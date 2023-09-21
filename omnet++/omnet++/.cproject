@@ -41,7 +41,6 @@
 						</toolChain>
 					</folderInfo>
 					<fileInfo id="org.omnetpp.cdt.gnu.config.debug.1985671753.78580612" name="stabelNet.ned" rcbsApplicability="disable" resourcePath="stabelNet.ned" toolsToInvoke=""/>
-					<fileInfo id="org.omnetpp.cdt.gnu.config.debug.1985671753.1975664754" name="omnetpp.ini" rcbsApplicability="disable" resourcePath="omnetpp.ini" toolsToInvoke=""/>
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
@@ -86,14 +85,13 @@
 						</toolChain>
 					</folderInfo>
 					<fileInfo id="org.omnetpp.cdt.gnu.config.release.1354630203.1906383644" name="stabelNet.ned" rcbsApplicability="disable" resourcePath="stabelNet.ned" toolsToInvoke=""/>
-					<fileInfo id="org.omnetpp.cdt.gnu.config.release.1354630203.744650261" name="omnetpp.ini" rcbsApplicability="disable" resourcePath="omnetpp.ini" toolsToInvoke=""/>
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
 		</cconfiguration>
 	</storageModule>
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-		<project id="mininet.org.omnetpp.cdt.omnetppProjectType.740653539" name="OMNeT++ Simulation" projectType="org.omnetpp.cdt.omnetppProjectType"/>
+		<project id="omnet++.org.omnetpp.cdt.omnetppProjectType.734546588" name="OMNeT++ Simulation" projectType="org.omnetpp.cdt.omnetppProjectType"/>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="refreshScope" versionNumber="2">

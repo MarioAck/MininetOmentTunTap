@@ -1,0 +1,4164 @@
+version 3
+run General-0-20230921-18:16:39-45176
+attr configname General
+attr datetime 20230921-18:16:39
+attr datetimef 20230921-181639
+attr experiment General
+attr inifile babel.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network BabelShowcase
+attr processid 45176
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config image-path ../../../omnetpp-6.0.1/samples/inet4.5/images
+config network BabelShowcase
+config scheduler-class inet::RealTimeScheduler
+config *.visualizer.interfaceTableVisualizer[0].displayInterfaceTables true
+config *.visualizer.mediumVisualizer[0].displayCommunicationRanges true
+config *.visualizer.numDataLinkVisualizers 2
+config *.visualizer.*.displaySignals true
+config *.visualizer.dataLinkVisualizer[0].displayLinks true
+config *.visualizer.dataLinkVisualizer[0].lineColor "\"red1\""
+config *.visualizer.dataLinkVisualizer[0].packetFilter "\"*\""
+config *.*.wlan[*].mac.fcsMode "\"computed\""
+config **.crcMode "\"declared\""
+config *.*.wlan[*].radio.transmitter.power 2mW
+config *.host*.wlan[0].typename ExtUpperIeee80211Interface
+config *.host*.wlan[0].copyConfiguration "\"copyFromExt\""
+config *.host0.wlan[0].device "\"taps1-eth2\""
+config *.host1.wlan[0].device "\"taps2-eth2\""
+
+par BabelShowcase.visualizer.sceneVisualizer[0] typename "\"inet.visualizer.canvas.scene.SceneCanvasVisualizer\""
+par BabelShowcase.visualizer.sceneVisualizer[0] visualizationTargetModule "\"^.^\""
+par BabelShowcase.visualizer.sceneVisualizer[0] visualizationSubjectModule "\"^.^\""
+par BabelShowcase.visualizer.sceneVisualizer[0] tags "\"\""
+par BabelShowcase.visualizer.sceneVisualizer[0] physicalEnvironmentModule "\"physicalEnvironment\""
+par BabelShowcase.visualizer.sceneVisualizer[0] networkNodeVisualizerModule "\"BabelShowcase.visualizer.networkNodeVisualizer[0]\""
+par BabelShowcase.visualizer.sceneVisualizer[0] axisLength "nan m"
+attr mutable ""
+attr unit m
+par BabelShowcase.visualizer.sceneVisualizer[0] animationSpeed 0
+par BabelShowcase.visualizer.sceneVisualizer[0] sceneMinX "nan m"
+attr unit m
+par BabelShowcase.visualizer.sceneVisualizer[0] sceneMinY "nan m"
+attr unit m
+par BabelShowcase.visualizer.sceneVisualizer[0] sceneMinZ "nan m"
+attr unit m
+par BabelShowcase.visualizer.sceneVisualizer[0] sceneMaxX "nan m"
+attr unit m
+par BabelShowcase.visualizer.sceneVisualizer[0] sceneMaxY "nan m"
+attr unit m
+par BabelShowcase.visualizer.sceneVisualizer[0] sceneMaxZ "nan m"
+attr unit m
+par BabelShowcase.visualizer.sceneVisualizer[0] zIndex 0
+par BabelShowcase.visualizer.sceneVisualizer[0] viewAngle "\"x right y down z out\""
+attr mutable ""
+par BabelShowcase.visualizer.sceneVisualizer[0] viewScale "\"1 1\""
+attr mutable ""
+par BabelShowcase.visualizer.sceneVisualizer[0] viewTranslation "\"0 0\""
+attr mutable ""
+par BabelShowcase.visualizer.sceneVisualizer[0] descriptionFigure "\"\""
+par BabelShowcase.visualizer.physicalEnvironmentVisualizer[0] typename "\"inet.visualizer.canvas.environment.PhysicalEnvironmentCanvasVisualizer\""
+par BabelShowcase.visualizer.physicalEnvironmentVisualizer[0] visualizationTargetModule "\"^.^\""
+par BabelShowcase.visualizer.physicalEnvironmentVisualizer[0] visualizationSubjectModule "\"^.^\""
+par BabelShowcase.visualizer.physicalEnvironmentVisualizer[0] tags "\"\""
+par BabelShowcase.visualizer.physicalEnvironmentVisualizer[0] physicalEnvironmentModule "\"physicalEnvironment\""
+par BabelShowcase.visualizer.physicalEnvironmentVisualizer[0] displayObjects true
+par BabelShowcase.visualizer.physicalEnvironmentVisualizer[0] zIndex 0
+par BabelShowcase.visualizer.networkNodeVisualizer[0] typename "\"inet.visualizer.canvas.scene.NetworkNodeCanvasVisualizer\""
+par BabelShowcase.visualizer.networkNodeVisualizer[0] visualizationTargetModule "\"^.^\""
+par BabelShowcase.visualizer.networkNodeVisualizer[0] visualizationSubjectModule "\"^.^\""
+par BabelShowcase.visualizer.networkNodeVisualizer[0] tags "\"\""
+par BabelShowcase.visualizer.networkNodeVisualizer[0] nodeFilter "\"*\""
+attr mutable ""
+par BabelShowcase.visualizer.networkNodeVisualizer[0] annotationSpacing 4
+par BabelShowcase.visualizer.networkNodeVisualizer[0] placementPenalty 10
+par BabelShowcase.visualizer.networkNodeVisualizer[0] zIndex 0
+par BabelShowcase.visualizer.networkConnectionVisualizer[0] typename "\"inet.visualizer.canvas.scene.NetworkConnectionCanvasVisualizer\""
+par BabelShowcase.visualizer.networkConnectionVisualizer[0] visualizationTargetModule "\"^.^\""
+par BabelShowcase.visualizer.networkConnectionVisualizer[0] visualizationSubjectModule "\"^.^\""
+par BabelShowcase.visualizer.networkConnectionVisualizer[0] tags "\"\""
+par BabelShowcase.visualizer.networkConnectionVisualizer[0] displayNetworkConnections true
+par BabelShowcase.visualizer.networkConnectionVisualizer[0] nodeFilter "\"\""
+attr mutable ""
+par BabelShowcase.visualizer.networkConnectionVisualizer[0] lineColor "\"black\""
+par BabelShowcase.visualizer.networkConnectionVisualizer[0] lineStyle "\"solid\""
+par BabelShowcase.visualizer.networkConnectionVisualizer[0] lineWidth 1
+par BabelShowcase.visualizer.networkConnectionVisualizer[0] zIndex 0
+par BabelShowcase.visualizer.mobilityVisualizer[0] typename "\"inet.visualizer.canvas.mobility.MobilityCanvasVisualizer\""
+par BabelShowcase.visualizer.mobilityVisualizer[0] visualizationTargetModule "\"^.^\""
+par BabelShowcase.visualizer.mobilityVisualizer[0] visualizationSubjectModule "\"^.^\""
+par BabelShowcase.visualizer.mobilityVisualizer[0] tags "\"\""
+par BabelShowcase.visualizer.mobilityVisualizer[0] networkNodeVisualizerModule "\"BabelShowcase.visualizer.networkNodeVisualizer[0]\""
+par BabelShowcase.visualizer.mobilityVisualizer[0] displayMobility true
+par BabelShowcase.visualizer.mobilityVisualizer[0] animationSpeed 0
+par BabelShowcase.visualizer.mobilityVisualizer[0] moduleFilter "\"**.mobility\""
+attr mutable ""
+par BabelShowcase.visualizer.mobilityVisualizer[0] displayPositions false
+par BabelShowcase.visualizer.mobilityVisualizer[0] positionCircleRadius 4
+par BabelShowcase.visualizer.mobilityVisualizer[0] positionCircleLineWidth 1
+par BabelShowcase.visualizer.mobilityVisualizer[0] positionCircleLineColor "\"dark\""
+attr enum light,dark
+par BabelShowcase.visualizer.mobilityVisualizer[0] positionCircleFillColor "\"dark\""
+attr enum light,dark
+par BabelShowcase.visualizer.mobilityVisualizer[0] displayOrientations false
+par BabelShowcase.visualizer.mobilityVisualizer[0] orientationPieRadius 32
+par BabelShowcase.visualizer.mobilityVisualizer[0] orientationPieSize 0.2
+par BabelShowcase.visualizer.mobilityVisualizer[0] orientationPieOpacity 0.25
+par BabelShowcase.visualizer.mobilityVisualizer[0] orientationLineColor "\"black\""
+par BabelShowcase.visualizer.mobilityVisualizer[0] orientationLineStyle "\"solid\""
+par BabelShowcase.visualizer.mobilityVisualizer[0] orientationLineWidth 1
+par BabelShowcase.visualizer.mobilityVisualizer[0] orientationFillColor "\"blue\""
+par BabelShowcase.visualizer.mobilityVisualizer[0] displayVelocities false
+par BabelShowcase.visualizer.mobilityVisualizer[0] velocityArrowScale 1
+par BabelShowcase.visualizer.mobilityVisualizer[0] velocityLineColor "\"black\""
+par BabelShowcase.visualizer.mobilityVisualizer[0] velocityLineStyle "\"solid\""
+par BabelShowcase.visualizer.mobilityVisualizer[0] velocityLineWidth 1
+par BabelShowcase.visualizer.mobilityVisualizer[0] displayMovementTrails false
+par BabelShowcase.visualizer.mobilityVisualizer[0] movementTrailLineColor "\"dark\""
+attr enum light,dark
+par BabelShowcase.visualizer.mobilityVisualizer[0] movementTrailLineStyle "\"solid\""
+par BabelShowcase.visualizer.mobilityVisualizer[0] movementTrailLineWidth 1
+par BabelShowcase.visualizer.mobilityVisualizer[0] trailLength 100
+par BabelShowcase.visualizer.mobilityVisualizer[0] zIndex 0
+par BabelShowcase.visualizer.statisticVisualizer[0] typename "\"inet.visualizer.canvas.common.StatisticCanvasVisualizer\""
+par BabelShowcase.visualizer.statisticVisualizer[0] visualizationTargetModule "\"^.^\""
+par BabelShowcase.visualizer.statisticVisualizer[0] visualizationSubjectModule "\"^.^\""
+par BabelShowcase.visualizer.statisticVisualizer[0] tags "\"\""
+par BabelShowcase.visualizer.statisticVisualizer[0] networkNodeVisualizerModule "\"BabelShowcase.visualizer.networkNodeVisualizer[0]\""
+par BabelShowcase.visualizer.statisticVisualizer[0] displayStatistics true
+par BabelShowcase.visualizer.statisticVisualizer[0] signalName "\"\""
+par BabelShowcase.visualizer.statisticVisualizer[0] statisticName "\"\""
+par BabelShowcase.visualizer.statisticVisualizer[0] statisticUnit "\"\""
+par BabelShowcase.visualizer.statisticVisualizer[0] statisticExpression "\"\""
+par BabelShowcase.visualizer.statisticVisualizer[0] sourceFilter "\"**\""
+attr mutable ""
+par BabelShowcase.visualizer.statisticVisualizer[0] format "\"%n: %v %u\""
+attr mutable ""
+par BabelShowcase.visualizer.statisticVisualizer[0] unit "\"\""
+par BabelShowcase.visualizer.statisticVisualizer[0] font "\"<default>\""
+par BabelShowcase.visualizer.statisticVisualizer[0] textColor "\"black\""
+par BabelShowcase.visualizer.statisticVisualizer[0] backgroundColor "\"white\""
+par BabelShowcase.visualizer.statisticVisualizer[0] opacity 1
+par BabelShowcase.visualizer.statisticVisualizer[0] placementHint "\"top\""
+par BabelShowcase.visualizer.statisticVisualizer[0] placementPriority 0
+par BabelShowcase.visualizer.statisticVisualizer[0] zIndex 10
+par BabelShowcase.visualizer.statisticVisualizer[0] propertyName "\"\""
+par BabelShowcase.visualizer.statisticVisualizer[0] propertyIndex "\"\""
+par BabelShowcase.visualizer.infoVisualizer[0] typename "\"inet.visualizer.canvas.common.InfoCanvasVisualizer\""
+par BabelShowcase.visualizer.infoVisualizer[0] visualizationTargetModule "\"^.^\""
+par BabelShowcase.visualizer.infoVisualizer[0] visualizationSubjectModule "\"^.^\""
+par BabelShowcase.visualizer.infoVisualizer[0] tags "\"\""
+par BabelShowcase.visualizer.infoVisualizer[0] networkNodeVisualizerModule "\"BabelShowcase.visualizer.networkNodeVisualizer[0]\""
+par BabelShowcase.visualizer.infoVisualizer[0] displayInfos true
+par BabelShowcase.visualizer.infoVisualizer[0] modules "\"\""
+attr mutable ""
+par BabelShowcase.visualizer.infoVisualizer[0] format "\"%t\""
+attr mutable ""
+par BabelShowcase.visualizer.infoVisualizer[0] font "\"<default>\""
+par BabelShowcase.visualizer.infoVisualizer[0] textColor "\"black\""
+par BabelShowcase.visualizer.infoVisualizer[0] backgroundColor "\"white\""
+par BabelShowcase.visualizer.infoVisualizer[0] opacity 1
+par BabelShowcase.visualizer.infoVisualizer[0] placementHint "\"top\""
+par BabelShowcase.visualizer.infoVisualizer[0] placementPriority 0
+par BabelShowcase.visualizer.infoVisualizer[0] zIndex 10
+par BabelShowcase.visualizer.energyStorageVisualizer[0] typename "\"inet.visualizer.canvas.power.EnergyStorageCanvasVisualizer\""
+par BabelShowcase.visualizer.energyStorageVisualizer[0] visualizationTargetModule "\"^.^\""
+par BabelShowcase.visualizer.energyStorageVisualizer[0] visualizationSubjectModule "\"^.^\""
+par BabelShowcase.visualizer.energyStorageVisualizer[0] tags "\"\""
+par BabelShowcase.visualizer.energyStorageVisualizer[0] networkNodeVisualizerModule "\"BabelShowcase.visualizer.networkNodeVisualizer[0]\""
+par BabelShowcase.visualizer.energyStorageVisualizer[0] displayEnergyStorages false
+par BabelShowcase.visualizer.energyStorageVisualizer[0] energyStorageFilter "\"**\""
+par BabelShowcase.visualizer.energyStorageVisualizer[0] color "\"green\""
+par BabelShowcase.visualizer.energyStorageVisualizer[0] width 8
+par BabelShowcase.visualizer.energyStorageVisualizer[0] height 24
+par BabelShowcase.visualizer.energyStorageVisualizer[0] spacing 2
+par BabelShowcase.visualizer.energyStorageVisualizer[0] placementHint "\"right\""
+par BabelShowcase.visualizer.energyStorageVisualizer[0] placementPriority 0
+par BabelShowcase.visualizer.energyStorageVisualizer[0] zIndex 10
+par BabelShowcase.visualizer.mediumVisualizer[0] typename "\"inet.visualizer.canvas.physicallayer.MediumCanvasVisualizer\""
+par BabelShowcase.visualizer.mediumVisualizer[0] visualizationTargetModule "\"^.^\""
+par BabelShowcase.visualizer.mediumVisualizer[0] visualizationSubjectModule "\"^.^\""
+par BabelShowcase.visualizer.mediumVisualizer[0] tags "\"\""
+par BabelShowcase.visualizer.mediumVisualizer[0] mediumModule "\"radioMedium\""
+par BabelShowcase.visualizer.mediumVisualizer[0] networkNodeVisualizerModule "\"BabelShowcase.visualizer.networkNodeVisualizer[0]\""
+par BabelShowcase.visualizer.mediumVisualizer[0] nodeFilter "\"*\""
+attr mutable ""
+par BabelShowcase.visualizer.mediumVisualizer[0] interfaceFilter "\"*\""
+attr mutable ""
+par BabelShowcase.visualizer.mediumVisualizer[0] packetFilter "(omnetpp::cValueHolder)holder: \"*\""
+attr mutable ""
+par BabelShowcase.visualizer.mediumVisualizer[0] displaySignals true
+par BabelShowcase.visualizer.mediumVisualizer[0] signalColor "\"dark\""
+attr enum light,dark
+par BabelShowcase.visualizer.mediumVisualizer[0] signalPropagationAnimationSpeed "nan "
+attr mutable ""
+par BabelShowcase.visualizer.mediumVisualizer[0] signalPropagationAnimationTime 1s
+attr unit s
+par BabelShowcase.visualizer.mediumVisualizer[0] signalPropagationAdditionalTime 0s
+attr unit s
+par BabelShowcase.visualizer.mediumVisualizer[0] signalTransmissionAnimationSpeed "nan "
+attr mutable ""
+par BabelShowcase.visualizer.mediumVisualizer[0] signalTransmissionAnimationTime 1s
+attr unit s
+par BabelShowcase.visualizer.mediumVisualizer[0] signalAnimationSpeedChangeTimeMode "\"realTime\""
+attr enum realTime,animationTime,simulationTime
+par BabelShowcase.visualizer.mediumVisualizer[0] signalAnimationSpeedChangeTime 1s
+attr unit s
+par BabelShowcase.visualizer.mediumVisualizer[0] displaySignalDepartures false
+par BabelShowcase.visualizer.mediumVisualizer[0] signalDepartureImage "\"misc/signal_departure.png\""
+par BabelShowcase.visualizer.mediumVisualizer[0] signalDeparturePlacementHint "\"topCenter\""
+par BabelShowcase.visualizer.mediumVisualizer[0] signalDeparturePlacementPriority 1
+par BabelShowcase.visualizer.mediumVisualizer[0] displaySignalArrivals false
+par BabelShowcase.visualizer.mediumVisualizer[0] signalArrivalImage "\"misc/signal_arrival.png\""
+par BabelShowcase.visualizer.mediumVisualizer[0] signalArrivalPlacementHint "\"topCenter\""
+par BabelShowcase.visualizer.mediumVisualizer[0] signalArrivalPlacementPriority -1
+par BabelShowcase.visualizer.mediumVisualizer[0] displayCommunicationRanges true
+par BabelShowcase.visualizer.mediumVisualizer[0] communicationRangeLineColor "\"blue\""
+par BabelShowcase.visualizer.mediumVisualizer[0] communicationRangeLineStyle "\"solid\""
+par BabelShowcase.visualizer.mediumVisualizer[0] communicationRangeLineWidth 1
+par BabelShowcase.visualizer.mediumVisualizer[0] displayInterferenceRanges false
+par BabelShowcase.visualizer.mediumVisualizer[0] interferenceRangeLineColor "\"gray\""
+par BabelShowcase.visualizer.mediumVisualizer[0] interferenceRangeLineStyle "\"solid\""
+par BabelShowcase.visualizer.mediumVisualizer[0] interferenceRangeLineWidth 1
+par BabelShowcase.visualizer.mediumVisualizer[0] autoPowerAxis true
+par BabelShowcase.visualizer.mediumVisualizer[0] signalMinPower "inf dBmW"
+attr unit dBmW
+par BabelShowcase.visualizer.mediumVisualizer[0] signalMaxPower 0dBmW
+attr unit dBmW
+par BabelShowcase.visualizer.mediumVisualizer[0] signalMinPowerDensity "inf dBmWpMHz"
+attr unit dBmWpMHz
+par BabelShowcase.visualizer.mediumVisualizer[0] signalMaxPowerDensity "-inf dBmWpMHz"
+attr unit dBmWpMHz
+par BabelShowcase.visualizer.mediumVisualizer[0] autoTimeAxis true
+par BabelShowcase.visualizer.mediumVisualizer[0] signalMinTime 0s
+attr unit s
+par BabelShowcase.visualizer.mediumVisualizer[0] signalMaxTime 0s
+attr unit s
+par BabelShowcase.visualizer.mediumVisualizer[0] autoFrequencyAxis true
+par BabelShowcase.visualizer.mediumVisualizer[0] signalMinFrequency "inf Hz"
+attr unit Hz
+par BabelShowcase.visualizer.mediumVisualizer[0] signalMaxFrequency "-inf Hz"
+attr unit Hz
+par BabelShowcase.visualizer.mediumVisualizer[0] displayMainPowerDensityMap false
+par BabelShowcase.visualizer.mediumVisualizer[0] mainPowerDensityMapPixmapDensity 1
+par BabelShowcase.visualizer.mediumVisualizer[0] mainPowerDensityMapMinX 0
+par BabelShowcase.visualizer.mediumVisualizer[0] mainPowerDensityMapMaxX "nan "
+par BabelShowcase.visualizer.mediumVisualizer[0] mainPowerDensityMapMinY 0
+par BabelShowcase.visualizer.mediumVisualizer[0] mainPowerDensityMapMaxY "nan "
+par BabelShowcase.visualizer.mediumVisualizer[0] mainPowerDensityMapZ 0
+par BabelShowcase.visualizer.mediumVisualizer[0] mainPowerDensityMapFigureXTickCount 3
+par BabelShowcase.visualizer.mediumVisualizer[0] mainPowerDensityMapFigureYTickCount 3
+par BabelShowcase.visualizer.mediumVisualizer[0] displayPowerDensityMaps false
+par BabelShowcase.visualizer.mediumVisualizer[0] powerDensityMapMode "\"auto\""
+attr enum total,signal,auto
+par BabelShowcase.visualizer.mediumVisualizer[0] powerDensityMapPixelMode "\"mean\""
+attr enum sample,partition,mean
+par BabelShowcase.visualizer.mediumVisualizer[0] powerDensityMapApproximationSize 10
+par BabelShowcase.visualizer.mediumVisualizer[0] powerDensityMapCenterFrequency "nan Hz"
+attr mutable ""
+attr unit Hz
+par BabelShowcase.visualizer.mediumVisualizer[0] powerDensityMapBandwidth 0Hz
+attr mutable ""
+attr unit Hz
+par BabelShowcase.visualizer.mediumVisualizer[0] powerDensityMapFigureWidth 200
+par BabelShowcase.visualizer.mediumVisualizer[0] powerDensityMapFigureHeight 120
+par BabelShowcase.visualizer.mediumVisualizer[0] powerDensityMapPixmapWidth 200
+par BabelShowcase.visualizer.mediumVisualizer[0] powerDensityMapPixmapHeight 120
+par BabelShowcase.visualizer.mediumVisualizer[0] powerDensityMapZ 0
+par BabelShowcase.visualizer.mediumVisualizer[0] powerDensityMapFigureXTickCount 3
+par BabelShowcase.visualizer.mediumVisualizer[0] powerDensityMapFigureYTickCount 3
+par BabelShowcase.visualizer.mediumVisualizer[0] displaySpectrums false
+par BabelShowcase.visualizer.mediumVisualizer[0] spectrumMode "\"auto\""
+attr enum total,signal,auto
+par BabelShowcase.visualizer.mediumVisualizer[0] spectrumFigureWidth 200
+par BabelShowcase.visualizer.mediumVisualizer[0] spectrumFigureHeight 120
+par BabelShowcase.visualizer.mediumVisualizer[0] spectrumFigureXTickCount 3
+par BabelShowcase.visualizer.mediumVisualizer[0] spectrumFigureYTickCount 5
+par BabelShowcase.visualizer.mediumVisualizer[0] spectrumFigureInterpolationSize 5
+par BabelShowcase.visualizer.mediumVisualizer[0] spectrumPlacementHint "\"bottomCenter\""
+par BabelShowcase.visualizer.mediumVisualizer[0] spectrumPlacementPriority -1
+par BabelShowcase.visualizer.mediumVisualizer[0] displaySpectrograms false
+par BabelShowcase.visualizer.mediumVisualizer[0] spectrogramMode "\"auto\""
+attr enum total,signal,auto
+par BabelShowcase.visualizer.mediumVisualizer[0] spectrogramPixelMode "\"mean\""
+attr enum sample,partition,mean
+par BabelShowcase.visualizer.mediumVisualizer[0] spectrogramFigureWidth 200
+par BabelShowcase.visualizer.mediumVisualizer[0] spectrogramFigureHeight 120
+par BabelShowcase.visualizer.mediumVisualizer[0] spectrogramPixmapWidth 200
+par BabelShowcase.visualizer.mediumVisualizer[0] spectrogramPixmapHeight 120
+par BabelShowcase.visualizer.mediumVisualizer[0] spectrogramFigureXTickCount 3
+par BabelShowcase.visualizer.mediumVisualizer[0] spectrogramFigureYTickCount 5
+par BabelShowcase.visualizer.mediumVisualizer[0] spectrogramPlacementHint "\"bottomCenter\""
+par BabelShowcase.visualizer.mediumVisualizer[0] spectrogramPlacementPriority -1
+par BabelShowcase.visualizer.mediumVisualizer[0] zIndex 0
+par BabelShowcase.visualizer.mediumVisualizer[0] signalShape "\"ring\""
+attr enum ring,sphere
+par BabelShowcase.visualizer.mediumVisualizer[0] signalOpacity 0.5
+par BabelShowcase.visualizer.mediumVisualizer[0] signalRingCount 20
+par BabelShowcase.visualizer.mediumVisualizer[0] signalRingSize 50m
+attr unit m
+par BabelShowcase.visualizer.mediumVisualizer[0] signalFadingDistance 50m
+attr unit m
+par BabelShowcase.visualizer.mediumVisualizer[0] signalFadingFactor 1.2
+par BabelShowcase.visualizer.mediumVisualizer[0] signalWaveCount 20
+par BabelShowcase.visualizer.mediumVisualizer[0] signalWaveLength 50m
+attr unit m
+par BabelShowcase.visualizer.mediumVisualizer[0] signalWaveWidth 10m
+attr unit m
+par BabelShowcase.visualizer.mediumVisualizer[0] signalWaveFadingAnimationSpeedFactor 1
+par BabelShowcase.visualizer.mediumVisualizer[0] displayCommunicationHeat false
+par BabelShowcase.visualizer.obstacleLossVisualizer[0] typename "\"inet.visualizer.canvas.physicallayer.TracingObstacleLossCanvasVisualizer\""
+par BabelShowcase.visualizer.obstacleLossVisualizer[0] visualizationTargetModule "\"^.^\""
+par BabelShowcase.visualizer.obstacleLossVisualizer[0] visualizationSubjectModule "\"^.^\""
+par BabelShowcase.visualizer.obstacleLossVisualizer[0] tags "\"\""
+par BabelShowcase.visualizer.obstacleLossVisualizer[0] displayIntersections false
+par BabelShowcase.visualizer.obstacleLossVisualizer[0] intersectionLineColor "\"red\""
+par BabelShowcase.visualizer.obstacleLossVisualizer[0] intersectionLineStyle "\"solid\""
+par BabelShowcase.visualizer.obstacleLossVisualizer[0] intersectionLineWidth 1
+par BabelShowcase.visualizer.obstacleLossVisualizer[0] displayFaceNormalVectors false
+par BabelShowcase.visualizer.obstacleLossVisualizer[0] faceNormalLineColor "\"grey\""
+par BabelShowcase.visualizer.obstacleLossVisualizer[0] faceNormalLineStyle "\"solid\""
+par BabelShowcase.visualizer.obstacleLossVisualizer[0] faceNormalLineWidth 1
+par BabelShowcase.visualizer.obstacleLossVisualizer[0] fadeOutMode "\"realTime\""
+attr enum realTime,animationTime,simulationTime
+par BabelShowcase.visualizer.obstacleLossVisualizer[0] fadeOutTime 1s
+attr unit s
+par BabelShowcase.visualizer.obstacleLossVisualizer[0] fadeOutAnimationSpeed 0
+par BabelShowcase.visualizer.obstacleLossVisualizer[0] zIndex 0
+par BabelShowcase.visualizer.packetDropVisualizer[0] typename "\"inet.visualizer.canvas.common.PacketDropCanvasVisualizer\""
+par BabelShowcase.visualizer.packetDropVisualizer[0] visualizationTargetModule "\"^.^\""
+par BabelShowcase.visualizer.packetDropVisualizer[0] visualizationSubjectModule "\"^.^\""
+par BabelShowcase.visualizer.packetDropVisualizer[0] tags "\"\""
+par BabelShowcase.visualizer.packetDropVisualizer[0] displayPacketDrops false
+par BabelShowcase.visualizer.packetDropVisualizer[0] nodeFilter "\"*\""
+attr mutable ""
+par BabelShowcase.visualizer.packetDropVisualizer[0] interfaceFilter "\"*\""
+attr mutable ""
+par BabelShowcase.visualizer.packetDropVisualizer[0] packetFilter "(omnetpp::cValueHolder)holder: \"*\""
+attr mutable ""
+par BabelShowcase.visualizer.packetDropVisualizer[0] detailsFilter "\"*\""
+attr mutable ""
+par BabelShowcase.visualizer.packetDropVisualizer[0] icon "\"msg/packet_s\""
+par BabelShowcase.visualizer.packetDropVisualizer[0] iconTintAmount 1
+par BabelShowcase.visualizer.packetDropVisualizer[0] iconTintColor "\"dark\""
+par BabelShowcase.visualizer.packetDropVisualizer[0] labelFormat "\"%n\""
+attr mutable ""
+par BabelShowcase.visualizer.packetDropVisualizer[0] labelFont "\"<default>\""
+par BabelShowcase.visualizer.packetDropVisualizer[0] labelColor "\"black\""
+par BabelShowcase.visualizer.packetDropVisualizer[0] fadeOutMode "\"realTime\""
+attr enum realTime,animationTime,simulationTime
+par BabelShowcase.visualizer.packetDropVisualizer[0] fadeOutTime 1s
+attr unit s
+par BabelShowcase.visualizer.packetDropVisualizer[0] fadeOutAnimationSpeed 0
+par BabelShowcase.visualizer.packetDropVisualizer[0] zIndex 10
+par BabelShowcase.visualizer.packetDropVisualizer[0] dx 32
+par BabelShowcase.visualizer.packetDropVisualizer[0] dy 64
+par BabelShowcase.visualizer.queueVisualizer[0] typename "\"inet.visualizer.canvas.common.QueueCanvasVisualizer\""
+par BabelShowcase.visualizer.queueVisualizer[0] visualizationTargetModule "\"^.^\""
+par BabelShowcase.visualizer.queueVisualizer[0] visualizationSubjectModule "\"^.^\""
+par BabelShowcase.visualizer.queueVisualizer[0] tags "\"\""
+par BabelShowcase.visualizer.queueVisualizer[0] networkNodeVisualizerModule "\"BabelShowcase.visualizer.networkNodeVisualizer[0]\""
+par BabelShowcase.visualizer.queueVisualizer[0] displayQueues false
+par BabelShowcase.visualizer.queueVisualizer[0] queueFilter "\"**\""
+par BabelShowcase.visualizer.queueVisualizer[0] color "\"blue\""
+par BabelShowcase.visualizer.queueVisualizer[0] width 8
+par BabelShowcase.visualizer.queueVisualizer[0] height 24
+par BabelShowcase.visualizer.queueVisualizer[0] spacing 2
+par BabelShowcase.visualizer.queueVisualizer[0] placementHint "\"right\""
+par BabelShowcase.visualizer.queueVisualizer[0] placementPriority 0
+par BabelShowcase.visualizer.queueVisualizer[0] zIndex 10
+par BabelShowcase.visualizer.gateScheduleVisualizer[0] typename "\"inet.visualizer.canvas.common.GateScheduleCanvasVisualizer\""
+par BabelShowcase.visualizer.gateScheduleVisualizer[0] visualizationTargetModule "\"^.^\""
+par BabelShowcase.visualizer.gateScheduleVisualizer[0] visualizationSubjectModule "\"^.^\""
+par BabelShowcase.visualizer.gateScheduleVisualizer[0] tags "\"\""
+par BabelShowcase.visualizer.gateScheduleVisualizer[0] networkNodeVisualizerModule "\"BabelShowcase.visualizer.networkNodeVisualizer[0]\""
+par BabelShowcase.visualizer.gateScheduleVisualizer[0] displayGateSchedules false
+par BabelShowcase.visualizer.gateScheduleVisualizer[0] labelFormat "\"%i %D\""
+par BabelShowcase.visualizer.gateScheduleVisualizer[0] gateFilter "\"**\""
+par BabelShowcase.visualizer.gateScheduleVisualizer[0] width 100
+par BabelShowcase.visualizer.gateScheduleVisualizer[0] height 8
+par BabelShowcase.visualizer.gateScheduleVisualizer[0] spacing 2
+par BabelShowcase.visualizer.gateScheduleVisualizer[0] placementHint "\"right\""
+par BabelShowcase.visualizer.gateScheduleVisualizer[0] placementPriority 0
+par BabelShowcase.visualizer.gateScheduleVisualizer[0] displayDuration 0s
+attr mutable ""
+attr unit s
+par BabelShowcase.visualizer.gateScheduleVisualizer[0] currentTimePosition 50
+par BabelShowcase.visualizer.gateScheduleVisualizer[0] zIndex 10
+par BabelShowcase.visualizer.radioVisualizer[0] typename "\"inet.visualizer.canvas.physicallayer.RadioCanvasVisualizer\""
+par BabelShowcase.visualizer.radioVisualizer[0] visualizationTargetModule "\"^.^\""
+par BabelShowcase.visualizer.radioVisualizer[0] visualizationSubjectModule "\"^.^\""
+par BabelShowcase.visualizer.radioVisualizer[0] tags "\"\""
+par BabelShowcase.visualizer.radioVisualizer[0] networkNodeVisualizerModule "\"BabelShowcase.visualizer.networkNodeVisualizer[0]\""
+par BabelShowcase.visualizer.radioVisualizer[0] displayRadios false
+par BabelShowcase.visualizer.radioVisualizer[0] displayRadioMode true
+par BabelShowcase.visualizer.radioVisualizer[0] displayReceptionState true
+par BabelShowcase.visualizer.radioVisualizer[0] displayTransmissionState true
+par BabelShowcase.visualizer.radioVisualizer[0] displayAntennaLobes false
+par BabelShowcase.visualizer.radioVisualizer[0] radioFilter "\"**\""
+attr mutable ""
+par BabelShowcase.visualizer.radioVisualizer[0] radioModeImages "\"block/process_vs block/timer_vs block/wrx_vs block/wtx_vs block/wrxtx_vs block/cogwheel_vs\""
+par BabelShowcase.visualizer.radioVisualizer[0] receptionStateImages "\"- - misc/receiving misc/receiving\""
+par BabelShowcase.visualizer.radioVisualizer[0] transmissionStateImages "\"- - misc/transmitting\""
+par BabelShowcase.visualizer.radioVisualizer[0] width 16
+par BabelShowcase.visualizer.radioVisualizer[0] height 16
+par BabelShowcase.visualizer.radioVisualizer[0] placementHint "\"bottomRight\""
+par BabelShowcase.visualizer.radioVisualizer[0] placementPriority 0
+par BabelShowcase.visualizer.radioVisualizer[0] antennaLobeNormalize false
+par BabelShowcase.visualizer.radioVisualizer[0] antennaLobeRelativeLabels false
+par BabelShowcase.visualizer.radioVisualizer[0] antennaLobePlaneGlobal true
+par BabelShowcase.visualizer.radioVisualizer[0] antennaLobePlane "\"view\""
+attr enum view,xy,xz,yz
+par BabelShowcase.visualizer.radioVisualizer[0] antennaLobeMode "\"logarithmic\""
+attr enum logarithmic,linear
+par BabelShowcase.visualizer.radioVisualizer[0] antennaLobeLogarithmicBase 10
+par BabelShowcase.visualizer.radioVisualizer[0] antennaLobeLogarithmicScale 100
+par BabelShowcase.visualizer.radioVisualizer[0] antennaLobeRadius 100
+par BabelShowcase.visualizer.radioVisualizer[0] antennaLobeStep 10deg
+attr unit deg
+par BabelShowcase.visualizer.radioVisualizer[0] antennaLobeOpacity 0.25
+par BabelShowcase.visualizer.radioVisualizer[0] antennaLobeLineSmooth true
+par BabelShowcase.visualizer.radioVisualizer[0] antennaLobeLineColor "\"black\""
+par BabelShowcase.visualizer.radioVisualizer[0] antennaLobeLineStyle "\"solid\""
+par BabelShowcase.visualizer.radioVisualizer[0] antennaLobeLineWidth 1
+par BabelShowcase.visualizer.radioVisualizer[0] antennaLobeFillColor "\"white\""
+par BabelShowcase.visualizer.radioVisualizer[0] zIndex 10
+par BabelShowcase.visualizer.physicalLinkVisualizer[0] typename "\"inet.visualizer.canvas.physicallayer.PhysicalLinkCanvasVisualizer\""
+par BabelShowcase.visualizer.physicalLinkVisualizer[0] visualizationTargetModule "\"^.^\""
+par BabelShowcase.visualizer.physicalLinkVisualizer[0] visualizationSubjectModule "\"^.^\""
+par BabelShowcase.visualizer.physicalLinkVisualizer[0] tags "\"\""
+par BabelShowcase.visualizer.physicalLinkVisualizer[0] displayLinks false
+par BabelShowcase.visualizer.physicalLinkVisualizer[0] activityLevel "\"service\""
+attr enum service,peer,protocol
+par BabelShowcase.visualizer.physicalLinkVisualizer[0] nodeFilter "\"*\""
+attr mutable ""
+par BabelShowcase.visualizer.physicalLinkVisualizer[0] interfaceFilter "\"*\""
+attr mutable ""
+par BabelShowcase.visualizer.physicalLinkVisualizer[0] packetFilter "(omnetpp::cValueHolder)holder: \"*\""
+attr mutable ""
+par BabelShowcase.visualizer.physicalLinkVisualizer[0] lineColor "\"olive\""
+par BabelShowcase.visualizer.physicalLinkVisualizer[0] lineStyle "\"dotted\""
+par BabelShowcase.visualizer.physicalLinkVisualizer[0] lineWidth 3
+par BabelShowcase.visualizer.physicalLinkVisualizer[0] lineShift 16
+par BabelShowcase.visualizer.physicalLinkVisualizer[0] lineShiftMode "\"normal\""
+par BabelShowcase.visualizer.physicalLinkVisualizer[0] lineContactSpacing 3
+par BabelShowcase.visualizer.physicalLinkVisualizer[0] lineContactMode "\"rectangular\""
+attr enum circular,rectangular
+par BabelShowcase.visualizer.physicalLinkVisualizer[0] labelFormat "\"%n\""
+par BabelShowcase.visualizer.physicalLinkVisualizer[0] labelFont "\"<default>, 8px\""
+par BabelShowcase.visualizer.physicalLinkVisualizer[0] labelColor "\"olive\""
+par BabelShowcase.visualizer.physicalLinkVisualizer[0] fadeOutMode "\"realTime\""
+attr enum realTime,animationTime,simulationTime
+par BabelShowcase.visualizer.physicalLinkVisualizer[0] fadeOutTime 1s
+attr unit s
+par BabelShowcase.visualizer.physicalLinkVisualizer[0] fadeOutAnimationSpeed 0
+par BabelShowcase.visualizer.physicalLinkVisualizer[0] holdAnimationTime 0s
+attr unit s
+par BabelShowcase.visualizer.physicalLinkVisualizer[0] zIndex 1
+par BabelShowcase.visualizer.interfaceTableVisualizer[0] typename "\"inet.visualizer.canvas.linklayer.InterfaceTableCanvasVisualizer\""
+par BabelShowcase.visualizer.interfaceTableVisualizer[0] visualizationTargetModule "\"^.^\""
+par BabelShowcase.visualizer.interfaceTableVisualizer[0] visualizationSubjectModule "\"^.^\""
+par BabelShowcase.visualizer.interfaceTableVisualizer[0] tags "\"\""
+par BabelShowcase.visualizer.interfaceTableVisualizer[0] networkNodeVisualizerModule "\"BabelShowcase.visualizer.networkNodeVisualizer[0]\""
+par BabelShowcase.visualizer.interfaceTableVisualizer[0] displayInterfaceTables true
+par BabelShowcase.visualizer.interfaceTableVisualizer[0] displayWiredInterfacesAtConnections true
+par BabelShowcase.visualizer.interfaceTableVisualizer[0] displayBackground false
+par BabelShowcase.visualizer.interfaceTableVisualizer[0] nodeFilter "\"*\""
+attr mutable ""
+par BabelShowcase.visualizer.interfaceTableVisualizer[0] interfaceFilter "\"not(lo*)\""
+attr mutable ""
+par BabelShowcase.visualizer.interfaceTableVisualizer[0] format "\"%N %\\\\%a%/%l\""
+attr mutable ""
+par BabelShowcase.visualizer.interfaceTableVisualizer[0] placementHint "\"top\""
+par BabelShowcase.visualizer.interfaceTableVisualizer[0] placementPriority 0
+par BabelShowcase.visualizer.interfaceTableVisualizer[0] font "\"<default>\""
+par BabelShowcase.visualizer.interfaceTableVisualizer[0] textColor "\"#005030\""
+par BabelShowcase.visualizer.interfaceTableVisualizer[0] backgroundColor "\"white\""
+par BabelShowcase.visualizer.interfaceTableVisualizer[0] opacity 1
+par BabelShowcase.visualizer.interfaceTableVisualizer[0] zIndex 10
+par BabelShowcase.visualizer.dataLinkVisualizer[0] typename "\"inet.visualizer.canvas.linklayer.DataLinkCanvasVisualizer\""
+par BabelShowcase.visualizer.dataLinkVisualizer[0] visualizationTargetModule "\"^.^\""
+par BabelShowcase.visualizer.dataLinkVisualizer[0] visualizationSubjectModule "\"^.^\""
+par BabelShowcase.visualizer.dataLinkVisualizer[0] tags "\"\""
+par BabelShowcase.visualizer.dataLinkVisualizer[0] displayLinks true
+par BabelShowcase.visualizer.dataLinkVisualizer[0] activityLevel "\"service\""
+attr enum service,peer,protocol
+par BabelShowcase.visualizer.dataLinkVisualizer[0] nodeFilter "\"*\""
+attr mutable ""
+par BabelShowcase.visualizer.dataLinkVisualizer[0] interfaceFilter "\"*\""
+attr mutable ""
+par BabelShowcase.visualizer.dataLinkVisualizer[0] packetFilter "(omnetpp::cValueHolder)holder: \"*\""
+attr mutable ""
+par BabelShowcase.visualizer.dataLinkVisualizer[0] lineColor "\"red1\""
+par BabelShowcase.visualizer.dataLinkVisualizer[0] lineStyle "\"solid\""
+par BabelShowcase.visualizer.dataLinkVisualizer[0] lineWidth 3
+par BabelShowcase.visualizer.dataLinkVisualizer[0] lineShift 16
+par BabelShowcase.visualizer.dataLinkVisualizer[0] lineShiftMode "\"normal\""
+par BabelShowcase.visualizer.dataLinkVisualizer[0] lineContactSpacing 3
+par BabelShowcase.visualizer.dataLinkVisualizer[0] lineContactMode "\"rectangular\""
+attr enum circular,rectangular
+par BabelShowcase.visualizer.dataLinkVisualizer[0] labelFormat "\"%n\""
+par BabelShowcase.visualizer.dataLinkVisualizer[0] labelFont "\"<default>, 8px\""
+par BabelShowcase.visualizer.dataLinkVisualizer[0] labelColor "\"darkcyan\""
+par BabelShowcase.visualizer.dataLinkVisualizer[0] fadeOutMode "\"realTime\""
+attr enum realTime,animationTime,simulationTime
+par BabelShowcase.visualizer.dataLinkVisualizer[0] fadeOutTime 1s
+attr unit s
+par BabelShowcase.visualizer.dataLinkVisualizer[0] fadeOutAnimationSpeed 0
+par BabelShowcase.visualizer.dataLinkVisualizer[0] holdAnimationTime 0s
+attr unit s
+par BabelShowcase.visualizer.dataLinkVisualizer[0] zIndex 2
+par BabelShowcase.visualizer.dataLinkVisualizer[1] typename "\"inet.visualizer.canvas.linklayer.DataLinkCanvasVisualizer\""
+par BabelShowcase.visualizer.dataLinkVisualizer[1] visualizationTargetModule "\"^.^\""
+par BabelShowcase.visualizer.dataLinkVisualizer[1] visualizationSubjectModule "\"^.^\""
+par BabelShowcase.visualizer.dataLinkVisualizer[1] tags "\"\""
+par BabelShowcase.visualizer.dataLinkVisualizer[1] displayLinks false
+par BabelShowcase.visualizer.dataLinkVisualizer[1] activityLevel "\"service\""
+attr enum service,peer,protocol
+par BabelShowcase.visualizer.dataLinkVisualizer[1] nodeFilter "\"*\""
+attr mutable ""
+par BabelShowcase.visualizer.dataLinkVisualizer[1] interfaceFilter "\"*\""
+attr mutable ""
+par BabelShowcase.visualizer.dataLinkVisualizer[1] packetFilter "(omnetpp::cValueHolder)holder: \"*\""
+attr mutable ""
+par BabelShowcase.visualizer.dataLinkVisualizer[1] lineColor "\"darkcyan\""
+par BabelShowcase.visualizer.dataLinkVisualizer[1] lineStyle "\"solid\""
+par BabelShowcase.visualizer.dataLinkVisualizer[1] lineWidth 3
+par BabelShowcase.visualizer.dataLinkVisualizer[1] lineShift 16
+par BabelShowcase.visualizer.dataLinkVisualizer[1] lineShiftMode "\"normal\""
+par BabelShowcase.visualizer.dataLinkVisualizer[1] lineContactSpacing 3
+par BabelShowcase.visualizer.dataLinkVisualizer[1] lineContactMode "\"rectangular\""
+attr enum circular,rectangular
+par BabelShowcase.visualizer.dataLinkVisualizer[1] labelFormat "\"%n\""
+par BabelShowcase.visualizer.dataLinkVisualizer[1] labelFont "\"<default>, 8px\""
+par BabelShowcase.visualizer.dataLinkVisualizer[1] labelColor "\"darkcyan\""
+par BabelShowcase.visualizer.dataLinkVisualizer[1] fadeOutMode "\"realTime\""
+attr enum realTime,animationTime,simulationTime
+par BabelShowcase.visualizer.dataLinkVisualizer[1] fadeOutTime 1s
+attr unit s
+par BabelShowcase.visualizer.dataLinkVisualizer[1] fadeOutAnimationSpeed 0
+par BabelShowcase.visualizer.dataLinkVisualizer[1] holdAnimationTime 0s
+attr unit s
+par BabelShowcase.visualizer.dataLinkVisualizer[1] zIndex 2
+par BabelShowcase.visualizer.linkBreakVisualizer[0] typename "\"inet.visualizer.canvas.linklayer.LinkBreakCanvasVisualizer\""
+par BabelShowcase.visualizer.linkBreakVisualizer[0] visualizationTargetModule "\"^.^\""
+par BabelShowcase.visualizer.linkBreakVisualizer[0] visualizationSubjectModule "\"^.^\""
+par BabelShowcase.visualizer.linkBreakVisualizer[0] tags "\"\""
+par BabelShowcase.visualizer.linkBreakVisualizer[0] displayLinkBreaks false
+par BabelShowcase.visualizer.linkBreakVisualizer[0] nodeFilter "\"*\""
+attr mutable ""
+par BabelShowcase.visualizer.linkBreakVisualizer[0] interfaceFilter "\"*\""
+attr mutable ""
+par BabelShowcase.visualizer.linkBreakVisualizer[0] packetFilter "(omnetpp::cValueHolder)holder: \"*\""
+attr mutable ""
+par BabelShowcase.visualizer.linkBreakVisualizer[0] icon "\"status/stop\""
+par BabelShowcase.visualizer.linkBreakVisualizer[0] iconTintAmount 0
+par BabelShowcase.visualizer.linkBreakVisualizer[0] iconTintColor "\"\""
+par BabelShowcase.visualizer.linkBreakVisualizer[0] fadeOutMode "\"realTime\""
+attr enum realTime,animationTime,simulationTime
+par BabelShowcase.visualizer.linkBreakVisualizer[0] fadeOutTime 1s
+attr unit s
+par BabelShowcase.visualizer.linkBreakVisualizer[0] fadeOutAnimationSpeed 0
+par BabelShowcase.visualizer.linkBreakVisualizer[0] zIndex 2
+par BabelShowcase.visualizer.ieee80211Visualizer[0] typename "\"inet.visualizer.canvas.linklayer.Ieee80211CanvasVisualizer\""
+par BabelShowcase.visualizer.ieee80211Visualizer[0] visualizationTargetModule "\"^.^\""
+par BabelShowcase.visualizer.ieee80211Visualizer[0] visualizationSubjectModule "\"^.^\""
+par BabelShowcase.visualizer.ieee80211Visualizer[0] tags "\"\""
+par BabelShowcase.visualizer.ieee80211Visualizer[0] networkNodeVisualizerModule "\"BabelShowcase.visualizer.networkNodeVisualizer[0]\""
+par BabelShowcase.visualizer.ieee80211Visualizer[0] displayAssociations false
+par BabelShowcase.visualizer.ieee80211Visualizer[0] nodeFilter "\"*\""
+attr mutable ""
+par BabelShowcase.visualizer.ieee80211Visualizer[0] interfaceFilter "\"*\""
+attr mutable ""
+par BabelShowcase.visualizer.ieee80211Visualizer[0] minPower -85dBm
+attr unit dBm
+par BabelShowcase.visualizer.ieee80211Visualizer[0] maxPower -50dBm
+attr unit dBm
+par BabelShowcase.visualizer.ieee80211Visualizer[0] icons "\"misc/signal_power_0 misc/signal_power_1 misc/signal_power_2 misc/signal_power_3\""
+par BabelShowcase.visualizer.ieee80211Visualizer[0] iconColor "\"dark\""
+attr enum light,dark
+par BabelShowcase.visualizer.ieee80211Visualizer[0] labelFont "\"<default>\""
+par BabelShowcase.visualizer.ieee80211Visualizer[0] labelColor "\"black\""
+par BabelShowcase.visualizer.ieee80211Visualizer[0] placementHint "\"top\""
+par BabelShowcase.visualizer.ieee80211Visualizer[0] placementPriority 0
+par BabelShowcase.visualizer.ieee80211Visualizer[0] zIndex 2
+par BabelShowcase.visualizer.networkRouteVisualizer[0] typename "\"inet.visualizer.canvas.networklayer.NetworkRouteCanvasVisualizer\""
+par BabelShowcase.visualizer.networkRouteVisualizer[0] visualizationTargetModule "\"^.^\""
+par BabelShowcase.visualizer.networkRouteVisualizer[0] visualizationSubjectModule "\"^.^\""
+par BabelShowcase.visualizer.networkRouteVisualizer[0] tags "\"\""
+par BabelShowcase.visualizer.networkRouteVisualizer[0] displayRoutes false
+par BabelShowcase.visualizer.networkRouteVisualizer[0] startPathSignal "\"packetReceivedFromUpper\""
+par BabelShowcase.visualizer.networkRouteVisualizer[0] extendPathSignal "\"packetReceivedFromLower\""
+par BabelShowcase.visualizer.networkRouteVisualizer[0] endPathSignal "\"packetSentToUpper\""
+par BabelShowcase.visualizer.networkRouteVisualizer[0] nodeFilter "\"*\""
+attr mutable ""
+par BabelShowcase.visualizer.networkRouteVisualizer[0] packetFilter "(omnetpp::cValueHolder)holder: \"*\""
+attr mutable ""
+par BabelShowcase.visualizer.networkRouteVisualizer[0] lineColor "\"dark\""
+attr enum light,dark
+par BabelShowcase.visualizer.networkRouteVisualizer[0] lineStyle "\"solid\""
+par BabelShowcase.visualizer.networkRouteVisualizer[0] lineWidth 3
+par BabelShowcase.visualizer.networkRouteVisualizer[0] lineSmooth false
+par BabelShowcase.visualizer.networkRouteVisualizer[0] lineShift 16
+par BabelShowcase.visualizer.networkRouteVisualizer[0] lineShiftMode "\"normal\""
+par BabelShowcase.visualizer.networkRouteVisualizer[0] lineContactSpacing 3
+par BabelShowcase.visualizer.networkRouteVisualizer[0] lineContactMode "\"rectangular\""
+attr enum circular,rectangular
+par BabelShowcase.visualizer.networkRouteVisualizer[0] labelFormat "\"%n\""
+par BabelShowcase.visualizer.networkRouteVisualizer[0] labelFont "\"<default>, 8px\""
+par BabelShowcase.visualizer.networkRouteVisualizer[0] labelColor "\"\""
+par BabelShowcase.visualizer.networkRouteVisualizer[0] fadeOutMode "\"realTime\""
+attr enum realTime,animationTime,simulationTime
+par BabelShowcase.visualizer.networkRouteVisualizer[0] fadeOutTime 1s
+attr unit s
+par BabelShowcase.visualizer.networkRouteVisualizer[0] fadeOutAnimationSpeed 0
+par BabelShowcase.visualizer.networkRouteVisualizer[0] zIndex 3
+par BabelShowcase.visualizer.routingTableVisualizer[0] typename "\"inet.visualizer.canvas.networklayer.RoutingTableCanvasVisualizer\""
+par BabelShowcase.visualizer.routingTableVisualizer[0] visualizationTargetModule "\"^.^\""
+par BabelShowcase.visualizer.routingTableVisualizer[0] visualizationSubjectModule "\"^.^\""
+par BabelShowcase.visualizer.routingTableVisualizer[0] tags "\"\""
+par BabelShowcase.visualizer.routingTableVisualizer[0] displayRoutingTables false
+par BabelShowcase.visualizer.routingTableVisualizer[0] displayRoutesIndividually true
+par BabelShowcase.visualizer.routingTableVisualizer[0] displayLabels true
+par BabelShowcase.visualizer.routingTableVisualizer[0] destinationFilter "\"*\""
+attr mutable ""
+par BabelShowcase.visualizer.routingTableVisualizer[0] nodeFilter "\"*\""
+attr mutable ""
+par BabelShowcase.visualizer.routingTableVisualizer[0] lineColor "\"black\""
+par BabelShowcase.visualizer.routingTableVisualizer[0] lineStyle "\"solid\""
+par BabelShowcase.visualizer.routingTableVisualizer[0] lineWidth 2
+par BabelShowcase.visualizer.routingTableVisualizer[0] lineShift 16
+par BabelShowcase.visualizer.routingTableVisualizer[0] lineShiftMode "\"normal\""
+par BabelShowcase.visualizer.routingTableVisualizer[0] lineContactSpacing 3
+par BabelShowcase.visualizer.routingTableVisualizer[0] lineContactMode "\"rectangular\""
+attr enum circular,rectangular
+par BabelShowcase.visualizer.routingTableVisualizer[0] labelFormat "\"%d/%m -> %g (%n)\""
+attr mutable ""
+par BabelShowcase.visualizer.routingTableVisualizer[0] labelFont "\"<default>, 8px\""
+par BabelShowcase.visualizer.routingTableVisualizer[0] labelColor "\"black\""
+par BabelShowcase.visualizer.routingTableVisualizer[0] zIndex 0
+par BabelShowcase.visualizer.transportRouteVisualizer[0] typename "\"inet.visualizer.canvas.transportlayer.TransportRouteCanvasVisualizer\""
+par BabelShowcase.visualizer.transportRouteVisualizer[0] visualizationTargetModule "\"^.^\""
+par BabelShowcase.visualizer.transportRouteVisualizer[0] visualizationSubjectModule "\"^.^\""
+par BabelShowcase.visualizer.transportRouteVisualizer[0] tags "\"\""
+par BabelShowcase.visualizer.transportRouteVisualizer[0] displayRoutes false
+par BabelShowcase.visualizer.transportRouteVisualizer[0] startPathSignal "\"packetReceivedFromUpper\""
+par BabelShowcase.visualizer.transportRouteVisualizer[0] extendPathSignal "\"packetReceivedFromLower\""
+par BabelShowcase.visualizer.transportRouteVisualizer[0] endPathSignal "\"packetSentToUpper\""
+par BabelShowcase.visualizer.transportRouteVisualizer[0] nodeFilter "\"*\""
+attr mutable ""
+par BabelShowcase.visualizer.transportRouteVisualizer[0] packetFilter "(omnetpp::cValueHolder)holder: \"*\""
+attr mutable ""
+par BabelShowcase.visualizer.transportRouteVisualizer[0] lineColor "\"dark\""
+attr enum light,dark
+par BabelShowcase.visualizer.transportRouteVisualizer[0] lineStyle "\"solid\""
+par BabelShowcase.visualizer.transportRouteVisualizer[0] lineWidth 3
+par BabelShowcase.visualizer.transportRouteVisualizer[0] lineSmooth false
+par BabelShowcase.visualizer.transportRouteVisualizer[0] lineShift 16
+par BabelShowcase.visualizer.transportRouteVisualizer[0] lineShiftMode "\"normal\""
+par BabelShowcase.visualizer.transportRouteVisualizer[0] lineContactSpacing 3
+par BabelShowcase.visualizer.transportRouteVisualizer[0] lineContactMode "\"rectangular\""
+attr enum circular,rectangular
+par BabelShowcase.visualizer.transportRouteVisualizer[0] labelFormat "\"%n\""
+par BabelShowcase.visualizer.transportRouteVisualizer[0] labelFont "\"<default>, 8px\""
+par BabelShowcase.visualizer.transportRouteVisualizer[0] labelColor "\"\""
+par BabelShowcase.visualizer.transportRouteVisualizer[0] fadeOutMode "\"realTime\""
+attr enum realTime,animationTime,simulationTime
+par BabelShowcase.visualizer.transportRouteVisualizer[0] fadeOutTime 1s
+attr unit s
+par BabelShowcase.visualizer.transportRouteVisualizer[0] fadeOutAnimationSpeed 0
+par BabelShowcase.visualizer.transportRouteVisualizer[0] zIndex 4
+par BabelShowcase.visualizer.transportConnectionVisualizer[0] typename "\"inet.visualizer.canvas.transportlayer.TransportConnectionCanvasVisualizer\""
+par BabelShowcase.visualizer.transportConnectionVisualizer[0] visualizationTargetModule "\"^.^\""
+par BabelShowcase.visualizer.transportConnectionVisualizer[0] visualizationSubjectModule "\"^.^\""
+par BabelShowcase.visualizer.transportConnectionVisualizer[0] tags "\"\""
+par BabelShowcase.visualizer.transportConnectionVisualizer[0] networkNodeVisualizerModule "\"BabelShowcase.visualizer.networkNodeVisualizer[0]\""
+par BabelShowcase.visualizer.transportConnectionVisualizer[0] displayTransportConnections false
+par BabelShowcase.visualizer.transportConnectionVisualizer[0] sourceNodeFilter "\"*\""
+attr mutable ""
+par BabelShowcase.visualizer.transportConnectionVisualizer[0] sourcePortFilter "\"*\""
+attr mutable ""
+par BabelShowcase.visualizer.transportConnectionVisualizer[0] destinationNodeFilter "\"*\""
+attr mutable ""
+par BabelShowcase.visualizer.transportConnectionVisualizer[0] destinationPortFilter "\"*\""
+attr mutable ""
+par BabelShowcase.visualizer.transportConnectionVisualizer[0] icon "\"misc/marker_s\""
+par BabelShowcase.visualizer.transportConnectionVisualizer[0] iconColor "\"dark\""
+attr enum light,dark
+par BabelShowcase.visualizer.transportConnectionVisualizer[0] labelFont "\"<default>\""
+par BabelShowcase.visualizer.transportConnectionVisualizer[0] labelColor "\"black\""
+par BabelShowcase.visualizer.transportConnectionVisualizer[0] placementHint "\"top\""
+par BabelShowcase.visualizer.transportConnectionVisualizer[0] placementPriority 0
+par BabelShowcase.visualizer.transportConnectionVisualizer[0] zIndex 4
+par BabelShowcase.visualizer.failureProtectionConfigurationVisualizer[0] typename "\"inet.visualizer.canvas.configurator.FailureProtectionConfigurationCanvasVisualizer\""
+par BabelShowcase.visualizer.failureProtectionConfigurationVisualizer[0] visualizationTargetModule "\"^.^\""
+par BabelShowcase.visualizer.failureProtectionConfigurationVisualizer[0] visualizationSubjectModule "\"^.^\""
+par BabelShowcase.visualizer.failureProtectionConfigurationVisualizer[0] tags "\"\""
+par BabelShowcase.visualizer.failureProtectionConfigurationVisualizer[0] displayTrees false
+par BabelShowcase.visualizer.failureProtectionConfigurationVisualizer[0] lineColor "\"dark\""
+attr enum light,dark
+par BabelShowcase.visualizer.failureProtectionConfigurationVisualizer[0] lineStyle "\"solid\""
+par BabelShowcase.visualizer.failureProtectionConfigurationVisualizer[0] lineWidth 3
+par BabelShowcase.visualizer.failureProtectionConfigurationVisualizer[0] lineSmooth false
+par BabelShowcase.visualizer.failureProtectionConfigurationVisualizer[0] lineShift 16
+par BabelShowcase.visualizer.failureProtectionConfigurationVisualizer[0] lineShiftMode "\"normal\""
+par BabelShowcase.visualizer.failureProtectionConfigurationVisualizer[0] lineContactSpacing 3
+par BabelShowcase.visualizer.failureProtectionConfigurationVisualizer[0] lineContactMode "\"rectangular\""
+attr enum circular,rectangular
+par BabelShowcase.visualizer.failureProtectionConfigurationVisualizer[0] failureProtectionConfiguratorModule "\"failureProtectionConfigurator\""
+par BabelShowcase.visualizer.failureProtectionConfigurationVisualizer[0] streamFilter "\"*\""
+par BabelShowcase.visualizer.failureProtectionConfigurationVisualizer[0] zIndex 3
+par BabelShowcase.visualizer.streamRedundancyConfigurationVisualizer[0] typename "\"inet.visualizer.canvas.configurator.StreamRedundancyConfigurationCanvasVisualizer\""
+par BabelShowcase.visualizer.streamRedundancyConfigurationVisualizer[0] visualizationTargetModule "\"^.^\""
+par BabelShowcase.visualizer.streamRedundancyConfigurationVisualizer[0] visualizationSubjectModule "\"^.^\""
+par BabelShowcase.visualizer.streamRedundancyConfigurationVisualizer[0] tags "\"\""
+par BabelShowcase.visualizer.streamRedundancyConfigurationVisualizer[0] displayTrees false
+par BabelShowcase.visualizer.streamRedundancyConfigurationVisualizer[0] lineColor "\"dark\""
+attr enum light,dark
+par BabelShowcase.visualizer.streamRedundancyConfigurationVisualizer[0] lineStyle "\"solid\""
+par BabelShowcase.visualizer.streamRedundancyConfigurationVisualizer[0] lineWidth 3
+par BabelShowcase.visualizer.streamRedundancyConfigurationVisualizer[0] lineSmooth false
+par BabelShowcase.visualizer.streamRedundancyConfigurationVisualizer[0] lineShift 16
+par BabelShowcase.visualizer.streamRedundancyConfigurationVisualizer[0] lineShiftMode "\"normal\""
+par BabelShowcase.visualizer.streamRedundancyConfigurationVisualizer[0] lineContactSpacing 3
+par BabelShowcase.visualizer.streamRedundancyConfigurationVisualizer[0] lineContactMode "\"rectangular\""
+attr enum circular,rectangular
+par BabelShowcase.visualizer.streamRedundancyConfigurationVisualizer[0] streamRedundancyConfiguratorModule "\"streamRedundancyConfigurator\""
+par BabelShowcase.visualizer.streamRedundancyConfigurationVisualizer[0] streamFilter "\"*\""
+par BabelShowcase.visualizer.streamRedundancyConfigurationVisualizer[0] zIndex 3
+par BabelShowcase.visualizer typename "\"inet.visualizer.canvas.integrated.IntegratedMultiCanvasVisualizer\""
+par BabelShowcase.visualizer numSceneVisualizers 1
+par BabelShowcase.visualizer numPhysicalEnvironmentVisualizers 1
+par BabelShowcase.visualizer numNetworkNodeVisualizers 1
+par BabelShowcase.visualizer numNetworkConnectionVisualizers 1
+par BabelShowcase.visualizer numMobilityVisualizers 1
+par BabelShowcase.visualizer numStatisticVisualizers 1
+par BabelShowcase.visualizer numInfoVisualizers 1
+par BabelShowcase.visualizer numEnergyStorageVisualizers 1
+par BabelShowcase.visualizer numMediumVisualizers 1
+par BabelShowcase.visualizer numObstacleLossVisualizers 1
+par BabelShowcase.visualizer numPacketDropVisualizers 1
+par BabelShowcase.visualizer numQueueVisualizers 1
+par BabelShowcase.visualizer numGateScheduleVisualizers 1
+par BabelShowcase.visualizer numRadioVisualizers 1
+par BabelShowcase.visualizer numPhysicalLinkVisualizers 1
+par BabelShowcase.visualizer numInterfaceTableVisualizers 1
+par BabelShowcase.visualizer numDataLinkVisualizers 2
+par BabelShowcase.visualizer numLinkBreakVisualizers 1
+par BabelShowcase.visualizer numIeee80211Visualizers 1
+par BabelShowcase.visualizer numNetworkRouteVisualizers 1
+par BabelShowcase.visualizer numRoutingTableVisualizers 1
+par BabelShowcase.visualizer numTransportRouteVisualizers 1
+par BabelShowcase.visualizer numTransportConnectionVisualizers 1
+par BabelShowcase.visualizer numFailureProtectionConfigurationVisualizers 1
+par BabelShowcase.visualizer numStreamRedundancyConfigurationVisualizers 1
+par BabelShowcase.radioMedium.propagation typename "\"inet.physicallayer.wireless.common.propagation.ConstantSpeedPropagation\""
+par BabelShowcase.radioMedium.propagation propagationSpeed 2.99792e+08mps
+attr unit mps
+par BabelShowcase.radioMedium.propagation ignoreMovementDuringTransmission true
+par BabelShowcase.radioMedium.propagation ignoreMovementDuringPropagation true
+par BabelShowcase.radioMedium.propagation ignoreMovementDuringReception true
+scalar BabelShowcase.radioMedium.propagation "Arrival computation count" 764
+par BabelShowcase.radioMedium.analogModel typename "\"inet.physicallayer.wireless.common.analogmodel.packetlevel.ScalarAnalogModel\""
+par BabelShowcase.radioMedium.analogModel ignorePartialInterference false
+par BabelShowcase.radioMedium.backgroundNoise typename "\"inet.physicallayer.wireless.common.backgroundnoise.IsotropicScalarBackgroundNoise\""
+par BabelShowcase.radioMedium.backgroundNoise power -110dBm
+attr unit dBm
+par BabelShowcase.radioMedium.backgroundNoise bandwidth "nan Hz"
+attr unit Hz
+par BabelShowcase.radioMedium.pathLoss typename "\"inet.physicallayer.wireless.common.pathloss.FreeSpacePathLoss\""
+par BabelShowcase.radioMedium.pathLoss alpha 2
+par BabelShowcase.radioMedium.pathLoss systemLoss 0dB
+attr unit dB
+par BabelShowcase.radioMedium.mediumLimitCache typename "\"inet.physicallayer.wireless.common.medium.MediumLimitCache\""
+par BabelShowcase.radioMedium.mediumLimitCache centerFrequency 2.4e+09Hz
+attr unit Hz
+par BabelShowcase.radioMedium.mediumLimitCache maxSpeed "nan mps"
+attr unit mps
+par BabelShowcase.radioMedium.mediumLimitCache maxTransmissionPower "nan W"
+attr unit W
+par BabelShowcase.radioMedium.mediumLimitCache minInterferencePower -110dBm
+attr unit dBm
+par BabelShowcase.radioMedium.mediumLimitCache minReceptionPower -85dBm
+attr unit dBm
+par BabelShowcase.radioMedium.mediumLimitCache maxAntennaGain 0dB
+attr unit dB
+par BabelShowcase.radioMedium.mediumLimitCache minInterferenceTime 1e-12s
+attr unit s
+par BabelShowcase.radioMedium.mediumLimitCache maxTransmissionDuration 0.01s
+attr unit s
+par BabelShowcase.radioMedium.mediumLimitCache maxCommunicationRange "nan m"
+attr unit m
+par BabelShowcase.radioMedium.mediumLimitCache maxInterferenceRange "nan m"
+attr unit m
+par BabelShowcase.radioMedium.communicationCache typename "\"inet.physicallayer.wireless.common.communicationcache.VectorCommunicationCache\""
+par BabelShowcase.radioMedium typename "\"inet.physicallayer.wireless.ieee80211.packetlevel.Ieee80211ScalarRadioMedium\""
+par BabelShowcase.radioMedium physicalEnvironmentModule "\"physicalEnvironment\""
+par BabelShowcase.radioMedium signalAnalogRepresentation "\"scalar\""
+attr enum unitDisk,scalar,dimensional
+par BabelShowcase.radioMedium rangeFilter "\"\""
+par BabelShowcase.radioMedium radioModeFilter false
+par BabelShowcase.radioMedium listeningFilter false
+par BabelShowcase.radioMedium macAddressFilter false
+par BabelShowcase.radioMedium recordTransmissionLog false
+par BabelShowcase.radioMedium recordReceptionLog false
+scalar BabelShowcase.radioMedium "transmission count" 764
+scalar BabelShowcase.radioMedium "signal send count" 764
+scalar BabelShowcase.radioMedium "reception computation count" 764
+scalar BabelShowcase.radioMedium "interference computation count" 2743
+scalar BabelShowcase.radioMedium "reception decision computation count" 610
+scalar BabelShowcase.radioMedium "listening decision computation count" 1523
+scalar BabelShowcase.radioMedium "reception cache hit" 83.278616765156
+attr unit %
+scalar BabelShowcase.radioMedium "interference cache hit" 66.666666666667
+attr unit %
+scalar BabelShowcase.radioMedium "noise cache hit" 0
+attr unit %
+scalar BabelShowcase.radioMedium "snir cache hit" 50
+attr unit %
+scalar BabelShowcase.radioMedium "reception decision cache hit" 50
+attr unit %
+scalar BabelShowcase.radioMedium "reception result cache hit" 0
+attr unit %
+par BabelShowcase.host0.radioIn[0].channel typename "\"ned.IdealChannel\""
+par BabelShowcase.host0.mobility typename "\"inet.mobility.static.StationaryMobility\""
+par BabelShowcase.host0.mobility subjectModule "\"^\""
+par BabelShowcase.host0.mobility coordinateSystemModule "\"\""
+par BabelShowcase.host0.mobility displayStringTextFormat "\"p: %p\\nv: %v\""
+attr mutable ""
+par BabelShowcase.host0.mobility updateDisplayString true
+par BabelShowcase.host0.mobility constraintAreaMinX "-inf m"
+attr unit m
+par BabelShowcase.host0.mobility constraintAreaMinY "-inf m"
+attr unit m
+par BabelShowcase.host0.mobility constraintAreaMinZ "-inf m"
+attr unit m
+par BabelShowcase.host0.mobility constraintAreaMaxX "inf m"
+attr unit m
+par BabelShowcase.host0.mobility constraintAreaMaxY "inf m"
+attr unit m
+par BabelShowcase.host0.mobility constraintAreaMaxZ "inf m"
+attr unit m
+par BabelShowcase.host0.mobility initialX "nan m"
+attr unit m
+par BabelShowcase.host0.mobility initialY "nan m"
+attr unit m
+par BabelShowcase.host0.mobility initialZ 0m
+attr unit m
+par BabelShowcase.host0.mobility initialLatitude "nan deg"
+attr unit deg
+par BabelShowcase.host0.mobility initialLongitude "nan deg"
+attr unit deg
+par BabelShowcase.host0.mobility initialAltitude 0m
+attr unit m
+par BabelShowcase.host0.mobility initialHeading 0deg
+attr unit deg
+par BabelShowcase.host0.mobility initialElevation 0deg
+attr unit deg
+par BabelShowcase.host0.mobility initialBank 0deg
+attr unit deg
+par BabelShowcase.host0.mobility initFromDisplayString true
+par BabelShowcase.host0.mobility updateFromDisplayString true
+par BabelShowcase.host0.interfaceTable typename "\"inet.networklayer.common.InterfaceTable\""
+par BabelShowcase.host0.interfaceTable displayAddresses false
+par BabelShowcase.host0.cb typename "\"inet.common.MessageDispatcher\""
+par BabelShowcase.host0.cb displayStringTextFormat "\"processed %p pk (%l)\""
+par BabelShowcase.host0.cb forwardServiceRegistration true
+par BabelShowcase.host0.cb forwardProtocolRegistration true
+par BabelShowcase.host0.bl typename "\"inet.common.MessageDispatcher\""
+par BabelShowcase.host0.bl displayStringTextFormat "\"processed %p pk (%l)\""
+par BabelShowcase.host0.bl forwardServiceRegistration true
+par BabelShowcase.host0.bl forwardProtocolRegistration true
+par BabelShowcase.host0.li typename "\"inet.common.MessageDispatcher\""
+par BabelShowcase.host0.li displayStringTextFormat "\"processed %p pk (%l)\""
+par BabelShowcase.host0.li forwardServiceRegistration true
+par BabelShowcase.host0.li forwardProtocolRegistration true
+par BabelShowcase.host0.lo[0].upperLayerIn.channel typename "\"ned.IdealChannel\""
+par BabelShowcase.host0.lo[0].lo.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par BabelShowcase.host0.lo[0].lo typename "\"inet.linklayer.loopback.Loopback\""
+par BabelShowcase.host0.lo[0].lo interfaceTableModule "\"BabelShowcase.host0.interfaceTable\""
+par BabelShowcase.host0.lo[0].lo mtu 4470B
+attr unit B
+scalar BabelShowcase.host0.lo[0].lo rcvdPkFromHl:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar BabelShowcase.host0.lo[0].lo rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar BabelShowcase.host0.lo[0].lo passedUpPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BabelShowcase.host0.lo[0].lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+par BabelShowcase.host0.lo[0] typename "\"inet.linklayer.loopback.LoopbackInterface\""
+par BabelShowcase.host0.lo[0] displayStringTextFormat "\"%a (%i)\\n%m\""
+par BabelShowcase.host0.lo[0] recordPcap false
+par BabelShowcase.host0.lo[0] numPcapRecorders 0
+par BabelShowcase.host0.lo[0] interfaceTableModule "\"BabelShowcase.host0.interfaceTable\""
+scalar BabelShowcase.host0.lo[0] packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, count"
+scalar BabelShowcase.host0.lo[0] packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, sum(packetBytes)"
+scalar BabelShowcase.host0.lo[0] packetDropNoCarrier:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, count"
+scalar BabelShowcase.host0.lo[0] packetDropNoCarrier:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, sum(packetBytes)"
+par BabelShowcase.host0.wlan[0].radioIn.channel typename "\"ned.IdealChannel\""
+par BabelShowcase.host0.wlan[0].llc.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par BabelShowcase.host0.wlan[0].tap.lowerLayerOut.channel typename "\"ned.IdealChannel\""
+par BabelShowcase.host0.wlan[0].mib typename "\"inet.linklayer.ieee80211.mib.Ieee80211Mib\""
+par BabelShowcase.host0.wlan[0].tap typename "\"inet.emulation.linklayer.ethernet.ExtEthernetTapDevice\""
+par BabelShowcase.host0.wlan[0].tap device "\"taps1-eth2\""
+par BabelShowcase.host0.wlan[0].tap namespace "\"\""
+par BabelShowcase.host0.wlan[0].tap packetNameFormat "\"Ext-%p-%t-%n\""
+scalar BabelShowcase.host0.wlan[0].tap packetReceived:count 166
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar BabelShowcase.host0.wlan[0].tap packetReceived:sum(packetBytes) 11712
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].tap packetSent:count 83
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar BabelShowcase.host0.wlan[0].tap packetSent:sum(packetBytes) 4900
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].tap packetReceivedFromLower:count 83
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceivedFromLower
+attr title "packets received from higher layer, count"
+scalar BabelShowcase.host0.wlan[0].tap packetReceivedFromLower:sum(packetBytes) 5232
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceivedFromLower
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].tap packetSentFromLower:count 166
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToLower
+attr title "packets sent to higher layer, count"
+scalar BabelShowcase.host0.wlan[0].tap packetSentFromLower:sum(packetBytes) 11712
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToLower
+attr title "packets sent to higher layer, sum(packetBytes)"
+par BabelShowcase.host0.wlan[0].llc typename "\"inet.linklayer.ieee80211.portal.Ieee80211Portal\""
+par BabelShowcase.host0.wlan[0].llc fcsMode "\"declared\""
+attr enum declared,computed
+par BabelShowcase.host0.wlan[0].mgmt typename "\"inet.linklayer.ieee80211.mgmt.Ieee80211MgmtAdhoc\""
+par BabelShowcase.host0.wlan[0].mgmt mibModule "\"BabelShowcase.host0.wlan[0].mib\""
+par BabelShowcase.host0.wlan[0].mgmt macModule "\"BabelShowcase.host0.wlan[0].mac\""
+par BabelShowcase.host0.wlan[0].mgmt interfaceTableModule "\"BabelShowcase.host0.interfaceTable\""
+par BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.pendingQueue typename "\"inet.linklayer.ieee80211.mac.queue.PendingQueue\""
+par BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.pendingQueue displayStringTextFormat "\"contains %p pk (%l) pushed %u\\npulled %o removed %r dropped %d\""
+par BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.pendingQueue packetCapacity 100
+par BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.pendingQueue dataCapacity -1b
+attr unit b
+par BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.pendingQueue dropperClass "\"inet::queueing::PacketAtCollectionEndDropper\""
+par BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.pendingQueue comparatorClass "\"inet::ieee80211::MgmtOverDataComparator\""
+par BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.pendingQueue bufferModule "\"\""
+scalar BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.pendingQueue queueLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, last"
+attr unit pk
+scalar BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.pendingQueue queueLength:max 4
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, max"
+attr unit pk
+scalar BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.pendingQueue queueLength:timeavg 0.0030986198812399
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, timeavg"
+attr unit pk
+scalar BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.pendingQueue queueBitLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, last"
+attr unit b
+scalar BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.pendingQueue queueBitLength:max 2048
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, max"
+attr unit b
+scalar BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.pendingQueue queueBitLength:timeavg 1.5864933791948
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, timeavg"
+attr unit b
+statistic BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.pendingQueue queueingTime:histogram
+field count 166
+field mean 0.002621330639759
+field stddev 0.014156613696698
+field min 0
+field max 0.141716939
+field sum 0.4351408862
+field sqrsum 0.034208250511603
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	162
+bin	0.02	1
+bin	0.04	0
+bin	0.06	1
+bin	0.08	1
+bin	0.1	0
+bin	0.12	0
+bin	0.14	1
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.pendingQueue outgoingPackets:count 166
+attr recordingmode count
+attr source packetPulled
+attr title "outgoing packets, count"
+attr unit pk
+scalar BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.pendingQueue outgoingPacketLengths:sum 108896
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths, sum"
+attr unit b
+statistic BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.pendingQueue outgoingPacketLengths:histogram
+field count 166
+field mean 656
+field stddev 372.9064225781
+field min 512
+field max 1952
+field sum 108896
+field sqrsum 94380544
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+bin	-inf	0
+bin	150	0
+bin	200	0
+bin	250	0
+bin	300	0
+bin	350	0
+bin	400	0
+bin	450	0
+bin	500	139
+bin	550	0
+bin	600	0
+bin	650	0
+bin	700	6
+bin	750	0
+bin	800	0
+bin	850	6
+bin	900	0
+bin	950	0
+bin	1000	0
+bin	1050	1
+bin	1100	0
+bin	1150	0
+bin	1200	0
+bin	1250	0
+bin	1300	0
+bin	1350	0
+bin	1400	0
+bin	1450	0
+bin	1500	0
+bin	1550	0
+bin	1600	0
+bin	1650	0
+bin	1700	0
+bin	1750	0
+bin	1800	8
+bin	1850	3
+bin	1900	0
+bin	1950	3
+bin	2000	0
+bin	2050	0
+bin	2100	0
+bin	2150	0
+bin	2200	0
+bin	2250	0
+bin	2300	0
+bin	2350	0
+statistic BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.pendingQueue flowQueueingTime:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(demuxFlow(packetPulled))
+attr title "flow queueing times"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.pendingQueue incomingPackets:count 166
+attr recordingmode count
+attr source packetPushStarted
+attr title "incoming packets, count"
+attr unit pk
+scalar BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.pendingQueue incomingPacketLengths:sum 108896
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths, sum"
+attr unit b
+statistic BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.pendingQueue incomingPacketLengths:histogram
+field count 166
+field mean 656
+field stddev 372.9064225781
+field min 512
+field max 1952
+field sum 108896
+field sqrsum 94380544
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+bin	-inf	0
+bin	150	0
+bin	200	0
+bin	250	0
+bin	300	0
+bin	350	0
+bin	400	0
+bin	450	0
+bin	500	139
+bin	550	0
+bin	600	0
+bin	650	0
+bin	700	6
+bin	750	0
+bin	800	0
+bin	850	6
+bin	900	0
+bin	950	0
+bin	1000	0
+bin	1050	1
+bin	1100	0
+bin	1150	0
+bin	1200	0
+bin	1250	0
+bin	1300	0
+bin	1350	0
+bin	1400	0
+bin	1450	0
+bin	1500	0
+bin	1550	0
+bin	1600	0
+bin	1650	0
+bin	1700	0
+bin	1750	0
+bin	1800	8
+bin	1850	3
+bin	1900	0
+bin	1950	3
+bin	2000	0
+bin	2050	0
+bin	2100	0
+bin	2150	0
+bin	2200	0
+bin	2250	0
+bin	2300	0
+bin	2350	0
+scalar BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.pendingQueue droppedPacketsQueueOverflow:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "dropped packets: queue overflow, count"
+attr unit pk
+scalar BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.pendingQueue droppedPacketLengthsQueueOverflow:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetDropReasonIsQueueOverflow(packetDropped))
+attr title "dropped packet lengths: queue overflow, sum"
+attr unit b
+par BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.inProgressFrames typename "\"inet.linklayer.ieee80211.mac.queue.InProgressFrames\""
+par BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.inProgressFrames pendingQueueModule "\"^.pendingQueue\""
+par BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.inProgressFrames originatorMacDataServiceModule "\"^.^.originatorMacDataService\""
+par BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.inProgressFrames ackHandlerModule "\"^.^.ackHandler\""
+statistic BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.inProgressFrames queueingTime:histogram
+field count 166
+field mean 0.021651960903012
+field stddev 0.031987330548249
+field min 5.4e-05
+field max 0.179717
+field sum 3.5942255099
+field sqrsum 0.24664826729145
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(packetDequeued)
+attr title "queueing times"
+bin	-inf	0
+bin	0	95
+bin	0.005	0
+bin	0.01	1
+bin	0.015	2
+bin	0.02	6
+bin	0.025	11
+bin	0.03	7
+bin	0.035	5
+bin	0.04	7
+bin	0.045	6
+bin	0.05	2
+bin	0.055	2
+bin	0.06	4
+bin	0.065	3
+bin	0.07	2
+bin	0.075	4
+bin	0.08	4
+bin	0.085	0
+bin	0.09	0
+bin	0.095	0
+bin	0.1	0
+bin	0.105	0
+bin	0.11	3
+bin	0.115	0
+bin	0.12	0
+bin	0.125	0
+bin	0.13	0
+bin	0.135	0
+bin	0.14	0
+bin	0.145	1
+bin	0.15	0
+bin	0.155	0
+bin	0.16	0
+bin	0.165	0
+bin	0.17	0
+bin	0.175	1
+bin	0.18	0
+bin	0.185	0
+bin	0.19	0
+bin	0.195	0
+bin	0.2	0
+bin	0.205	0
+bin	0.21	0
+bin	0.215	0
+bin	0.22	0
+bin	0.225	0
+scalar BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:max 2
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(count(packetEnqueued) - count(packetDequeued))"
+attr title "queue length, max"
+scalar BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:timeavg 0.025562997003447
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(count(packetEnqueued) - count(packetDequeued))"
+attr title "queue length, timeavg"
+par BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.contention typename "\"inet.linklayer.ieee80211.mac.contention.Contention\""
+par BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.contention initialChannelBusy true
+par BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.contention backoffOptimization true
+scalar BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.contention channelAccessGranted:count 592
+attr recordingmode count
+attr title "channel access granted, count"
+scalar BabelShowcase.host0.wlan[0].mac.dcf.channelAccess.contention stateChanged:count 5142
+attr enum IDLE,DEFER,IFS_AND_BACKOFF
+attr interpolationmode none
+attr recordingmode count
+attr title "contention state changed, count"
+attr type enum
+par BabelShowcase.host0.wlan[0].mac.dcf.channelAccess typename "\"inet.linklayer.ieee80211.mac.channelaccess.Dcaf\""
+par BabelShowcase.host0.wlan[0].mac.dcf.channelAccess difsn -1
+par BabelShowcase.host0.wlan[0].mac.dcf.channelAccess cwMin -1
+par BabelShowcase.host0.wlan[0].mac.dcf.channelAccess cwMax -1
+par BabelShowcase.host0.wlan[0].mac.dcf.channelAccess rxModule "\"^.^.rx\""
+scalar BabelShowcase.host0.wlan[0].mac.dcf.channelAccess channelOwnershipChanged:count 1184
+attr interpolationmode sample-hold
+attr recordingmode count
+attr title "channel ownership, count"
+par BabelShowcase.host0.wlan[0].mac.dcf.originatorMacDataService.fragmentationPolicy typename "\"inet.linklayer.ieee80211.mac.fragmentation.BasicFragmentationPolicy\""
+par BabelShowcase.host0.wlan[0].mac.dcf.originatorMacDataService.fragmentationPolicy fragmentationThreshold 1500B
+attr unit B
+par BabelShowcase.host0.wlan[0].mac.dcf.originatorMacDataService typename "\"inet.linklayer.ieee80211.mac.originator.OriginatorMacDataService\""
+scalar BabelShowcase.host0.wlan[0].mac.dcf.originatorMacDataService packetAggregated:count 0
+attr recordingmode count
+attr title "packets aggregated, count"
+scalar BabelShowcase.host0.wlan[0].mac.dcf.originatorMacDataService packetFragmented:count 0
+attr recordingmode count
+attr title "packets fragmented, count"
+par BabelShowcase.host0.wlan[0].mac.dcf.recipientMacDataService typename "\"inet.linklayer.ieee80211.mac.recipient.RecipientMacDataService\""
+scalar BabelShowcase.host0.wlan[0].mac.dcf.recipientMacDataService packetDeaggregated:count 0
+attr recordingmode count
+attr title "packets deaggregated, count"
+scalar BabelShowcase.host0.wlan[0].mac.dcf.recipientMacDataService packetDefragmented:count 83
+attr recordingmode count
+attr title "packets defragmented, count"
+scalar BabelShowcase.host0.wlan[0].mac.dcf.recipientMacDataService packetDropDuplicateDetected:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsDuplicateDetected(packetDropped)
+attr title "packet drops: duplicate detected, count"
+scalar BabelShowcase.host0.wlan[0].mac.dcf.recipientMacDataService packetDropDuplicateDetected:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsDuplicateDetected(packetDropped)
+attr title "packet drops: duplicate detected, sum(packetBytes)"
+par BabelShowcase.host0.wlan[0].mac.dcf.rateSelection typename "\"inet.linklayer.ieee80211.mac.rateselection.RateSelection\""
+par BabelShowcase.host0.wlan[0].mac.dcf.rateSelection rateControlModule "\"^.rateControl\""
+par BabelShowcase.host0.wlan[0].mac.dcf.rateSelection multicastFrameBitrate -1bps
+attr unit bps
+par BabelShowcase.host0.wlan[0].mac.dcf.rateSelection responseAckFrameBitrate -1bps
+attr unit bps
+par BabelShowcase.host0.wlan[0].mac.dcf.rateSelection responseCtsFrameBitrate -1bps
+attr unit bps
+par BabelShowcase.host0.wlan[0].mac.dcf.rateSelection dataFrameBitrate -1bps
+attr unit bps
+par BabelShowcase.host0.wlan[0].mac.dcf.rateSelection dataFrameBandwidth "nan Hz"
+attr unit Hz
+par BabelShowcase.host0.wlan[0].mac.dcf.rateSelection dataFrameNumSpatialStreams -1
+par BabelShowcase.host0.wlan[0].mac.dcf.rateSelection mgmtFrameBitrate -1bps
+attr unit bps
+par BabelShowcase.host0.wlan[0].mac.dcf.rateSelection controlFrameBitrate -1bps
+attr unit bps
+par BabelShowcase.host0.wlan[0].mac.dcf.recoveryProcedure typename "\"inet.linklayer.ieee80211.mac.originator.NonQosRecoveryProcedure\""
+par BabelShowcase.host0.wlan[0].mac.dcf.recoveryProcedure cwCalculatorModule "\"^.channelAccess\""
+par BabelShowcase.host0.wlan[0].mac.dcf.recoveryProcedure rtsPolicyModule "\"^.rtsPolicy\""
+par BabelShowcase.host0.wlan[0].mac.dcf.recoveryProcedure shortRetryLimit 7
+par BabelShowcase.host0.wlan[0].mac.dcf.recoveryProcedure longRetryLimit 4
+scalar BabelShowcase.host0.wlan[0].mac.dcf.recoveryProcedure retryLimitReached:count 71
+attr recordingmode count
+attr title "retry limit reached, count"
+par BabelShowcase.host0.wlan[0].mac.dcf.originatorProtectionMechanism typename "\"inet.linklayer.ieee80211.mac.protectionmechanism.OriginatorProtectionMechanism\""
+par BabelShowcase.host0.wlan[0].mac.dcf.originatorProtectionMechanism rateSelectionModule "\"^.rateSelection\""
+par BabelShowcase.host0.wlan[0].mac.dcf.ackHandler typename "\"inet.linklayer.ieee80211.mac.originator.AckHandler\""
+par BabelShowcase.host0.wlan[0].mac.dcf.originatorAckPolicy typename "\"inet.linklayer.ieee80211.mac.originator.OriginatorAckPolicy\""
+par BabelShowcase.host0.wlan[0].mac.dcf.originatorAckPolicy rateSelectionModule "\"^.rateSelection\""
+par BabelShowcase.host0.wlan[0].mac.dcf.originatorAckPolicy ackTimeout -1s
+attr unit s
+par BabelShowcase.host0.wlan[0].mac.dcf.recipientAckPolicy typename "\"inet.linklayer.ieee80211.mac.recipient.RecipientAckPolicy\""
+par BabelShowcase.host0.wlan[0].mac.dcf.recipientAckPolicy rateSelectionModule "\"^.rateSelection\""
+par BabelShowcase.host0.wlan[0].mac.dcf.rtsPolicy typename "\"inet.linklayer.ieee80211.mac.originator.RtsPolicy\""
+par BabelShowcase.host0.wlan[0].mac.dcf.rtsPolicy rateSelectionModule "\"^.rateSelection\""
+par BabelShowcase.host0.wlan[0].mac.dcf.rtsPolicy ctsTimeout -1s
+attr unit s
+par BabelShowcase.host0.wlan[0].mac.dcf.rtsPolicy rtsThreshold 2346B
+attr unit B
+par BabelShowcase.host0.wlan[0].mac.dcf.ctsPolicy typename "\"inet.linklayer.ieee80211.mac.recipient.CtsPolicy\""
+par BabelShowcase.host0.wlan[0].mac.dcf.ctsPolicy rxModule "\"^.^.rx\""
+par BabelShowcase.host0.wlan[0].mac.dcf.ctsPolicy rateSelectionModule "\"^.rateSelection\""
+par BabelShowcase.host0.wlan[0].mac.dcf typename "\"inet.linklayer.ieee80211.mac.coordinationfunction.Dcf\""
+par BabelShowcase.host0.wlan[0].mac.dcf rxModule "\"^.rx\""
+par BabelShowcase.host0.wlan[0].mac.dcf txModule "\"^.tx\""
+scalar BabelShowcase.host0.wlan[0].mac.dcf frameSequenceFinished:count 592
+attr recordingmode count
+attr title "finished frame sequences, count"
+statistic BabelShowcase.host0.wlan[0].mac.dcf frameSequenceDuration:histogram
+field count 592
+field mean 9.8207770270271e-05
+field stddev 1.7111530446092e-05
+field min 5.4e-05
+field max 0.00011
+field sum 0.058139
+field sqrsum 5.8827489999999e-06
+attr recordingmode histogram
+attr source frameSequenceDuration(frameSequenceFinished)
+attr title "frame sequence durations"
+bin	-inf	0
+bin	3.9e-05	0
+bin	4e-05	0
+bin	4.1e-05	0
+bin	4.2e-05	0
+bin	4.3e-05	0
+bin	4.4e-05	0
+bin	4.5e-05	0
+bin	4.6e-05	0
+bin	4.7e-05	0
+bin	4.8e-05	0
+bin	4.9e-05	0
+bin	5e-05	0
+bin	5.1e-05	0
+bin	5.2e-05	0
+bin	5.3e-05	68
+bin	5.4e-05	0
+bin	5.5e-05	0
+bin	5.6e-05	0
+bin	5.7e-05	6
+bin	5.8e-05	0
+bin	5.9e-05	0
+bin	6e-05	0
+bin	6.1e-05	0
+bin	6.2e-05	0
+bin	6.3e-05	0
+bin	6.4e-05	0
+bin	6.5e-05	0
+bin	6.6e-05	6
+bin	6.7e-05	0
+bin	6.8e-05	0
+bin	6.9e-05	0
+bin	7e-05	0
+bin	7.1e-05	0
+bin	7.2e-05	0
+bin	7.3e-05	1
+bin	7.4e-05	0
+bin	7.5e-05	0
+bin	7.6e-05	0
+bin	7.7e-05	0
+bin	7.8e-05	0
+bin	7.9e-05	0
+bin	8e-05	0
+bin	8.1e-05	0
+bin	8.2e-05	0
+bin	8.3e-05	0
+bin	8.4e-05	0
+bin	8.5e-05	0
+bin	8.6e-05	0
+bin	8.7e-05	0
+bin	8.8e-05	0
+bin	8.9e-05	0
+bin	9e-05	0
+bin	9.1e-05	0
+bin	9.2e-05	0
+bin	9.3e-05	0
+bin	9.4e-05	0
+bin	9.5e-05	0
+bin	9.6e-05	0
+bin	9.7e-05	0
+bin	9.8e-05	0
+bin	9.9e-05	0
+bin	0.0001	0
+bin	0.000101	8
+bin	0.000102	0
+bin	0.000103	0
+bin	0.000104	0
+bin	0.000105	500
+bin	0.000106	0
+bin	0.000107	0
+bin	0.000108	0
+bin	0.000109	3
+bin	0.00011	0
+bin	0.000111	0
+bin	0.000112	0
+bin	0.000113	0
+bin	0.000114	0
+bin	0.000115	0
+bin	0.000116	0
+bin	0.000117	0
+bin	0.000118	0
+bin	0.000119	0
+bin	0.00012	0
+bin	0.000121	0
+bin	0.000122	0
+bin	0.000123	0
+bin	0.000124	0
+statistic BabelShowcase.host0.wlan[0].mac.dcf frameSequenceNumPackets:histogram
+field count 592
+field mean 1.839527027027
+field stddev 0.36735453298715
+field min 1
+field max 2
+field sum 1089
+field sqrsum 2083
+attr recordingmode histogram
+attr source frameSequenceNumPackets(frameSequenceFinished)
+attr title "frame sequences: number of packets"
+bin	-inf	0
+bin	0	0
+bin	1	95
+bin	2	497
+bin	3	0
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetReceivedFromPeer:count 83
+attr interpolationmode none
+attr recordingmode count
+attr title "packets received, count"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetReceivedFromPeer:sum(packetBytes) 6726
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr title "packets received, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetReceivedFromPeerUnicast:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source ieee80211Unicast(packetReceivedFromPeer)
+attr title "packets received: unicast, count"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetReceivedFromPeerUnicast:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source ieee80211Unicast(packetReceivedFromPeer)
+attr title "packets received: unicast, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetReceivedFromPeerMulticast:count 83
+attr interpolationmode none
+attr recordingmode count
+attr source ieee80211Multicast(packetReceivedFromPeer)
+attr title "packets received: multicast, count"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetReceivedFromPeerMulticast:sum(packetBytes) 6726
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source ieee80211Multicast(packetReceivedFromPeer)
+attr title "packets received: multicast, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetReceivedFromPeerBroadcast:count 71
+attr interpolationmode none
+attr recordingmode count
+attr source ieee80211Broadcast(packetReceivedFromPeer)
+attr title "packets received: broadcast, count"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetReceivedFromPeerBroadcast:sum(packetBytes) 4544
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source ieee80211Broadcast(packetReceivedFromPeer)
+attr title "packets received: broadcast, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetReceivedFromPeerWithRetry:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source ieee80211Retry(packetReceivedFromPeer)
+attr title "packets received: with retry, count"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetReceivedFromPeerWithRetry:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source ieee80211Retry(packetReceivedFromPeer)
+attr title "packets received: with retry, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetReceivedFromPeerWithoutRetry:count 83
+attr interpolationmode none
+attr recordingmode count
+attr source ieee80211NotRetry(packetReceivedFromPeer)
+attr title "packets received: without retry, count"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetReceivedFromPeerWithoutRetry:sum(packetBytes) 6726
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source ieee80211NotRetry(packetReceivedFromPeer)
+attr title "packets received: without retry, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetSentToPeer:count 592
+attr interpolationmode none
+attr recordingmode count
+attr title "packets sent, count"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetSentToPeer:sum(packetBytes) 40876
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr title "packets sent, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetSentToPeerUnicast:count 497
+attr interpolationmode none
+attr recordingmode count
+attr source ieee80211Unicast(packetSentToPeer)
+attr title "packets sent: unicast, count"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetSentToPeerUnicast:sum(packetBytes) 31808
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source ieee80211Unicast(packetSentToPeer)
+attr title "packets sent: unicast, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetSentToPeerMulticast:count 95
+attr interpolationmode none
+attr recordingmode count
+attr source ieee80211Multicast(packetSentToPeer)
+attr title "packets sent: multicast, count"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetSentToPeerMulticast:sum(packetBytes) 9068
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source ieee80211Multicast(packetSentToPeer)
+attr title "packets sent: multicast, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetSentToPeerBroadcast:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source ieee80211Broadcast(packetSentToPeer)
+attr title "packets sent: broadcast , count"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetSentToPeerBroadcast:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source ieee80211Broadcast(packetSentToPeer)
+attr title "packets sent: broadcast , sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetSentToPeerWithRetry:count 426
+attr interpolationmode none
+attr recordingmode count
+attr source ieee80211Retry(packetSentToPeer)
+attr title "packets sent: with retry, count"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetSentToPeerWithRetry:sum(packetBytes) 27264
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source ieee80211Retry(packetSentToPeer)
+attr title "packets sent: with retry, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetSentToPeerWithoutRetry:count 166
+attr interpolationmode none
+attr recordingmode count
+attr source ieee80211NotRetry(packetSentToPeer)
+attr title "packets sent: without retry, count"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetSentToPeerWithoutRetry:sum(packetBytes) 13612
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source ieee80211NotRetry(packetSentToPeer)
+attr title "packets sent: without retry, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetDrop:count 71
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropped
+attr title "packet drops, count"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetDrop:sum(packetBytes) 4544
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropped
+attr title "packet drops, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drops: not addressed to us, count"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drops: not addressed to us, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetDropRetryLimitReached:count 71
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drops: retry limit reached, count"
+scalar BabelShowcase.host0.wlan[0].mac.dcf packetDropRetryLimitReached:sum(packetBytes) 4544
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drops: retry limit reached, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].mac.dcf linkBroken:count 71
+attr interpolationmode none
+attr recordingmode count
+attr title "link breaks, count"
+par BabelShowcase.host0.wlan[0].mac.ds typename "\"inet.linklayer.ieee80211.mac.Ds\""
+par BabelShowcase.host0.wlan[0].mac.ds mibModule "\"BabelShowcase.host0.wlan[0].mib\""
+par BabelShowcase.host0.wlan[0].mac.rx typename "\"inet.linklayer.ieee80211.mac.Rx\""
+par BabelShowcase.host0.wlan[0].mac.tx typename "\"inet.linklayer.ieee80211.mac.Tx\""
+par BabelShowcase.host0.wlan[0].mac.tx rxModule "\"^.rx\""
+par BabelShowcase.host0.wlan[0].mac typename "\"inet.linklayer.ieee80211.mac.Ieee80211Mac\""
+par BabelShowcase.host0.wlan[0].mac interfaceTableModule "\"BabelShowcase.host0.interfaceTable\""
+par BabelShowcase.host0.wlan[0].mac mibModule "\"BabelShowcase.host0.wlan[0].mib\""
+par BabelShowcase.host0.wlan[0].mac modeSet "\"g(mixed)\""
+attr enum a,b,g(erp),g(mixed),n(mixed-2.4Ghz),p,ac
+par BabelShowcase.host0.wlan[0].mac fcsMode "\"computed\""
+attr enum declared,computed
+par BabelShowcase.host0.wlan[0].mac initialRadioMode "\"receiver\""
+attr enum off,sleep,receiver,transmitter,transceiver
+par BabelShowcase.host0.wlan[0].mac mtu 2304B
+attr unit B
+par BabelShowcase.host0.wlan[0].mac qosStation false
+scalar BabelShowcase.host0.wlan[0].mac packetReceivedFromLower:count 95
+attr interpolationmode none
+attr recordingmode count
+attr title "packets received from lower layer, count"
+scalar BabelShowcase.host0.wlan[0].mac packetReceivedFromLower:sum(packetBytes) 7518
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].mac packetSentToLower:count 592
+attr interpolationmode none
+attr recordingmode count
+attr title "packets sent to lower layer, count"
+scalar BabelShowcase.host0.wlan[0].mac packetSentToLower:sum(packetBytes) 40876
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].mac packetReceivedFromUpper:count 166
+attr interpolationmode none
+attr recordingmode count
+attr title "packets received from upper layer, count"
+scalar BabelShowcase.host0.wlan[0].mac packetReceivedFromUpper:sum(packetBytes) 8964
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr title "packets received from upper layer, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].mac packetSentToUpper:count 83
+attr interpolationmode none
+attr recordingmode count
+attr title "packets sent to upper layer, count"
+scalar BabelShowcase.host0.wlan[0].mac packetSentToUpper:sum(packetBytes) 4402
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr title "packets sent to upper layer, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].mac packetDrop:count 83
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropped
+attr title "packet drops, count"
+scalar BabelShowcase.host0.wlan[0].mac packetDrop:sum(packetBytes) 5336
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropped
+attr title "packet drops, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].mac packetDropIncorrectlyReceived:count 12
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drops: incorrectly received, count"
+scalar BabelShowcase.host0.wlan[0].mac packetDropIncorrectlyReceived:sum(packetBytes) 792
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drops: incorrectly received, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drops: not addressed to us, count"
+scalar BabelShowcase.host0.wlan[0].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drops: not addressed to us, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].mac packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar BabelShowcase.host0.wlan[0].mac packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].mac packetDropRetryLimitReached:count 71
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drops: retry limit reached, count"
+scalar BabelShowcase.host0.wlan[0].mac packetDropRetryLimitReached:sum(packetBytes) 4544
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drops: retry limit reached, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].mac packetDropDuplicateDetected:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsDuplicateDetected(packetDropped)
+attr title "packet drops: duplicate detected, count"
+scalar BabelShowcase.host0.wlan[0].mac packetDropDuplicateDetected:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsDuplicateDetected(packetDropped)
+attr title "packet drops: duplicate detected, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].mac packetDropOther:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsOther(packetDropped)
+attr title "packet drops: other, count"
+scalar BabelShowcase.host0.wlan[0].mac packetDropOther:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsOther(packetDropped)
+attr title "packet drops: other, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0].mac linkBroken:count 71
+attr interpolationmode none
+attr recordingmode count
+attr title "link breaks, count"
+par BabelShowcase.host0.wlan[0].radio.antenna typename "\"inet.physicallayer.wireless.common.antenna.IsotropicAntenna\""
+par BabelShowcase.host0.wlan[0].radio.antenna mobilityModule "\"^.^.^.mobility\""
+par BabelShowcase.host0.wlan[0].radio.antenna numAntennas 1
+par BabelShowcase.host0.wlan[0].radio.transmitter typename "\"inet.physicallayer.wireless.ieee80211.packetlevel.Ieee80211ScalarTransmitter\""
+par BabelShowcase.host0.wlan[0].radio.transmitter preambleDuration -1s
+attr unit s
+par BabelShowcase.host0.wlan[0].radio.transmitter headerLength 192b
+attr unit b
+par BabelShowcase.host0.wlan[0].radio.transmitter bitrate -1bps
+attr unit bps
+par BabelShowcase.host0.wlan[0].radio.transmitter power 0.002W
+attr unit W
+par BabelShowcase.host0.wlan[0].radio.transmitter centerFrequency 2.412e+09Hz
+attr unit Hz
+par BabelShowcase.host0.wlan[0].radio.transmitter bandwidth "nan Hz"
+attr unit Hz
+par BabelShowcase.host0.wlan[0].radio.transmitter codeRate 1
+par BabelShowcase.host0.wlan[0].radio.transmitter modulation "\"BPSK\""
+par BabelShowcase.host0.wlan[0].radio.transmitter opMode "\"g(mixed)\""
+attr enum a,b,g(erp),g(mixed),n(mixed-2.4Ghz),p,ac
+par BabelShowcase.host0.wlan[0].radio.transmitter bandName "\"2.4 GHz\""
+attr enum "2.4 GHz,5 GHz,5 GHz (20 MHz),5 GHz (40 MHz),5 GHz (80 MHz),5 GHz (160 MHz),5.9 GHz"
+par BabelShowcase.host0.wlan[0].radio.transmitter channelNumber 0
+par BabelShowcase.host0.wlan[0].radio.receiver.errorModel typename "\"inet.physicallayer.wireless.ieee80211.packetlevel.errormodel.Ieee80211NistErrorModel\""
+par BabelShowcase.host0.wlan[0].radio.receiver.errorModel corruptionMode "\"packet\""
+attr enum packet,chunk,byte,bit
+par BabelShowcase.host0.wlan[0].radio.receiver.errorModel snirMode "\"min\""
+attr enum min,mean
+par BabelShowcase.host0.wlan[0].radio.receiver.errorModel snirOffset 0dB
+attr unit dB
+par BabelShowcase.host0.wlan[0].radio.receiver typename "\"inet.physicallayer.wireless.ieee80211.packetlevel.Ieee80211ScalarReceiver\""
+par BabelShowcase.host0.wlan[0].radio.receiver snirThreshold 4dB
+attr unit dB
+par BabelShowcase.host0.wlan[0].radio.receiver snirThresholdMode "\"min\""
+attr enum min,mean
+par BabelShowcase.host0.wlan[0].radio.receiver energyDetection -85dBm
+attr unit dBm
+par BabelShowcase.host0.wlan[0].radio.receiver sensitivity -85dBm
+attr unit dBm
+par BabelShowcase.host0.wlan[0].radio.receiver centerFrequency 2.412e+09Hz
+attr unit Hz
+par BabelShowcase.host0.wlan[0].radio.receiver bandwidth 2.2e+07Hz
+attr unit Hz
+par BabelShowcase.host0.wlan[0].radio.receiver modulation "\"BPSK\""
+par BabelShowcase.host0.wlan[0].radio.receiver opMode "\"g(mixed)\""
+attr enum a,b,g(erp),g(mixed),n(mixed-2.4Ghz),p,ac
+par BabelShowcase.host0.wlan[0].radio.receiver bandName "\"2.4 GHz\""
+attr enum "2.4 GHz,5 GHz,5 GHz (20 MHz),5 GHz (40 MHz),5 GHz (80 MHz),5 GHz (160 MHz),5.9 GHz"
+par BabelShowcase.host0.wlan[0].radio.receiver channelNumber 0
+par BabelShowcase.host0.wlan[0].radio typename "\"inet.physicallayer.wireless.ieee80211.packetlevel.Ieee80211ScalarRadio\""
+par BabelShowcase.host0.wlan[0].radio radioMediumModule "\"radioMedium\""
+par BabelShowcase.host0.wlan[0].radio energySourceModule "\"\""
+par BabelShowcase.host0.wlan[0].radio initialRadioMode "\"off\""
+attr enum off,sleep,receiver,transmitter,transceiver
+par BabelShowcase.host0.wlan[0].radio switchingTimes "\"ms 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\""
+par BabelShowcase.host0.wlan[0].radio sendRawBytes false
+par BabelShowcase.host0.wlan[0].radio separateTransmissionParts false
+par BabelShowcase.host0.wlan[0].radio separateReceptionParts false
+par BabelShowcase.host0.wlan[0].radio displayCommunicationRange false
+par BabelShowcase.host0.wlan[0].radio displayInterferenceRange false
+par BabelShowcase.host0.wlan[0].radio centerFrequency 2.412e+09Hz
+attr unit Hz
+par BabelShowcase.host0.wlan[0].radio bandwidth "nan Hz"
+attr unit Hz
+par BabelShowcase.host0.wlan[0].radio signalAnalogRepresentation "\"scalar\""
+attr enum scalar,dimensional
+par BabelShowcase.host0.wlan[0].radio opMode "\"g(mixed)\""
+attr enum a,b,g(erp),g(mixed),n(mixed-2.4Ghz),p,ac
+par BabelShowcase.host0.wlan[0].radio bandName "\"2.4 GHz\""
+attr enum "2.4 GHz,5 GHz,5 GHz (20 MHz),5 GHz (40 MHz),5 GHz (80 MHz),5 GHz (160 MHz),5.9 GHz"
+par BabelShowcase.host0.wlan[0].radio channelNumber 0
+par BabelShowcase.host0.wlan[0].radio crcMode "\"declared\""
+attr enum declared,computed
+statistic BabelShowcase.host0.wlan[0].radio radioChannel:histogram
+field count 1
+field mean 0
+field stddev -nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr recordingmode histogram
+attr source radioChannelChanged
+attr title "Radio channel"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar BabelShowcase.host0.wlan[0].radio radioMode:count 1187
+attr interpolationmode sample-hold
+attr recordingmode count
+attr source radioModeChanged
+attr title "Radio mode, count"
+scalar BabelShowcase.host0.wlan[0].radio receptionState:count 1445
+attr interpolationmode sample-hold
+attr recordingmode count
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar BabelShowcase.host0.wlan[0].radio transmissionState:count 2368
+attr interpolationmode sample-hold
+attr recordingmode count
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+statistic BabelShowcase.host0.wlan[0].radio minSnir:histogram
+field count 95
+field mean 1918.0252446857
+field stddev 0
+field min 1918.0252446857
+field max 1918.0252446857
+field sum 182212.39824514
+field sqrsum 349487979.7289
+attr recordingmode histogram
+attr source minimumSnir(packetSentToUpper)
+attr title "Min SNIR"
+bin	-inf	0
+bin	1917.52	0
+bin	1917.54	0
+bin	1917.56	0
+bin	1917.58	0
+bin	1917.6	0
+bin	1917.62	0
+bin	1917.64	0
+bin	1917.66	0
+bin	1917.68	0
+bin	1917.7	0
+bin	1917.72	0
+bin	1917.74	0
+bin	1917.76	0
+bin	1917.78	0
+bin	1917.8	0
+bin	1917.82	0
+bin	1917.84	0
+bin	1917.86	0
+bin	1917.88	0
+bin	1917.9	0
+bin	1917.92	0
+bin	1917.94	0
+bin	1917.96	0
+bin	1917.98	0
+bin	1918	0
+bin	1918.02	95
+bin	1918.04	0
+bin	1918.06	0
+bin	1918.08	0
+bin	1918.1	0
+bin	1918.12	0
+bin	1918.14	0
+bin	1918.16	0
+bin	1918.18	0
+bin	1918.2	0
+bin	1918.22	0
+bin	1918.24	0
+bin	1918.26	0
+bin	1918.28	0
+bin	1918.3	0
+bin	1918.32	0
+bin	1918.34	0
+bin	1918.36	0
+bin	1918.38	0
+bin	1918.4	0
+bin	1918.42	0
+bin	1918.44	0
+bin	1918.46	0
+bin	1918.48	0
+bin	1918.5	0
+bin	1918.52	0
+bin	1918.54	0
+statistic BabelShowcase.host0.wlan[0].radio packetErrorRate:histogram
+field count 95
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr recordingmode histogram
+attr source packetErrorRate(packetSentToUpper)
+attr title "Packet error rate"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	95
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+statistic BabelShowcase.host0.wlan[0].radio bitErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr recordingmode histogram
+attr source bitErrorRate(packetSentToUpper)
+attr title "Bit error rate"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic BabelShowcase.host0.wlan[0].radio symbolErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr recordingmode histogram
+attr source symbolErrorRate(packetSentToUpper)
+attr title "Symbol error rate"
+bin	-inf	0
+bin	0	0
+bin	1	0
+par BabelShowcase.host0.wlan[0] typename "\"inet.emulation.linklayer.ieee80211.ExtUpperIeee80211Interface\""
+par BabelShowcase.host0.wlan[0] displayStringTextFormat "\"%a (%i)\\n%m\""
+par BabelShowcase.host0.wlan[0] recordPcap false
+par BabelShowcase.host0.wlan[0] numPcapRecorders 0
+par BabelShowcase.host0.wlan[0] isWireless false
+par BabelShowcase.host0.wlan[0] interfaceTableModule "\"BabelShowcase.host0.interfaceTable\""
+par BabelShowcase.host0.wlan[0] device "\"taps1-eth2\""
+par BabelShowcase.host0.wlan[0] namespace "\"\""
+par BabelShowcase.host0.wlan[0] copyConfiguration "\"copyFromExt\""
+attr enum ,copyToExt,copyFromExt
+par BabelShowcase.host0.wlan[0] address "\"0A-AA-00-00-00-01\""
+attr mutable ""
+par BabelShowcase.host0.wlan[0] broadcast true
+par BabelShowcase.host0.wlan[0] multicast true
+par BabelShowcase.host0.wlan[0] pointToPoint false
+par BabelShowcase.host0.wlan[0] mtu 4470B
+attr unit B
+par BabelShowcase.host0.wlan[0] energySourceModule "\"\""
+par BabelShowcase.host0.wlan[0] opMode "\"g(mixed)\""
+attr enum a,b,g(erp),g(mixed),n(mixed-2.4Ghz),p,ac
+par BabelShowcase.host0.wlan[0] bitrate -1bps
+attr unit bps
+scalar BabelShowcase.host0.wlan[0] packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, count"
+scalar BabelShowcase.host0.wlan[0] packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, sum(packetBytes)"
+scalar BabelShowcase.host0.wlan[0] packetDropNoCarrier:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, count"
+scalar BabelShowcase.host0.wlan[0] packetDropNoCarrier:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, sum(packetBytes)"
+par BabelShowcase.host0.ipv4.transportIn.channel typename "\"ned.IdealChannel\""
+par BabelShowcase.host0.ipv4.up.out[0].channel typename "\"ned.IdealChannel\""
+par BabelShowcase.host0.ipv4.lp.out[2].channel typename "\"ned.IdealChannel\""
+par BabelShowcase.host0.ipv4.ifIn.channel typename "\"ned.IdealChannel\""
+par BabelShowcase.host0.ipv4.configurator typename "\"inet.networklayer.configurator.ipv4.Ipv4NodeConfigurator\""
+par BabelShowcase.host0.ipv4.configurator interfaceTableModule "\"BabelShowcase.host0.interfaceTable\""
+par BabelShowcase.host0.ipv4.configurator routingTableModule "\"BabelShowcase.host0.ipv4.routingTable\""
+par BabelShowcase.host0.ipv4.configurator networkConfiguratorModule "\"configurator\""
+par BabelShowcase.host0.ipv4.configurator configureRoutingTable true
+par BabelShowcase.host0.ipv4.routingTable typename "\"inet.networklayer.ipv4.Ipv4RoutingTable\""
+par BabelShowcase.host0.ipv4.routingTable interfaceTableModule "\"BabelShowcase.host0.interfaceTable\""
+par BabelShowcase.host0.ipv4.routingTable routerId "\"auto\""
+par BabelShowcase.host0.ipv4.routingTable netmaskRoutes "\"*\""
+par BabelShowcase.host0.ipv4.routingTable forwarding true
+par BabelShowcase.host0.ipv4.routingTable multicastForwarding false
+par BabelShowcase.host0.ipv4.routingTable useAdminDist false
+par BabelShowcase.host0.ipv4.routingTable routingFile "\"\""
+par BabelShowcase.host0.ipv4.natTable typename "\"inet.networklayer.ipv4.Ipv4NatTable\""
+par BabelShowcase.host0.ipv4.natTable networkProtocolModule "\"^.ip\""
+par BabelShowcase.host0.ipv4.natTable config "<config/> at content:1"
+par BabelShowcase.host0.ipv4.up typename "\"inet.common.MessageDispatcher\""
+par BabelShowcase.host0.ipv4.up displayStringTextFormat "\"processed %p pk (%l)\""
+par BabelShowcase.host0.ipv4.up forwardServiceRegistration true
+par BabelShowcase.host0.ipv4.up forwardProtocolRegistration true
+par BabelShowcase.host0.ipv4.igmp typename "\"inet.networklayer.ipv4.Igmpv2\""
+par BabelShowcase.host0.ipv4.igmp interfaceTableModule "\"BabelShowcase.host0.interfaceTable\""
+par BabelShowcase.host0.ipv4.igmp routingTableModule "\"BabelShowcase.host0.ipv4.routingTable\""
+par BabelShowcase.host0.ipv4.igmp crcMode "\"declared\""
+attr enum declared,computed
+par BabelShowcase.host0.ipv4.igmp enabled true
+par BabelShowcase.host0.ipv4.igmp robustnessVariable 2
+par BabelShowcase.host0.ipv4.igmp queryInterval 125s
+attr unit s
+par BabelShowcase.host0.ipv4.igmp queryResponseInterval 10s
+attr unit s
+par BabelShowcase.host0.ipv4.igmp groupMembershipInterval 260s
+attr unit s
+par BabelShowcase.host0.ipv4.igmp otherQuerierPresentInterval 255s
+attr unit s
+par BabelShowcase.host0.ipv4.igmp startupQueryInterval 31.25s
+attr unit s
+par BabelShowcase.host0.ipv4.igmp startupQueryCount 2
+par BabelShowcase.host0.ipv4.igmp lastMemberQueryInterval 1s
+attr unit s
+par BabelShowcase.host0.ipv4.igmp lastMemberQueryCount 2
+par BabelShowcase.host0.ipv4.igmp unsolicitedReportInterval 10s
+attr unit s
+par BabelShowcase.host0.ipv4.icmp typename "\"inet.networklayer.ipv4.Icmp\""
+par BabelShowcase.host0.ipv4.icmp interfaceTableModule "\"BabelShowcase.host0.interfaceTable\""
+par BabelShowcase.host0.ipv4.icmp routingTableModule "\"BabelShowcase.host0.ipv4.routingTable\""
+par BabelShowcase.host0.ipv4.icmp crcMode "\"declared\""
+attr enum declared,computed
+attr mutable ""
+par BabelShowcase.host0.ipv4.icmp quoteLength 8B
+attr mutable ""
+attr unit B
+par BabelShowcase.host0.ipv4.mp typename "\"inet.common.MessageDispatcher\""
+par BabelShowcase.host0.ipv4.mp displayStringTextFormat "\"processed %p pk (%l)\""
+par BabelShowcase.host0.ipv4.mp forwardServiceRegistration true
+par BabelShowcase.host0.ipv4.mp forwardProtocolRegistration true
+par BabelShowcase.host0.ipv4.ip typename "\"inet.networklayer.ipv4.Ipv4\""
+par BabelShowcase.host0.ipv4.ip interfaceTableModule "\"BabelShowcase.host0.interfaceTable\""
+par BabelShowcase.host0.ipv4.ip routingTableModule "\"BabelShowcase.host0.ipv4.routingTable\""
+par BabelShowcase.host0.ipv4.ip arpModule "\"BabelShowcase.host0.ipv4.arp\""
+par BabelShowcase.host0.ipv4.ip icmpModule "\"BabelShowcase.host0.ipv4.icmp\""
+par BabelShowcase.host0.ipv4.ip crcMode "\"declared\""
+attr enum declared,computed
+par BabelShowcase.host0.ipv4.ip timeToLive 32
+par BabelShowcase.host0.ipv4.ip multicastTimeToLive 32
+par BabelShowcase.host0.ipv4.ip fragmentTimeout 60s
+attr unit s
+par BabelShowcase.host0.ipv4.ip limitedBroadcast false
+par BabelShowcase.host0.ipv4.ip directBroadcastInterfaces "\"\""
+scalar BabelShowcase.host0.ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar BabelShowcase.host0.ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar BabelShowcase.host0.ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar BabelShowcase.host0.ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar BabelShowcase.host0.ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar BabelShowcase.host0.ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar BabelShowcase.host0.ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar BabelShowcase.host0.ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar BabelShowcase.host0.ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar BabelShowcase.host0.ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar BabelShowcase.host0.ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar BabelShowcase.host0.ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+par BabelShowcase.host0.ipv4.arp typename "\"inet.networklayer.arp.ipv4.Arp\""
+par BabelShowcase.host0.ipv4.arp interfaceTableModule "\"BabelShowcase.host0.interfaceTable\""
+par BabelShowcase.host0.ipv4.arp routingTableModule "\"BabelShowcase.host0.ipv4.routingTable\""
+par BabelShowcase.host0.ipv4.arp retryTimeout 1s
+attr unit s
+par BabelShowcase.host0.ipv4.arp retryCount 3
+par BabelShowcase.host0.ipv4.arp cacheTimeout 120s
+attr unit s
+par BabelShowcase.host0.ipv4.arp proxyArpInterfaces "\"\""
+scalar BabelShowcase.host0.ipv4.arp arpResolutionFailed:count 0
+attr recordingmode count
+attr title "ARP failed resolutions, count"
+scalar BabelShowcase.host0.ipv4.arp arpResolutionCompleted:count 0
+attr recordingmode count
+attr title "ARP completed resolutions, count"
+scalar BabelShowcase.host0.ipv4.arp arpResolutionInitiated:count 0
+attr recordingmode count
+attr title "ARP initiated resolutions, count"
+scalar BabelShowcase.host0.ipv4.arp arpReplySent:count 0
+attr recordingmode count
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar BabelShowcase.host0.ipv4.arp arpReplySent:sum(packetBytes) 0
+attr recordingmode sum(packetBytes)
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar BabelShowcase.host0.ipv4.arp arpRequestSent:count 0
+attr recordingmode count
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar BabelShowcase.host0.ipv4.arp arpRequestSent:sum(packetBytes) 0
+attr recordingmode sum(packetBytes)
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+par BabelShowcase.host0.ipv4.lp typename "\"inet.common.MessageDispatcher\""
+par BabelShowcase.host0.ipv4.lp displayStringTextFormat "\"processed %p pk (%l)\""
+par BabelShowcase.host0.ipv4.lp forwardServiceRegistration true
+par BabelShowcase.host0.ipv4.lp forwardProtocolRegistration true
+par BabelShowcase.host0.ipv4 typename "\"inet.networklayer.ipv4.Ipv4NetworkLayer\""
+par BabelShowcase.host0.ipv4 forwarding true
+par BabelShowcase.host0.ipv4 multicastForwarding false
+par BabelShowcase.host0.ipv4 interfaceTableModule "\"BabelShowcase.host0.interfaceTable\""
+par BabelShowcase.host0.ipv4 displayStringTextFormat "\"%i\""
+par BabelShowcase.host0.nl typename "\"inet.common.MessageDispatcher\""
+par BabelShowcase.host0.nl displayStringTextFormat "\"processed %p pk (%l)\""
+par BabelShowcase.host0.nl forwardServiceRegistration true
+par BabelShowcase.host0.nl forwardProtocolRegistration true
+par BabelShowcase.host0.udp typename "\"inet.transportlayer.udp.Udp\""
+par BabelShowcase.host0.udp interfaceTableModule "\"BabelShowcase.host0.interfaceTable\""
+par BabelShowcase.host0.udp icmpModule "\"^.ipv4.icmp\""
+par BabelShowcase.host0.udp icmpv6Module "\"^.ipv6.icmpv6\""
+par BabelShowcase.host0.udp crcMode "\"declared\""
+attr enum disabled,declared,computed
+par BabelShowcase.host0.udp defaultMulticastLoop true
+scalar BabelShowcase.host0.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar BabelShowcase.host0.udp packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+scalar BabelShowcase.host0.udp packetSent:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar BabelShowcase.host0.udp packetSent:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+scalar BabelShowcase.host0.udp passedUpPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToUpper
+attr title "packets passed up, count"
+scalar BabelShowcase.host0.udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+scalar BabelShowcase.host0.udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+par BabelShowcase.host0.tcp typename "\"inet.transportlayer.tcp.Tcp\""
+par BabelShowcase.host0.tcp crcMode "\"declared\""
+attr enum declared,computed
+par BabelShowcase.host0.tcp advertisedWindow 7504
+par BabelShowcase.host0.tcp delayedAcksEnabled false
+par BabelShowcase.host0.tcp nagleEnabled true
+par BabelShowcase.host0.tcp limitedTransmitEnabled false
+par BabelShowcase.host0.tcp increasedIWEnabled false
+par BabelShowcase.host0.tcp sackSupport false
+par BabelShowcase.host0.tcp windowScalingSupport false
+par BabelShowcase.host0.tcp windowScalingFactor -1
+par BabelShowcase.host0.tcp timestampSupport false
+par BabelShowcase.host0.tcp mss 536
+par BabelShowcase.host0.tcp msl 120s
+attr unit s
+par BabelShowcase.host0.tcp tcpAlgorithmClass "\"TcpReno\""
+attr enum TcpVegas,TcpWestwood,TcpNewReno,TcpReno,TcpTahoe,TcpNoCongestionControl
+par BabelShowcase.host0.tcp useDataNotification false
+par BabelShowcase.host0.tcp dupthresh 3
+par BabelShowcase.host0.tcp initialSsthresh 4294967295
+par BabelShowcase.host0.tcp stopOperationExtraTime 0s
+attr unit s
+par BabelShowcase.host0.tcp stopOperationTimeout 2s
+attr unit s
+par BabelShowcase.host0.tcp ecnWillingness false
+par BabelShowcase.host0.tcp dctcpGamma 0.0625
+par BabelShowcase.host0.tn typename "\"inet.common.MessageDispatcher\""
+par BabelShowcase.host0.tn displayStringTextFormat "\"processed %p pk (%l)\""
+par BabelShowcase.host0.tn forwardServiceRegistration true
+par BabelShowcase.host0.tn forwardProtocolRegistration true
+par BabelShowcase.host0.at typename "\"inet.common.MessageDispatcher\""
+par BabelShowcase.host0.at displayStringTextFormat "\"processed %p pk (%l)\""
+par BabelShowcase.host0.at forwardServiceRegistration true
+par BabelShowcase.host0.at forwardProtocolRegistration true
+par BabelShowcase.host0 typename "\"inet.node.inet.AdhocHost\""
+par BabelShowcase.host0 hasStatus false
+par BabelShowcase.host0 osgModel "\"\""
+par BabelShowcase.host0 osgModelColor "\"\""
+par BabelShowcase.host0 canvasImage "\"\""
+par BabelShowcase.host0 canvasImageColor "\"\""
+par BabelShowcase.host0 recordPcap false
+par BabelShowcase.host0 numPcapRecorders 0
+par BabelShowcase.host0 numLoInterfaces 1
+par BabelShowcase.host0 numWlanInterfaces 1
+par BabelShowcase.host0 numEthInterfaces 0
+par BabelShowcase.host0 numPppInterfaces 0
+par BabelShowcase.host0 numTunInterfaces 0
+par BabelShowcase.host0 numVirtInterfaces 0
+par BabelShowcase.host0 fcsMode "\"declared\""
+attr enum declared,computed
+par BabelShowcase.host0 hasIpv4 true
+par BabelShowcase.host0 hasIpv6 false
+par BabelShowcase.host0 hasGn false
+par BabelShowcase.host0 forwarding true
+par BabelShowcase.host0 multicastForwarding false
+par BabelShowcase.host0 hasUdp true
+par BabelShowcase.host0 hasTcp true
+par BabelShowcase.host0 hasSctp false
+par BabelShowcase.host0 numApps 0
+par BabelShowcase.host1.radioIn[0].channel typename "\"ned.IdealChannel\""
+par BabelShowcase.host1.mobility typename "\"inet.mobility.static.StationaryMobility\""
+par BabelShowcase.host1.mobility subjectModule "\"^\""
+par BabelShowcase.host1.mobility coordinateSystemModule "\"\""
+par BabelShowcase.host1.mobility displayStringTextFormat "\"p: %p\\nv: %v\""
+attr mutable ""
+par BabelShowcase.host1.mobility updateDisplayString true
+par BabelShowcase.host1.mobility constraintAreaMinX "-inf m"
+attr unit m
+par BabelShowcase.host1.mobility constraintAreaMinY "-inf m"
+attr unit m
+par BabelShowcase.host1.mobility constraintAreaMinZ "-inf m"
+attr unit m
+par BabelShowcase.host1.mobility constraintAreaMaxX "inf m"
+attr unit m
+par BabelShowcase.host1.mobility constraintAreaMaxY "inf m"
+attr unit m
+par BabelShowcase.host1.mobility constraintAreaMaxZ "inf m"
+attr unit m
+par BabelShowcase.host1.mobility initialX "nan m"
+attr unit m
+par BabelShowcase.host1.mobility initialY "nan m"
+attr unit m
+par BabelShowcase.host1.mobility initialZ 0m
+attr unit m
+par BabelShowcase.host1.mobility initialLatitude "nan deg"
+attr unit deg
+par BabelShowcase.host1.mobility initialLongitude "nan deg"
+attr unit deg
+par BabelShowcase.host1.mobility initialAltitude 0m
+attr unit m
+par BabelShowcase.host1.mobility initialHeading 0deg
+attr unit deg
+par BabelShowcase.host1.mobility initialElevation 0deg
+attr unit deg
+par BabelShowcase.host1.mobility initialBank 0deg
+attr unit deg
+par BabelShowcase.host1.mobility initFromDisplayString true
+par BabelShowcase.host1.mobility updateFromDisplayString true
+par BabelShowcase.host1.interfaceTable typename "\"inet.networklayer.common.InterfaceTable\""
+par BabelShowcase.host1.interfaceTable displayAddresses false
+par BabelShowcase.host1.cb typename "\"inet.common.MessageDispatcher\""
+par BabelShowcase.host1.cb displayStringTextFormat "\"processed %p pk (%l)\""
+par BabelShowcase.host1.cb forwardServiceRegistration true
+par BabelShowcase.host1.cb forwardProtocolRegistration true
+par BabelShowcase.host1.bl typename "\"inet.common.MessageDispatcher\""
+par BabelShowcase.host1.bl displayStringTextFormat "\"processed %p pk (%l)\""
+par BabelShowcase.host1.bl forwardServiceRegistration true
+par BabelShowcase.host1.bl forwardProtocolRegistration true
+par BabelShowcase.host1.li typename "\"inet.common.MessageDispatcher\""
+par BabelShowcase.host1.li displayStringTextFormat "\"processed %p pk (%l)\""
+par BabelShowcase.host1.li forwardServiceRegistration true
+par BabelShowcase.host1.li forwardProtocolRegistration true
+par BabelShowcase.host1.lo[0].upperLayerIn.channel typename "\"ned.IdealChannel\""
+par BabelShowcase.host1.lo[0].lo.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par BabelShowcase.host1.lo[0].lo typename "\"inet.linklayer.loopback.Loopback\""
+par BabelShowcase.host1.lo[0].lo interfaceTableModule "\"BabelShowcase.host1.interfaceTable\""
+par BabelShowcase.host1.lo[0].lo mtu 4470B
+attr unit B
+scalar BabelShowcase.host1.lo[0].lo rcvdPkFromHl:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar BabelShowcase.host1.lo[0].lo rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar BabelShowcase.host1.lo[0].lo passedUpPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BabelShowcase.host1.lo[0].lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+par BabelShowcase.host1.lo[0] typename "\"inet.linklayer.loopback.LoopbackInterface\""
+par BabelShowcase.host1.lo[0] displayStringTextFormat "\"%a (%i)\\n%m\""
+par BabelShowcase.host1.lo[0] recordPcap false
+par BabelShowcase.host1.lo[0] numPcapRecorders 0
+par BabelShowcase.host1.lo[0] interfaceTableModule "\"BabelShowcase.host1.interfaceTable\""
+scalar BabelShowcase.host1.lo[0] packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, count"
+scalar BabelShowcase.host1.lo[0] packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, sum(packetBytes)"
+scalar BabelShowcase.host1.lo[0] packetDropNoCarrier:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, count"
+scalar BabelShowcase.host1.lo[0] packetDropNoCarrier:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, sum(packetBytes)"
+par BabelShowcase.host1.wlan[0].radioIn.channel typename "\"ned.IdealChannel\""
+par BabelShowcase.host1.wlan[0].llc.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par BabelShowcase.host1.wlan[0].tap.lowerLayerOut.channel typename "\"ned.IdealChannel\""
+par BabelShowcase.host1.wlan[0].mib typename "\"inet.linklayer.ieee80211.mib.Ieee80211Mib\""
+par BabelShowcase.host1.wlan[0].tap typename "\"inet.emulation.linklayer.ethernet.ExtEthernetTapDevice\""
+par BabelShowcase.host1.wlan[0].tap device "\"taps2-eth2\""
+par BabelShowcase.host1.wlan[0].tap namespace "\"\""
+par BabelShowcase.host1.wlan[0].tap packetNameFormat "\"Ext-%p-%t-%n\""
+scalar BabelShowcase.host1.wlan[0].tap packetReceived:count 172
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar BabelShowcase.host1.wlan[0].tap packetReceived:sum(packetBytes) 11988
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].tap packetSent:count 12
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar BabelShowcase.host1.wlan[0].tap packetSent:sum(packetBytes) 1918
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].tap packetReceivedFromLower:count 12
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceivedFromLower
+attr title "packets received from higher layer, count"
+scalar BabelShowcase.host1.wlan[0].tap packetReceivedFromLower:sum(packetBytes) 1966
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceivedFromLower
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].tap packetSentFromLower:count 172
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToLower
+attr title "packets sent to higher layer, count"
+scalar BabelShowcase.host1.wlan[0].tap packetSentFromLower:sum(packetBytes) 11988
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToLower
+attr title "packets sent to higher layer, sum(packetBytes)"
+par BabelShowcase.host1.wlan[0].llc typename "\"inet.linklayer.ieee80211.portal.Ieee80211Portal\""
+par BabelShowcase.host1.wlan[0].llc fcsMode "\"declared\""
+attr enum declared,computed
+par BabelShowcase.host1.wlan[0].mgmt typename "\"inet.linklayer.ieee80211.mgmt.Ieee80211MgmtAdhoc\""
+par BabelShowcase.host1.wlan[0].mgmt mibModule "\"BabelShowcase.host1.wlan[0].mib\""
+par BabelShowcase.host1.wlan[0].mgmt macModule "\"BabelShowcase.host1.wlan[0].mac\""
+par BabelShowcase.host1.wlan[0].mgmt interfaceTableModule "\"BabelShowcase.host1.interfaceTable\""
+par BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.pendingQueue typename "\"inet.linklayer.ieee80211.mac.queue.PendingQueue\""
+par BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.pendingQueue displayStringTextFormat "\"contains %p pk (%l) pushed %u\\npulled %o removed %r dropped %d\""
+par BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.pendingQueue packetCapacity 100
+par BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.pendingQueue dataCapacity -1b
+attr unit b
+par BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.pendingQueue dropperClass "\"inet::queueing::PacketAtCollectionEndDropper\""
+par BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.pendingQueue comparatorClass "\"inet::ieee80211::MgmtOverDataComparator\""
+par BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.pendingQueue bufferModule "\"\""
+scalar BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.pendingQueue queueLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, last"
+attr unit pk
+scalar BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.pendingQueue queueLength:max 1
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, max"
+attr unit pk
+scalar BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.pendingQueue queueLength:timeavg 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, timeavg"
+attr unit pk
+scalar BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.pendingQueue queueBitLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, last"
+attr unit b
+scalar BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.pendingQueue queueBitLength:max 1952
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, max"
+attr unit b
+scalar BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.pendingQueue queueBitLength:timeavg 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, timeavg"
+attr unit b
+statistic BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.pendingQueue queueingTime:histogram
+field count 172
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	172
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.pendingQueue outgoingPackets:count 172
+attr recordingmode count
+attr source packetPulled
+attr title "outgoing packets, count"
+attr unit pk
+scalar BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.pendingQueue outgoingPacketLengths:sum 111968
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths, sum"
+attr unit b
+statistic BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.pendingQueue outgoingPacketLengths:histogram
+field count 172
+field mean 650.97674418605
+field stddev 367.26302306518
+field min 512
+field max 1952
+field sum 111968
+field sqrsum 95953408
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+bin	-inf	0
+bin	150	0
+bin	200	0
+bin	250	0
+bin	300	0
+bin	350	0
+bin	400	0
+bin	450	0
+bin	500	145
+bin	550	0
+bin	600	0
+bin	650	0
+bin	700	6
+bin	750	0
+bin	800	0
+bin	850	6
+bin	900	0
+bin	950	0
+bin	1000	0
+bin	1050	1
+bin	1100	0
+bin	1150	0
+bin	1200	0
+bin	1250	0
+bin	1300	0
+bin	1350	0
+bin	1400	0
+bin	1450	0
+bin	1500	0
+bin	1550	0
+bin	1600	0
+bin	1650	0
+bin	1700	0
+bin	1750	0
+bin	1800	8
+bin	1850	3
+bin	1900	0
+bin	1950	3
+bin	2000	0
+bin	2050	0
+bin	2100	0
+bin	2150	0
+bin	2200	0
+bin	2250	0
+bin	2300	0
+bin	2350	0
+statistic BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.pendingQueue flowQueueingTime:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(demuxFlow(packetPulled))
+attr title "flow queueing times"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.pendingQueue incomingPackets:count 172
+attr recordingmode count
+attr source packetPushStarted
+attr title "incoming packets, count"
+attr unit pk
+scalar BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.pendingQueue incomingPacketLengths:sum 111968
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths, sum"
+attr unit b
+statistic BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.pendingQueue incomingPacketLengths:histogram
+field count 172
+field mean 650.97674418605
+field stddev 367.26302306518
+field min 512
+field max 1952
+field sum 111968
+field sqrsum 95953408
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+bin	-inf	0
+bin	150	0
+bin	200	0
+bin	250	0
+bin	300	0
+bin	350	0
+bin	400	0
+bin	450	0
+bin	500	145
+bin	550	0
+bin	600	0
+bin	650	0
+bin	700	6
+bin	750	0
+bin	800	0
+bin	850	6
+bin	900	0
+bin	950	0
+bin	1000	0
+bin	1050	1
+bin	1100	0
+bin	1150	0
+bin	1200	0
+bin	1250	0
+bin	1300	0
+bin	1350	0
+bin	1400	0
+bin	1450	0
+bin	1500	0
+bin	1550	0
+bin	1600	0
+bin	1650	0
+bin	1700	0
+bin	1750	0
+bin	1800	8
+bin	1850	3
+bin	1900	0
+bin	1950	3
+bin	2000	0
+bin	2050	0
+bin	2100	0
+bin	2150	0
+bin	2200	0
+bin	2250	0
+bin	2300	0
+bin	2350	0
+scalar BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.pendingQueue droppedPacketsQueueOverflow:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "dropped packets: queue overflow, count"
+attr unit pk
+scalar BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.pendingQueue droppedPacketLengthsQueueOverflow:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetDropReasonIsQueueOverflow(packetDropped))
+attr title "dropped packet lengths: queue overflow, sum"
+attr unit b
+par BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.inProgressFrames typename "\"inet.linklayer.ieee80211.mac.queue.InProgressFrames\""
+par BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.inProgressFrames pendingQueueModule "\"^.pendingQueue\""
+par BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.inProgressFrames originatorMacDataServiceModule "\"^.^.originatorMacDataService\""
+par BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.inProgressFrames ackHandlerModule "\"^.^.ackHandler\""
+statistic BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.inProgressFrames queueingTime:histogram
+field count 172
+field mean 5.7e-05
+field stddev 1.4708870697405e-05
+field min 5e-05
+field max 0.00011
+field sum 0.009804
+field sqrsum 5.95824e-07
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(packetDequeued)
+attr title "queueing times"
+bin	-inf	0
+bin	3.4e-05	0
+bin	3.5e-05	0
+bin	3.6e-05	0
+bin	3.7e-05	0
+bin	3.8e-05	0
+bin	3.9e-05	0
+bin	4e-05	0
+bin	4.1e-05	0
+bin	4.2e-05	0
+bin	4.3e-05	0
+bin	4.4e-05	0
+bin	4.5e-05	0
+bin	4.6e-05	0
+bin	4.7e-05	0
+bin	4.8e-05	0
+bin	4.9e-05	77
+bin	5e-05	0
+bin	5.1e-05	0
+bin	5.2e-05	0
+bin	5.3e-05	68
+bin	5.4e-05	0
+bin	5.5e-05	0
+bin	5.6e-05	0
+bin	5.7e-05	6
+bin	5.8e-05	0
+bin	5.9e-05	0
+bin	6e-05	0
+bin	6.1e-05	0
+bin	6.2e-05	0
+bin	6.3e-05	0
+bin	6.4e-05	0
+bin	6.5e-05	0
+bin	6.6e-05	6
+bin	6.7e-05	0
+bin	6.8e-05	0
+bin	6.9e-05	0
+bin	7e-05	0
+bin	7.1e-05	0
+bin	7.2e-05	0
+bin	7.3e-05	1
+bin	7.4e-05	0
+bin	7.5e-05	0
+bin	7.6e-05	0
+bin	7.7e-05	0
+bin	7.8e-05	0
+bin	7.9e-05	0
+bin	8e-05	0
+bin	8.1e-05	0
+bin	8.2e-05	0
+bin	8.3e-05	0
+bin	8.4e-05	0
+bin	8.5e-05	0
+bin	8.6e-05	0
+bin	8.7e-05	0
+bin	8.8e-05	0
+bin	8.9e-05	0
+bin	9e-05	0
+bin	9.1e-05	0
+bin	9.2e-05	0
+bin	9.3e-05	0
+bin	9.4e-05	0
+bin	9.5e-05	0
+bin	9.6e-05	0
+bin	9.7e-05	0
+bin	9.8e-05	0
+bin	9.9e-05	0
+bin	0.0001	0
+bin	0.000101	8
+bin	0.000102	0
+bin	0.000103	0
+bin	0.000104	0
+bin	0.000105	3
+bin	0.000106	0
+bin	0.000107	0
+bin	0.000108	0
+bin	0.000109	3
+bin	0.00011	0
+bin	0.000111	0
+bin	0.000112	0
+bin	0.000113	0
+bin	0.000114	0
+bin	0.000115	0
+bin	0.000116	0
+bin	0.000117	0
+bin	0.000118	0
+bin	0.000119	0
+bin	0.00012	0
+bin	0.000121	0
+bin	0.000122	0
+bin	0.000123	0
+bin	0.000124	0
+bin	0.000125	0
+scalar BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:max 1
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(count(packetEnqueued) - count(packetDequeued))"
+attr title "queue length, max"
+scalar BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:timeavg 6.9728407950887e-05
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(count(packetEnqueued) - count(packetDequeued))"
+attr title "queue length, timeavg"
+par BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.contention typename "\"inet.linklayer.ieee80211.mac.contention.Contention\""
+par BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.contention initialChannelBusy true
+par BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.contention backoffOptimization true
+scalar BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.contention channelAccessGranted:count 172
+attr recordingmode count
+attr title "channel access granted, count"
+scalar BabelShowcase.host1.wlan[0].mac.dcf.channelAccess.contention stateChanged:count 5436
+attr enum IDLE,DEFER,IFS_AND_BACKOFF
+attr interpolationmode none
+attr recordingmode count
+attr title "contention state changed, count"
+attr type enum
+par BabelShowcase.host1.wlan[0].mac.dcf.channelAccess typename "\"inet.linklayer.ieee80211.mac.channelaccess.Dcaf\""
+par BabelShowcase.host1.wlan[0].mac.dcf.channelAccess difsn -1
+par BabelShowcase.host1.wlan[0].mac.dcf.channelAccess cwMin -1
+par BabelShowcase.host1.wlan[0].mac.dcf.channelAccess cwMax -1
+par BabelShowcase.host1.wlan[0].mac.dcf.channelAccess rxModule "\"^.^.rx\""
+scalar BabelShowcase.host1.wlan[0].mac.dcf.channelAccess channelOwnershipChanged:count 344
+attr interpolationmode sample-hold
+attr recordingmode count
+attr title "channel ownership, count"
+par BabelShowcase.host1.wlan[0].mac.dcf.originatorMacDataService.fragmentationPolicy typename "\"inet.linklayer.ieee80211.mac.fragmentation.BasicFragmentationPolicy\""
+par BabelShowcase.host1.wlan[0].mac.dcf.originatorMacDataService.fragmentationPolicy fragmentationThreshold 1500B
+attr unit B
+par BabelShowcase.host1.wlan[0].mac.dcf.originatorMacDataService typename "\"inet.linklayer.ieee80211.mac.originator.OriginatorMacDataService\""
+scalar BabelShowcase.host1.wlan[0].mac.dcf.originatorMacDataService packetAggregated:count 0
+attr recordingmode count
+attr title "packets aggregated, count"
+scalar BabelShowcase.host1.wlan[0].mac.dcf.originatorMacDataService packetFragmented:count 0
+attr recordingmode count
+attr title "packets fragmented, count"
+par BabelShowcase.host1.wlan[0].mac.dcf.recipientMacDataService typename "\"inet.linklayer.ieee80211.mac.recipient.RecipientMacDataService\""
+scalar BabelShowcase.host1.wlan[0].mac.dcf.recipientMacDataService packetDeaggregated:count 0
+attr recordingmode count
+attr title "packets deaggregated, count"
+scalar BabelShowcase.host1.wlan[0].mac.dcf.recipientMacDataService packetDefragmented:count 12
+attr recordingmode count
+attr title "packets defragmented, count"
+scalar BabelShowcase.host1.wlan[0].mac.dcf.recipientMacDataService packetDropDuplicateDetected:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsDuplicateDetected(packetDropped)
+attr title "packet drops: duplicate detected, count"
+scalar BabelShowcase.host1.wlan[0].mac.dcf.recipientMacDataService packetDropDuplicateDetected:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsDuplicateDetected(packetDropped)
+attr title "packet drops: duplicate detected, sum(packetBytes)"
+par BabelShowcase.host1.wlan[0].mac.dcf.rateSelection typename "\"inet.linklayer.ieee80211.mac.rateselection.RateSelection\""
+par BabelShowcase.host1.wlan[0].mac.dcf.rateSelection rateControlModule "\"^.rateControl\""
+par BabelShowcase.host1.wlan[0].mac.dcf.rateSelection multicastFrameBitrate -1bps
+attr unit bps
+par BabelShowcase.host1.wlan[0].mac.dcf.rateSelection responseAckFrameBitrate -1bps
+attr unit bps
+par BabelShowcase.host1.wlan[0].mac.dcf.rateSelection responseCtsFrameBitrate -1bps
+attr unit bps
+par BabelShowcase.host1.wlan[0].mac.dcf.rateSelection dataFrameBitrate -1bps
+attr unit bps
+par BabelShowcase.host1.wlan[0].mac.dcf.rateSelection dataFrameBandwidth "nan Hz"
+attr unit Hz
+par BabelShowcase.host1.wlan[0].mac.dcf.rateSelection dataFrameNumSpatialStreams -1
+par BabelShowcase.host1.wlan[0].mac.dcf.rateSelection mgmtFrameBitrate -1bps
+attr unit bps
+par BabelShowcase.host1.wlan[0].mac.dcf.rateSelection controlFrameBitrate -1bps
+attr unit bps
+par BabelShowcase.host1.wlan[0].mac.dcf.recoveryProcedure typename "\"inet.linklayer.ieee80211.mac.originator.NonQosRecoveryProcedure\""
+par BabelShowcase.host1.wlan[0].mac.dcf.recoveryProcedure cwCalculatorModule "\"^.channelAccess\""
+par BabelShowcase.host1.wlan[0].mac.dcf.recoveryProcedure rtsPolicyModule "\"^.rtsPolicy\""
+par BabelShowcase.host1.wlan[0].mac.dcf.recoveryProcedure shortRetryLimit 7
+par BabelShowcase.host1.wlan[0].mac.dcf.recoveryProcedure longRetryLimit 4
+scalar BabelShowcase.host1.wlan[0].mac.dcf.recoveryProcedure retryLimitReached:count 0
+attr recordingmode count
+attr title "retry limit reached, count"
+par BabelShowcase.host1.wlan[0].mac.dcf.originatorProtectionMechanism typename "\"inet.linklayer.ieee80211.mac.protectionmechanism.OriginatorProtectionMechanism\""
+par BabelShowcase.host1.wlan[0].mac.dcf.originatorProtectionMechanism rateSelectionModule "\"^.rateSelection\""
+par BabelShowcase.host1.wlan[0].mac.dcf.ackHandler typename "\"inet.linklayer.ieee80211.mac.originator.AckHandler\""
+par BabelShowcase.host1.wlan[0].mac.dcf.originatorAckPolicy typename "\"inet.linklayer.ieee80211.mac.originator.OriginatorAckPolicy\""
+par BabelShowcase.host1.wlan[0].mac.dcf.originatorAckPolicy rateSelectionModule "\"^.rateSelection\""
+par BabelShowcase.host1.wlan[0].mac.dcf.originatorAckPolicy ackTimeout -1s
+attr unit s
+par BabelShowcase.host1.wlan[0].mac.dcf.recipientAckPolicy typename "\"inet.linklayer.ieee80211.mac.recipient.RecipientAckPolicy\""
+par BabelShowcase.host1.wlan[0].mac.dcf.recipientAckPolicy rateSelectionModule "\"^.rateSelection\""
+par BabelShowcase.host1.wlan[0].mac.dcf.rtsPolicy typename "\"inet.linklayer.ieee80211.mac.originator.RtsPolicy\""
+par BabelShowcase.host1.wlan[0].mac.dcf.rtsPolicy rateSelectionModule "\"^.rateSelection\""
+par BabelShowcase.host1.wlan[0].mac.dcf.rtsPolicy ctsTimeout -1s
+attr unit s
+par BabelShowcase.host1.wlan[0].mac.dcf.rtsPolicy rtsThreshold 2346B
+attr unit B
+par BabelShowcase.host1.wlan[0].mac.dcf.ctsPolicy typename "\"inet.linklayer.ieee80211.mac.recipient.CtsPolicy\""
+par BabelShowcase.host1.wlan[0].mac.dcf.ctsPolicy rxModule "\"^.^.rx\""
+par BabelShowcase.host1.wlan[0].mac.dcf.ctsPolicy rateSelectionModule "\"^.rateSelection\""
+par BabelShowcase.host1.wlan[0].mac.dcf typename "\"inet.linklayer.ieee80211.mac.coordinationfunction.Dcf\""
+par BabelShowcase.host1.wlan[0].mac.dcf rxModule "\"^.rx\""
+par BabelShowcase.host1.wlan[0].mac.dcf txModule "\"^.tx\""
+scalar BabelShowcase.host1.wlan[0].mac.dcf frameSequenceFinished:count 172
+attr recordingmode count
+attr title "finished frame sequences, count"
+statistic BabelShowcase.host1.wlan[0].mac.dcf frameSequenceDuration:histogram
+field count 172
+field mean 5.7e-05
+field stddev 1.4708870697405e-05
+field min 5e-05
+field max 0.00011
+field sum 0.009804
+field sqrsum 5.95824e-07
+attr recordingmode histogram
+attr source frameSequenceDuration(frameSequenceFinished)
+attr title "frame sequence durations"
+bin	-inf	0
+bin	3.4e-05	0
+bin	3.5e-05	0
+bin	3.6e-05	0
+bin	3.7e-05	0
+bin	3.8e-05	0
+bin	3.9e-05	0
+bin	4e-05	0
+bin	4.1e-05	0
+bin	4.2e-05	0
+bin	4.3e-05	0
+bin	4.4e-05	0
+bin	4.5e-05	0
+bin	4.6e-05	0
+bin	4.7e-05	0
+bin	4.8e-05	0
+bin	4.9e-05	77
+bin	5e-05	0
+bin	5.1e-05	0
+bin	5.2e-05	0
+bin	5.3e-05	68
+bin	5.4e-05	0
+bin	5.5e-05	0
+bin	5.6e-05	0
+bin	5.7e-05	6
+bin	5.8e-05	0
+bin	5.9e-05	0
+bin	6e-05	0
+bin	6.1e-05	0
+bin	6.2e-05	0
+bin	6.3e-05	0
+bin	6.4e-05	0
+bin	6.5e-05	0
+bin	6.6e-05	6
+bin	6.7e-05	0
+bin	6.8e-05	0
+bin	6.9e-05	0
+bin	7e-05	0
+bin	7.1e-05	0
+bin	7.2e-05	0
+bin	7.3e-05	1
+bin	7.4e-05	0
+bin	7.5e-05	0
+bin	7.6e-05	0
+bin	7.7e-05	0
+bin	7.8e-05	0
+bin	7.9e-05	0
+bin	8e-05	0
+bin	8.1e-05	0
+bin	8.2e-05	0
+bin	8.3e-05	0
+bin	8.4e-05	0
+bin	8.5e-05	0
+bin	8.6e-05	0
+bin	8.7e-05	0
+bin	8.8e-05	0
+bin	8.9e-05	0
+bin	9e-05	0
+bin	9.1e-05	0
+bin	9.2e-05	0
+bin	9.3e-05	0
+bin	9.4e-05	0
+bin	9.5e-05	0
+bin	9.6e-05	0
+bin	9.7e-05	0
+bin	9.8e-05	0
+bin	9.9e-05	0
+bin	0.0001	0
+bin	0.000101	8
+bin	0.000102	0
+bin	0.000103	0
+bin	0.000104	0
+bin	0.000105	3
+bin	0.000106	0
+bin	0.000107	0
+bin	0.000108	0
+bin	0.000109	3
+bin	0.00011	0
+bin	0.000111	0
+bin	0.000112	0
+bin	0.000113	0
+bin	0.000114	0
+bin	0.000115	0
+bin	0.000116	0
+bin	0.000117	0
+bin	0.000118	0
+bin	0.000119	0
+bin	0.00012	0
+bin	0.000121	0
+bin	0.000122	0
+bin	0.000123	0
+bin	0.000124	0
+bin	0.000125	0
+statistic BabelShowcase.host1.wlan[0].mac.dcf frameSequenceNumPackets:histogram
+field count 172
+field mean 1
+field stddev 0
+field min 1
+field max 1
+field sum 172
+field sqrsum 172
+attr recordingmode histogram
+attr source frameSequenceNumPackets(frameSequenceFinished)
+attr title "frame sequences: number of packets"
+bin	-inf	0
+bin	0	0
+bin	1	172
+bin	2	0
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetReceivedFromPeer:count 12
+attr interpolationmode none
+attr recordingmode count
+attr title "packets received, count"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetReceivedFromPeer:sum(packetBytes) 2182
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr title "packets received, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetReceivedFromPeerUnicast:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source ieee80211Unicast(packetReceivedFromPeer)
+attr title "packets received: unicast, count"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetReceivedFromPeerUnicast:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source ieee80211Unicast(packetReceivedFromPeer)
+attr title "packets received: unicast, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetReceivedFromPeerMulticast:count 12
+attr interpolationmode none
+attr recordingmode count
+attr source ieee80211Multicast(packetReceivedFromPeer)
+attr title "packets received: multicast, count"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetReceivedFromPeerMulticast:sum(packetBytes) 2182
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source ieee80211Multicast(packetReceivedFromPeer)
+attr title "packets received: multicast, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetReceivedFromPeerBroadcast:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source ieee80211Broadcast(packetReceivedFromPeer)
+attr title "packets received: broadcast, count"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetReceivedFromPeerBroadcast:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source ieee80211Broadcast(packetReceivedFromPeer)
+attr title "packets received: broadcast, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetReceivedFromPeerWithRetry:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source ieee80211Retry(packetReceivedFromPeer)
+attr title "packets received: with retry, count"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetReceivedFromPeerWithRetry:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source ieee80211Retry(packetReceivedFromPeer)
+attr title "packets received: with retry, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetReceivedFromPeerWithoutRetry:count 12
+attr interpolationmode none
+attr recordingmode count
+attr source ieee80211NotRetry(packetReceivedFromPeer)
+attr title "packets received: without retry, count"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetReceivedFromPeerWithoutRetry:sum(packetBytes) 2182
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source ieee80211NotRetry(packetReceivedFromPeer)
+attr title "packets received: without retry, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetSentToPeer:count 172
+attr interpolationmode none
+attr recordingmode count
+attr title "packets sent, count"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetSentToPeer:sum(packetBytes) 13996
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr title "packets sent, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetSentToPeerUnicast:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source ieee80211Unicast(packetSentToPeer)
+attr title "packets sent: unicast, count"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetSentToPeerUnicast:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source ieee80211Unicast(packetSentToPeer)
+attr title "packets sent: unicast, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetSentToPeerMulticast:count 172
+attr interpolationmode none
+attr recordingmode count
+attr source ieee80211Multicast(packetSentToPeer)
+attr title "packets sent: multicast, count"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetSentToPeerMulticast:sum(packetBytes) 13996
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source ieee80211Multicast(packetSentToPeer)
+attr title "packets sent: multicast, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetSentToPeerBroadcast:count 77
+attr interpolationmode none
+attr recordingmode count
+attr source ieee80211Broadcast(packetSentToPeer)
+attr title "packets sent: broadcast , count"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetSentToPeerBroadcast:sum(packetBytes) 4928
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source ieee80211Broadcast(packetSentToPeer)
+attr title "packets sent: broadcast , sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetSentToPeerWithRetry:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source ieee80211Retry(packetSentToPeer)
+attr title "packets sent: with retry, count"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetSentToPeerWithRetry:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source ieee80211Retry(packetSentToPeer)
+attr title "packets sent: with retry, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetSentToPeerWithoutRetry:count 172
+attr interpolationmode none
+attr recordingmode count
+attr source ieee80211NotRetry(packetSentToPeer)
+attr title "packets sent: without retry, count"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetSentToPeerWithoutRetry:sum(packetBytes) 13996
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source ieee80211NotRetry(packetSentToPeer)
+attr title "packets sent: without retry, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetDrop:count 496
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropped
+attr title "packet drops, count"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetDrop:sum(packetBytes) 31744
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropped
+attr title "packet drops, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetDropNotAddressedToUs:count 496
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drops: not addressed to us, count"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetDropNotAddressedToUs:sum(packetBytes) 31744
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drops: not addressed to us, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetDropRetryLimitReached:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drops: retry limit reached, count"
+scalar BabelShowcase.host1.wlan[0].mac.dcf packetDropRetryLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drops: retry limit reached, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].mac.dcf linkBroken:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "link breaks, count"
+par BabelShowcase.host1.wlan[0].mac.ds typename "\"inet.linklayer.ieee80211.mac.Ds\""
+par BabelShowcase.host1.wlan[0].mac.ds mibModule "\"BabelShowcase.host1.wlan[0].mib\""
+par BabelShowcase.host1.wlan[0].mac.rx typename "\"inet.linklayer.ieee80211.mac.Rx\""
+par BabelShowcase.host1.wlan[0].mac.tx typename "\"inet.linklayer.ieee80211.mac.Tx\""
+par BabelShowcase.host1.wlan[0].mac.tx rxModule "\"^.rx\""
+par BabelShowcase.host1.wlan[0].mac typename "\"inet.linklayer.ieee80211.mac.Ieee80211Mac\""
+par BabelShowcase.host1.wlan[0].mac interfaceTableModule "\"BabelShowcase.host1.interfaceTable\""
+par BabelShowcase.host1.wlan[0].mac mibModule "\"BabelShowcase.host1.wlan[0].mib\""
+par BabelShowcase.host1.wlan[0].mac modeSet "\"g(mixed)\""
+attr enum a,b,g(erp),g(mixed),n(mixed-2.4Ghz),p,ac
+par BabelShowcase.host1.wlan[0].mac fcsMode "\"computed\""
+attr enum declared,computed
+par BabelShowcase.host1.wlan[0].mac initialRadioMode "\"receiver\""
+attr enum off,sleep,receiver,transmitter,transceiver
+par BabelShowcase.host1.wlan[0].mac mtu 2304B
+attr unit B
+par BabelShowcase.host1.wlan[0].mac qosStation false
+scalar BabelShowcase.host1.wlan[0].mac packetReceivedFromLower:count 515
+attr interpolationmode none
+attr recordingmode count
+attr title "packets received from lower layer, count"
+scalar BabelShowcase.host1.wlan[0].mac packetReceivedFromLower:sum(packetBytes) 34388
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].mac packetSentToLower:count 172
+attr interpolationmode none
+attr recordingmode count
+attr title "packets sent to lower layer, count"
+scalar BabelShowcase.host1.wlan[0].mac packetSentToLower:sum(packetBytes) 13996
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].mac packetReceivedFromUpper:count 172
+attr interpolationmode none
+attr recordingmode count
+attr title "packets received from upper layer, count"
+scalar BabelShowcase.host1.wlan[0].mac packetReceivedFromUpper:sum(packetBytes) 9180
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr title "packets received from upper layer, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].mac packetSentToUpper:count 12
+attr interpolationmode none
+attr recordingmode count
+attr title "packets sent to upper layer, count"
+scalar BabelShowcase.host1.wlan[0].mac packetSentToUpper:sum(packetBytes) 1846
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr title "packets sent to upper layer, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].mac packetDrop:count 503
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropped
+attr title "packet drops, count"
+scalar BabelShowcase.host1.wlan[0].mac packetDrop:sum(packetBytes) 32206
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropped
+attr title "packet drops, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].mac packetDropIncorrectlyReceived:count 7
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drops: incorrectly received, count"
+scalar BabelShowcase.host1.wlan[0].mac packetDropIncorrectlyReceived:sum(packetBytes) 462
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drops: incorrectly received, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].mac packetDropNotAddressedToUs:count 496
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drops: not addressed to us, count"
+scalar BabelShowcase.host1.wlan[0].mac packetDropNotAddressedToUs:sum(packetBytes) 31744
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drops: not addressed to us, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].mac packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar BabelShowcase.host1.wlan[0].mac packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].mac packetDropRetryLimitReached:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drops: retry limit reached, count"
+scalar BabelShowcase.host1.wlan[0].mac packetDropRetryLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drops: retry limit reached, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].mac packetDropDuplicateDetected:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsDuplicateDetected(packetDropped)
+attr title "packet drops: duplicate detected, count"
+scalar BabelShowcase.host1.wlan[0].mac packetDropDuplicateDetected:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsDuplicateDetected(packetDropped)
+attr title "packet drops: duplicate detected, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].mac packetDropOther:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsOther(packetDropped)
+attr title "packet drops: other, count"
+scalar BabelShowcase.host1.wlan[0].mac packetDropOther:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsOther(packetDropped)
+attr title "packet drops: other, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0].mac linkBroken:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "link breaks, count"
+par BabelShowcase.host1.wlan[0].radio.antenna typename "\"inet.physicallayer.wireless.common.antenna.IsotropicAntenna\""
+par BabelShowcase.host1.wlan[0].radio.antenna mobilityModule "\"^.^.^.mobility\""
+par BabelShowcase.host1.wlan[0].radio.antenna numAntennas 1
+par BabelShowcase.host1.wlan[0].radio.transmitter typename "\"inet.physicallayer.wireless.ieee80211.packetlevel.Ieee80211ScalarTransmitter\""
+par BabelShowcase.host1.wlan[0].radio.transmitter preambleDuration -1s
+attr unit s
+par BabelShowcase.host1.wlan[0].radio.transmitter headerLength 192b
+attr unit b
+par BabelShowcase.host1.wlan[0].radio.transmitter bitrate -1bps
+attr unit bps
+par BabelShowcase.host1.wlan[0].radio.transmitter power 0.002W
+attr unit W
+par BabelShowcase.host1.wlan[0].radio.transmitter centerFrequency 2.412e+09Hz
+attr unit Hz
+par BabelShowcase.host1.wlan[0].radio.transmitter bandwidth "nan Hz"
+attr unit Hz
+par BabelShowcase.host1.wlan[0].radio.transmitter codeRate 1
+par BabelShowcase.host1.wlan[0].radio.transmitter modulation "\"BPSK\""
+par BabelShowcase.host1.wlan[0].radio.transmitter opMode "\"g(mixed)\""
+attr enum a,b,g(erp),g(mixed),n(mixed-2.4Ghz),p,ac
+par BabelShowcase.host1.wlan[0].radio.transmitter bandName "\"2.4 GHz\""
+attr enum "2.4 GHz,5 GHz,5 GHz (20 MHz),5 GHz (40 MHz),5 GHz (80 MHz),5 GHz (160 MHz),5.9 GHz"
+par BabelShowcase.host1.wlan[0].radio.transmitter channelNumber 0
+par BabelShowcase.host1.wlan[0].radio.receiver.errorModel typename "\"inet.physicallayer.wireless.ieee80211.packetlevel.errormodel.Ieee80211NistErrorModel\""
+par BabelShowcase.host1.wlan[0].radio.receiver.errorModel corruptionMode "\"packet\""
+attr enum packet,chunk,byte,bit
+par BabelShowcase.host1.wlan[0].radio.receiver.errorModel snirMode "\"min\""
+attr enum min,mean
+par BabelShowcase.host1.wlan[0].radio.receiver.errorModel snirOffset 0dB
+attr unit dB
+par BabelShowcase.host1.wlan[0].radio.receiver typename "\"inet.physicallayer.wireless.ieee80211.packetlevel.Ieee80211ScalarReceiver\""
+par BabelShowcase.host1.wlan[0].radio.receiver snirThreshold 4dB
+attr unit dB
+par BabelShowcase.host1.wlan[0].radio.receiver snirThresholdMode "\"min\""
+attr enum min,mean
+par BabelShowcase.host1.wlan[0].radio.receiver energyDetection -85dBm
+attr unit dBm
+par BabelShowcase.host1.wlan[0].radio.receiver sensitivity -85dBm
+attr unit dBm
+par BabelShowcase.host1.wlan[0].radio.receiver centerFrequency 2.412e+09Hz
+attr unit Hz
+par BabelShowcase.host1.wlan[0].radio.receiver bandwidth 2.2e+07Hz
+attr unit Hz
+par BabelShowcase.host1.wlan[0].radio.receiver modulation "\"BPSK\""
+par BabelShowcase.host1.wlan[0].radio.receiver opMode "\"g(mixed)\""
+attr enum a,b,g(erp),g(mixed),n(mixed-2.4Ghz),p,ac
+par BabelShowcase.host1.wlan[0].radio.receiver bandName "\"2.4 GHz\""
+attr enum "2.4 GHz,5 GHz,5 GHz (20 MHz),5 GHz (40 MHz),5 GHz (80 MHz),5 GHz (160 MHz),5.9 GHz"
+par BabelShowcase.host1.wlan[0].radio.receiver channelNumber 0
+par BabelShowcase.host1.wlan[0].radio typename "\"inet.physicallayer.wireless.ieee80211.packetlevel.Ieee80211ScalarRadio\""
+par BabelShowcase.host1.wlan[0].radio radioMediumModule "\"radioMedium\""
+par BabelShowcase.host1.wlan[0].radio energySourceModule "\"\""
+par BabelShowcase.host1.wlan[0].radio initialRadioMode "\"off\""
+attr enum off,sleep,receiver,transmitter,transceiver
+par BabelShowcase.host1.wlan[0].radio switchingTimes "\"ms 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\""
+par BabelShowcase.host1.wlan[0].radio sendRawBytes false
+par BabelShowcase.host1.wlan[0].radio separateTransmissionParts false
+par BabelShowcase.host1.wlan[0].radio separateReceptionParts false
+par BabelShowcase.host1.wlan[0].radio displayCommunicationRange false
+par BabelShowcase.host1.wlan[0].radio displayInterferenceRange false
+par BabelShowcase.host1.wlan[0].radio centerFrequency 2.412e+09Hz
+attr unit Hz
+par BabelShowcase.host1.wlan[0].radio bandwidth "nan Hz"
+attr unit Hz
+par BabelShowcase.host1.wlan[0].radio signalAnalogRepresentation "\"scalar\""
+attr enum scalar,dimensional
+par BabelShowcase.host1.wlan[0].radio opMode "\"g(mixed)\""
+attr enum a,b,g(erp),g(mixed),n(mixed-2.4Ghz),p,ac
+par BabelShowcase.host1.wlan[0].radio bandName "\"2.4 GHz\""
+attr enum "2.4 GHz,5 GHz,5 GHz (20 MHz),5 GHz (40 MHz),5 GHz (80 MHz),5 GHz (160 MHz),5.9 GHz"
+par BabelShowcase.host1.wlan[0].radio channelNumber 0
+par BabelShowcase.host1.wlan[0].radio crcMode "\"declared\""
+attr enum declared,computed
+statistic BabelShowcase.host1.wlan[0].radio radioChannel:histogram
+field count 1
+field mean 0
+field stddev -nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr recordingmode histogram
+attr source radioChannelChanged
+attr title "Radio channel"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar BabelShowcase.host1.wlan[0].radio radioMode:count 347
+attr interpolationmode sample-hold
+attr recordingmode count
+attr source radioModeChanged
+attr title "Radio mode, count"
+scalar BabelShowcase.host1.wlan[0].radio receptionState:count 1450
+attr interpolationmode sample-hold
+attr recordingmode count
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar BabelShowcase.host1.wlan[0].radio transmissionState:count 688
+attr interpolationmode sample-hold
+attr recordingmode count
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+statistic BabelShowcase.host1.wlan[0].radio minSnir:histogram
+field count 515
+field mean 1918.0252446857
+field stddev 0
+field min 1918.0252446857
+field max 1918.0252446857
+field sum 987783.00101313
+field sqrsum 1894592732.2145
+attr recordingmode histogram
+attr source minimumSnir(packetSentToUpper)
+attr title "Min SNIR"
+bin	-inf	0
+bin	1917.52	0
+bin	1917.54	0
+bin	1917.56	0
+bin	1917.58	0
+bin	1917.6	0
+bin	1917.62	0
+bin	1917.64	0
+bin	1917.66	0
+bin	1917.68	0
+bin	1917.7	0
+bin	1917.72	0
+bin	1917.74	0
+bin	1917.76	0
+bin	1917.78	0
+bin	1917.8	0
+bin	1917.82	0
+bin	1917.84	0
+bin	1917.86	0
+bin	1917.88	0
+bin	1917.9	0
+bin	1917.92	0
+bin	1917.94	0
+bin	1917.96	0
+bin	1917.98	0
+bin	1918	0
+bin	1918.02	515
+bin	1918.04	0
+bin	1918.06	0
+bin	1918.08	0
+bin	1918.1	0
+bin	1918.12	0
+bin	1918.14	0
+bin	1918.16	0
+bin	1918.18	0
+bin	1918.2	0
+bin	1918.22	0
+bin	1918.24	0
+bin	1918.26	0
+bin	1918.28	0
+bin	1918.3	0
+bin	1918.32	0
+bin	1918.34	0
+bin	1918.36	0
+bin	1918.38	0
+bin	1918.4	0
+bin	1918.42	0
+bin	1918.44	0
+bin	1918.46	0
+bin	1918.48	0
+bin	1918.5	0
+bin	1918.52	0
+bin	1918.54	0
+statistic BabelShowcase.host1.wlan[0].radio packetErrorRate:histogram
+field count 515
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr recordingmode histogram
+attr source packetErrorRate(packetSentToUpper)
+attr title "Packet error rate"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	515
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+statistic BabelShowcase.host1.wlan[0].radio bitErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr recordingmode histogram
+attr source bitErrorRate(packetSentToUpper)
+attr title "Bit error rate"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic BabelShowcase.host1.wlan[0].radio symbolErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr recordingmode histogram
+attr source symbolErrorRate(packetSentToUpper)
+attr title "Symbol error rate"
+bin	-inf	0
+bin	0	0
+bin	1	0
+par BabelShowcase.host1.wlan[0] typename "\"inet.emulation.linklayer.ieee80211.ExtUpperIeee80211Interface\""
+par BabelShowcase.host1.wlan[0] displayStringTextFormat "\"%a (%i)\\n%m\""
+par BabelShowcase.host1.wlan[0] recordPcap false
+par BabelShowcase.host1.wlan[0] numPcapRecorders 0
+par BabelShowcase.host1.wlan[0] isWireless false
+par BabelShowcase.host1.wlan[0] interfaceTableModule "\"BabelShowcase.host1.interfaceTable\""
+par BabelShowcase.host1.wlan[0] device "\"taps2-eth2\""
+par BabelShowcase.host1.wlan[0] namespace "\"\""
+par BabelShowcase.host1.wlan[0] copyConfiguration "\"copyFromExt\""
+attr enum ,copyToExt,copyFromExt
+par BabelShowcase.host1.wlan[0] address "\"0A-AA-00-00-00-02\""
+attr mutable ""
+par BabelShowcase.host1.wlan[0] broadcast true
+par BabelShowcase.host1.wlan[0] multicast true
+par BabelShowcase.host1.wlan[0] pointToPoint false
+par BabelShowcase.host1.wlan[0] mtu 4470B
+attr unit B
+par BabelShowcase.host1.wlan[0] energySourceModule "\"\""
+par BabelShowcase.host1.wlan[0] opMode "\"g(mixed)\""
+attr enum a,b,g(erp),g(mixed),n(mixed-2.4Ghz),p,ac
+par BabelShowcase.host1.wlan[0] bitrate -1bps
+attr unit bps
+scalar BabelShowcase.host1.wlan[0] packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, count"
+scalar BabelShowcase.host1.wlan[0] packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, sum(packetBytes)"
+scalar BabelShowcase.host1.wlan[0] packetDropNoCarrier:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, count"
+scalar BabelShowcase.host1.wlan[0] packetDropNoCarrier:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, sum(packetBytes)"
+par BabelShowcase.host1.ipv4.transportIn.channel typename "\"ned.IdealChannel\""
+par BabelShowcase.host1.ipv4.up.out[0].channel typename "\"ned.IdealChannel\""
+par BabelShowcase.host1.ipv4.lp.out[2].channel typename "\"ned.IdealChannel\""
+par BabelShowcase.host1.ipv4.ifIn.channel typename "\"ned.IdealChannel\""
+par BabelShowcase.host1.ipv4.configurator typename "\"inet.networklayer.configurator.ipv4.Ipv4NodeConfigurator\""
+par BabelShowcase.host1.ipv4.configurator interfaceTableModule "\"BabelShowcase.host1.interfaceTable\""
+par BabelShowcase.host1.ipv4.configurator routingTableModule "\"BabelShowcase.host1.ipv4.routingTable\""
+par BabelShowcase.host1.ipv4.configurator networkConfiguratorModule "\"configurator\""
+par BabelShowcase.host1.ipv4.configurator configureRoutingTable true
+par BabelShowcase.host1.ipv4.routingTable typename "\"inet.networklayer.ipv4.Ipv4RoutingTable\""
+par BabelShowcase.host1.ipv4.routingTable interfaceTableModule "\"BabelShowcase.host1.interfaceTable\""
+par BabelShowcase.host1.ipv4.routingTable routerId "\"auto\""
+par BabelShowcase.host1.ipv4.routingTable netmaskRoutes "\"*\""
+par BabelShowcase.host1.ipv4.routingTable forwarding true
+par BabelShowcase.host1.ipv4.routingTable multicastForwarding false
+par BabelShowcase.host1.ipv4.routingTable useAdminDist false
+par BabelShowcase.host1.ipv4.routingTable routingFile "\"\""
+par BabelShowcase.host1.ipv4.natTable typename "\"inet.networklayer.ipv4.Ipv4NatTable\""
+par BabelShowcase.host1.ipv4.natTable networkProtocolModule "\"^.ip\""
+par BabelShowcase.host1.ipv4.natTable config "<config/> at content:1"
+par BabelShowcase.host1.ipv4.up typename "\"inet.common.MessageDispatcher\""
+par BabelShowcase.host1.ipv4.up displayStringTextFormat "\"processed %p pk (%l)\""
+par BabelShowcase.host1.ipv4.up forwardServiceRegistration true
+par BabelShowcase.host1.ipv4.up forwardProtocolRegistration true
+par BabelShowcase.host1.ipv4.igmp typename "\"inet.networklayer.ipv4.Igmpv2\""
+par BabelShowcase.host1.ipv4.igmp interfaceTableModule "\"BabelShowcase.host1.interfaceTable\""
+par BabelShowcase.host1.ipv4.igmp routingTableModule "\"BabelShowcase.host1.ipv4.routingTable\""
+par BabelShowcase.host1.ipv4.igmp crcMode "\"declared\""
+attr enum declared,computed
+par BabelShowcase.host1.ipv4.igmp enabled true
+par BabelShowcase.host1.ipv4.igmp robustnessVariable 2
+par BabelShowcase.host1.ipv4.igmp queryInterval 125s
+attr unit s
+par BabelShowcase.host1.ipv4.igmp queryResponseInterval 10s
+attr unit s
+par BabelShowcase.host1.ipv4.igmp groupMembershipInterval 260s
+attr unit s
+par BabelShowcase.host1.ipv4.igmp otherQuerierPresentInterval 255s
+attr unit s
+par BabelShowcase.host1.ipv4.igmp startupQueryInterval 31.25s
+attr unit s
+par BabelShowcase.host1.ipv4.igmp startupQueryCount 2
+par BabelShowcase.host1.ipv4.igmp lastMemberQueryInterval 1s
+attr unit s
+par BabelShowcase.host1.ipv4.igmp lastMemberQueryCount 2
+par BabelShowcase.host1.ipv4.igmp unsolicitedReportInterval 10s
+attr unit s
+par BabelShowcase.host1.ipv4.icmp typename "\"inet.networklayer.ipv4.Icmp\""
+par BabelShowcase.host1.ipv4.icmp interfaceTableModule "\"BabelShowcase.host1.interfaceTable\""
+par BabelShowcase.host1.ipv4.icmp routingTableModule "\"BabelShowcase.host1.ipv4.routingTable\""
+par BabelShowcase.host1.ipv4.icmp crcMode "\"declared\""
+attr enum declared,computed
+attr mutable ""
+par BabelShowcase.host1.ipv4.icmp quoteLength 8B
+attr mutable ""
+attr unit B
+par BabelShowcase.host1.ipv4.mp typename "\"inet.common.MessageDispatcher\""
+par BabelShowcase.host1.ipv4.mp displayStringTextFormat "\"processed %p pk (%l)\""
+par BabelShowcase.host1.ipv4.mp forwardServiceRegistration true
+par BabelShowcase.host1.ipv4.mp forwardProtocolRegistration true
+par BabelShowcase.host1.ipv4.ip typename "\"inet.networklayer.ipv4.Ipv4\""
+par BabelShowcase.host1.ipv4.ip interfaceTableModule "\"BabelShowcase.host1.interfaceTable\""
+par BabelShowcase.host1.ipv4.ip routingTableModule "\"BabelShowcase.host1.ipv4.routingTable\""
+par BabelShowcase.host1.ipv4.ip arpModule "\"BabelShowcase.host1.ipv4.arp\""
+par BabelShowcase.host1.ipv4.ip icmpModule "\"BabelShowcase.host1.ipv4.icmp\""
+par BabelShowcase.host1.ipv4.ip crcMode "\"declared\""
+attr enum declared,computed
+par BabelShowcase.host1.ipv4.ip timeToLive 32
+par BabelShowcase.host1.ipv4.ip multicastTimeToLive 32
+par BabelShowcase.host1.ipv4.ip fragmentTimeout 60s
+attr unit s
+par BabelShowcase.host1.ipv4.ip limitedBroadcast false
+par BabelShowcase.host1.ipv4.ip directBroadcastInterfaces "\"\""
+scalar BabelShowcase.host1.ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar BabelShowcase.host1.ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar BabelShowcase.host1.ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar BabelShowcase.host1.ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar BabelShowcase.host1.ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar BabelShowcase.host1.ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar BabelShowcase.host1.ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar BabelShowcase.host1.ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar BabelShowcase.host1.ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar BabelShowcase.host1.ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar BabelShowcase.host1.ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar BabelShowcase.host1.ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+par BabelShowcase.host1.ipv4.arp typename "\"inet.networklayer.arp.ipv4.Arp\""
+par BabelShowcase.host1.ipv4.arp interfaceTableModule "\"BabelShowcase.host1.interfaceTable\""
+par BabelShowcase.host1.ipv4.arp routingTableModule "\"BabelShowcase.host1.ipv4.routingTable\""
+par BabelShowcase.host1.ipv4.arp retryTimeout 1s
+attr unit s
+par BabelShowcase.host1.ipv4.arp retryCount 3
+par BabelShowcase.host1.ipv4.arp cacheTimeout 120s
+attr unit s
+par BabelShowcase.host1.ipv4.arp proxyArpInterfaces "\"\""
+scalar BabelShowcase.host1.ipv4.arp arpResolutionFailed:count 0
+attr recordingmode count
+attr title "ARP failed resolutions, count"
+scalar BabelShowcase.host1.ipv4.arp arpResolutionCompleted:count 0
+attr recordingmode count
+attr title "ARP completed resolutions, count"
+scalar BabelShowcase.host1.ipv4.arp arpResolutionInitiated:count 0
+attr recordingmode count
+attr title "ARP initiated resolutions, count"
+scalar BabelShowcase.host1.ipv4.arp arpReplySent:count 0
+attr recordingmode count
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar BabelShowcase.host1.ipv4.arp arpReplySent:sum(packetBytes) 0
+attr recordingmode sum(packetBytes)
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar BabelShowcase.host1.ipv4.arp arpRequestSent:count 0
+attr recordingmode count
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar BabelShowcase.host1.ipv4.arp arpRequestSent:sum(packetBytes) 0
+attr recordingmode sum(packetBytes)
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+par BabelShowcase.host1.ipv4.lp typename "\"inet.common.MessageDispatcher\""
+par BabelShowcase.host1.ipv4.lp displayStringTextFormat "\"processed %p pk (%l)\""
+par BabelShowcase.host1.ipv4.lp forwardServiceRegistration true
+par BabelShowcase.host1.ipv4.lp forwardProtocolRegistration true
+par BabelShowcase.host1.ipv4 typename "\"inet.networklayer.ipv4.Ipv4NetworkLayer\""
+par BabelShowcase.host1.ipv4 forwarding true
+par BabelShowcase.host1.ipv4 multicastForwarding false
+par BabelShowcase.host1.ipv4 interfaceTableModule "\"BabelShowcase.host1.interfaceTable\""
+par BabelShowcase.host1.ipv4 displayStringTextFormat "\"%i\""
+par BabelShowcase.host1.nl typename "\"inet.common.MessageDispatcher\""
+par BabelShowcase.host1.nl displayStringTextFormat "\"processed %p pk (%l)\""
+par BabelShowcase.host1.nl forwardServiceRegistration true
+par BabelShowcase.host1.nl forwardProtocolRegistration true
+par BabelShowcase.host1.udp typename "\"inet.transportlayer.udp.Udp\""
+par BabelShowcase.host1.udp interfaceTableModule "\"BabelShowcase.host1.interfaceTable\""
+par BabelShowcase.host1.udp icmpModule "\"^.ipv4.icmp\""
+par BabelShowcase.host1.udp icmpv6Module "\"^.ipv6.icmpv6\""
+par BabelShowcase.host1.udp crcMode "\"declared\""
+attr enum disabled,declared,computed
+par BabelShowcase.host1.udp defaultMulticastLoop true
+scalar BabelShowcase.host1.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar BabelShowcase.host1.udp packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+scalar BabelShowcase.host1.udp packetSent:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar BabelShowcase.host1.udp packetSent:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+scalar BabelShowcase.host1.udp passedUpPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToUpper
+attr title "packets passed up, count"
+scalar BabelShowcase.host1.udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+scalar BabelShowcase.host1.udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+par BabelShowcase.host1.tcp typename "\"inet.transportlayer.tcp.Tcp\""
+par BabelShowcase.host1.tcp crcMode "\"declared\""
+attr enum declared,computed
+par BabelShowcase.host1.tcp advertisedWindow 7504
+par BabelShowcase.host1.tcp delayedAcksEnabled false
+par BabelShowcase.host1.tcp nagleEnabled true
+par BabelShowcase.host1.tcp limitedTransmitEnabled false
+par BabelShowcase.host1.tcp increasedIWEnabled false
+par BabelShowcase.host1.tcp sackSupport false
+par BabelShowcase.host1.tcp windowScalingSupport false
+par BabelShowcase.host1.tcp windowScalingFactor -1
+par BabelShowcase.host1.tcp timestampSupport false
+par BabelShowcase.host1.tcp mss 536
+par BabelShowcase.host1.tcp msl 120s
+attr unit s
+par BabelShowcase.host1.tcp tcpAlgorithmClass "\"TcpReno\""
+attr enum TcpVegas,TcpWestwood,TcpNewReno,TcpReno,TcpTahoe,TcpNoCongestionControl
+par BabelShowcase.host1.tcp useDataNotification false
+par BabelShowcase.host1.tcp dupthresh 3
+par BabelShowcase.host1.tcp initialSsthresh 4294967295
+par BabelShowcase.host1.tcp stopOperationExtraTime 0s
+attr unit s
+par BabelShowcase.host1.tcp stopOperationTimeout 2s
+attr unit s
+par BabelShowcase.host1.tcp ecnWillingness false
+par BabelShowcase.host1.tcp dctcpGamma 0.0625
+par BabelShowcase.host1.tn typename "\"inet.common.MessageDispatcher\""
+par BabelShowcase.host1.tn displayStringTextFormat "\"processed %p pk (%l)\""
+par BabelShowcase.host1.tn forwardServiceRegistration true
+par BabelShowcase.host1.tn forwardProtocolRegistration true
+par BabelShowcase.host1.at typename "\"inet.common.MessageDispatcher\""
+par BabelShowcase.host1.at displayStringTextFormat "\"processed %p pk (%l)\""
+par BabelShowcase.host1.at forwardServiceRegistration true
+par BabelShowcase.host1.at forwardProtocolRegistration true
+par BabelShowcase.host1 typename "\"inet.node.inet.AdhocHost\""
+par BabelShowcase.host1 hasStatus false
+par BabelShowcase.host1 osgModel "\"\""
+par BabelShowcase.host1 osgModelColor "\"\""
+par BabelShowcase.host1 canvasImage "\"\""
+par BabelShowcase.host1 canvasImageColor "\"\""
+par BabelShowcase.host1 recordPcap false
+par BabelShowcase.host1 numPcapRecorders 0
+par BabelShowcase.host1 numLoInterfaces 1
+par BabelShowcase.host1 numWlanInterfaces 1
+par BabelShowcase.host1 numEthInterfaces 0
+par BabelShowcase.host1 numPppInterfaces 0
+par BabelShowcase.host1 numTunInterfaces 0
+par BabelShowcase.host1 numVirtInterfaces 0
+par BabelShowcase.host1 fcsMode "\"declared\""
+attr enum declared,computed
+par BabelShowcase.host1 hasIpv4 true
+par BabelShowcase.host1 hasIpv6 false
+par BabelShowcase.host1 hasGn false
+par BabelShowcase.host1 forwarding true
+par BabelShowcase.host1 multicastForwarding false
+par BabelShowcase.host1 hasUdp true
+par BabelShowcase.host1 hasTcp true
+par BabelShowcase.host1 hasSctp false
+par BabelShowcase.host1 numApps 0
+par BabelShowcase typename "\"BabelShowcase\""
+

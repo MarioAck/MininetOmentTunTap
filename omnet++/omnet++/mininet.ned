@@ -4,7 +4,7 @@ import inet.physicallayer.wireless.ieee80211.packetlevel.Ieee80211ScalarRadioMed
 import inet.visualizer.contract.IIntegratedVisualizer;
 import inet.physicallayer.wireless.common.medium.RadioMedium;
 
-network BabelShowcase
+network Mininet
 {
     parameters:
         @display("bgb=600,400");

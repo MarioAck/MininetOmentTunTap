@@ -1,0 +1,199 @@
+file 8605 1692029741                                            
+version 3
+run Distance-0-20230814-18:15:39-7088
+attr configname Distance
+attr datetime 20230814-18:15:39
+attr datetimef 20230814-181539
+attr experiment Distance
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network AnalogModelShowcaseDistanceNetwork
+attr processid 7088
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config image-path ../inet4.5/images
+config sim-time-limit 2.5s
+config network AnalogModelShowcaseDistanceNetwork
+config **.radio.packetErrorRate.result-recording-modes +vector
+config **.radio.bitErrorRate.result-recording-modes +vector
+config *.source.numApps 1
+config *.source.app[0].typename UdpBasicApp
+config *.source.app[*].destAddresses "\"destination\""
+config *.source.app[*].destPort 1000
+config *.source.app[*].messageLength 1000byte
+config *.source.app[*].sendInterval 1ms
+config *.destination.numApps 1
+config *.destination.app[0].typename UdpSink
+config *.destination.app[*].localPort 1000
+config *.destination.mobility.typename LinearMobility
+config *.destination.mobility.initialMovementHeading 0deg
+config *.destination.mobility.speed 100mps
+config *.destination.mobility.constraintAreaMinX 500m
+config *.destination.mobility.constraintAreaMaxX 825m
+config *.source.**.transmitter.power 5mW
+config *.source.**.displayCommunicationRange true
+config **.backgroundNoise.power -105dBm
+config **.wlan*.mac.*.rateSelection.dataFrameBitrate 54Mbps
+config **.wlan*.mac.dcf.channelAccess.pendingQueue.packetCapacity 14
+config *.visualizer.*.numStatisticVisualizers 2
+config *.visualizer.*.statisticVisualizer[0].signalName "\"packetSentToUpper\""
+config *.visualizer.*.statisticVisualizer[0].statisticExpression "\"packetErrorRate\""
+config *.visualizer.*.statisticVisualizer[0].sourceFilter "\"*.destination.wlan[*].radio\""
+config *.visualizer.*.statisticVisualizer[0].format "\"packetErrorRate: %v\""
+config *.visualizer.*.statisticVisualizer[1].signalName "\"packetSentToUpper\""
+config *.visualizer.*.statisticVisualizer[1].statisticExpression "\"minimumSnir\""
+config *.visualizer.*.statisticVisualizer[1].sourceFilter "\"*.destination.wlan[*].radio\""
+config *.visualizer.*.statisticVisualizer[1].format "\"SNIR: %v\""
+config *.visualizer.*.statisticVisualizer[1].placementHint "\"topLeft\""
+config *.visualizer.*.dataLinkVisualizer[0].displayLinks true
+config *.visualizer.*.packetDropVisualizer[0].displayPacketDrops true
+config *.visualizer.*.packetDropVisualizer[0].nodeFilter "\"destination\""
+config *.visualizer.*.packetDropVisualizer[0].labelFormat "\"%r\""
+config *.visualizer.*.infoVisualizer[0].displayInfos true
+config *.visualizer.*.infoVisualizer[0].modules "\"*.destination.app[0]\""
+
+vector 0 AnalogModelShowcaseDistanceNetwork.destination.wlan[0].mac.dcf frameSequenceActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(frameSequenceStarted)-count(frameSequenceFinished))
+attr title "frame sequence active"
+vector 1 AnalogModelShowcaseDistanceNetwork.destination.wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(count(packetEnqueued) - count(packetDequeued))"
+attr title "queue length"
+vector 2 AnalogModelShowcaseDistanceNetwork.destination.wlan[0].mac.dcf.channelAccess.contention backoffActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(backoffStarted)-count(backoffStopped))
+attr title "backoff active"
+vector 3 AnalogModelShowcaseDistanceNetwork.destination.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+vector 4 AnalogModelShowcaseDistanceNetwork.destination.udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+vector 5 AnalogModelShowcaseDistanceNetwork.destination.udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+vector 6 AnalogModelShowcaseDistanceNetwork.source.wlan[0].mac.dcf frameSequenceActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(frameSequenceStarted)-count(frameSequenceFinished))
+attr title "frame sequence active"
+vector 7 AnalogModelShowcaseDistanceNetwork.source.wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(count(packetEnqueued) - count(packetDequeued))"
+attr title "queue length"
+vector 8 AnalogModelShowcaseDistanceNetwork.source.wlan[0].mac.dcf.channelAccess.contention backoffActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(backoffStarted)-count(backoffStopped))
+attr title "backoff active"
+vector 9 AnalogModelShowcaseDistanceNetwork.source.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+vector 10 AnalogModelShowcaseDistanceNetwork.source.udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+vector 11 AnalogModelShowcaseDistanceNetwork.source.udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+vector 12 AnalogModelShowcaseDistanceNetwork.destination.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source radioModeChanged
+attr title "Radio mode"
+vector 13 AnalogModelShowcaseDistanceNetwork.destination.wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source radioChannelChanged
+attr title "Radio channel"
+vector 14 AnalogModelShowcaseDistanceNetwork.source.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source radioModeChanged
+attr title "Radio mode"
+vector 15 AnalogModelShowcaseDistanceNetwork.source.wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source radioChannelChanged
+attr title "Radio channel"
+vector 16 AnalogModelShowcaseDistanceNetwork.destination.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source receptionStateChanged
+attr title "Radio reception state"
+vector 17 AnalogModelShowcaseDistanceNetwork.destination.wlan[0].mac.dcf.channelAccess.contention stateChanged:vector ETV
+attr enum IDLE,DEFER,IFS_AND_BACKOFF
+attr interpolationmode none
+attr recordingmode vector
+attr title "contention state changed"
+attr type enum
+vector 18 AnalogModelShowcaseDistanceNetwork.source.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source receptionStateChanged
+attr title "Radio reception state"
+vector 19 AnalogModelShowcaseDistanceNetwork.source.wlan[0].mac.dcf.channelAccess.contention stateChanged:vector ETV
+attr enum IDLE,DEFER,IFS_AND_BACKOFF
+attr interpolationmode none
+attr recordingmode vector
+attr title "contention state changed"
+attr type enum
+vector 20 AnalogModelShowcaseDistanceNetwork.destination.wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr title "contention window"
+vector 21 AnalogModelShowcaseDistanceNetwork.source.wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr title "contention window"
+0	8312 16 0 0 0 0 2 0 0 0 0
+1	8328 16 0 0 0 0 2 0 0 0 0
+2	8344 16 0 0 0 0 2 0 0 0 0
+3	8360 8 0 0 0 0 1 0 0 0 0
+4	8368 8 0 0 0 0 1 0 0 0 0
+5	8376 8 0 0 0 0 1 0 0 0 0
+6	8384 16 0 0 0 0 2 0 0 0 0
+7	8400 16 0 0 0 0 2 0 0 0 0
+8	8416 16 0 0 0 0 2 0 0 0 0
+9	8432 8 0 0 0 0 1 0 0 0 0
+10	8440 9 0 0 0 0 1 0 0 0 0
+11	8449 9 0 0 0 0 1 0 0 0 0
+12	8458 27 0 0 0 0 3 0 2 2 4
+13	8485 9 0 0 0 0 1 0 0 0 0
+14	8494 27 0 0 0 0 3 0 2 2 4
+15	8521 9 0 0 0 0 1 0 0 0 0
+16	8530 9 0 0 0 0 1 1 1 1 1
+17	8539 18 0 0 0 0 2 0 0 0 0
+18	8557 9 0 0 0 0 1 1 1 1 1
+19	8566 18 0 0 0 0 2 0 0 0 0
+20	8584 10 0 0 0 0 1 31 31 31 961
+21	8594 10 0 0 0 0 1 31 31 31 961
+

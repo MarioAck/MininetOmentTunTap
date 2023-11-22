@@ -8,7 +8,7 @@ network Mininet
 {
     parameters:
         @display("bgb=600,400");
-		@figure[title](type=label; pos=0,-1; anchor=sw; color=darkblue);
+        @figure[title](type=label; pos=0,-1; anchor=sw; color=darkblue);
 
         @figure[rcvdPkText](type=indicatorText; pos=380,20; anchor=w; font=,18; textFormat="packets received: %g"; initialValue=0);
         @statistic[packetReceived](source=host0.wlan[0].packetDropInterfaceDown; record=figure(count); targetFigure=rcvdPkText);
@@ -23,10 +23,14 @@ network Mininet
         }
         host0: AdhocHost {
             parameters:
-                @display("r=,,#707070;p=349,200");
+                @display("r=,,#707070;p=425,198");
         }
         host1: AdhocHost {
             parameters:
-                @display("r=,,#707070;p=248,200");
+                @display("r=,,#707070;p=92,198");
+        }
+        host2: AdhocHost {
+            parameters:
+                @display("r=,,#707070;p=254,198");
         }
 }

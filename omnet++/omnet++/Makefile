@@ -1,13 +1,13 @@
 #
-# OMNeT++/OMNEST Makefile for omnet++
+# OMNeT++/OMNEST Makefile for mininet
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out -KINET4_5_PROJ=/home/mario/omnetpp-6.0.1/samples/inet4.5 -DINET_IMPORT -I. -I$$\(INET4_5_PROJ\)/src -L$$\(INET4_5_PROJ\)/src -lINET$$\(D\)
+#  opp_makemake -f --deep -O out -KINET4_5_PROJ=/home/mininet/Downloads/omnetpp-6.0.1-linux-x86_64/omnetpp-6.0.1/samples/inet4.5 -DINET_IMPORT -I. -I$$\(INET4_5_PROJ\)/src -L$$\(INET4_5_PROJ\)/src -lINET$$\(D\)
 #
 
 # Name of target to be created (-o option)
 TARGET_DIR = .
-TARGET_NAME = omnet++$(D)
+TARGET_NAME = mininet$(D)
 TARGET = $(TARGET_NAME)$(EXE_SUFFIX)
 TARGET_IMPLIB = $(TARGET_NAME)$(IMPLIB_SUFFIX)
 TARGET_IMPDEF = $(TARGET_NAME)$(IMPDEF_SUFFIX)
@@ -42,7 +42,7 @@ MSGFILES =
 SMFILES =
 
 # Other makefile variables (-K)
-INET4_5_PROJ=/home/mario/omnetpp-6.0.1/samples/inet4.5
+INET4_5_PROJ=/home/mininet/Downloads/omnetpp-6.0.1-linux-x86_64/omnetpp-6.0.1/samples/inet4.5
 
 #------------------------------------------------------------------------------
 

@@ -1,16 +1,15 @@
-from ryu.base import app_manager
-from ryu.controller import ofp_event
-from ryu.controller.handler import CONFIG_DISPATCHER, MAIN_DISPATCHER
+from ryu.controller.handler import MAIN_DISPATCHER
 from ryu.controller.handler import set_ev_cls
-from ryu.ofproto import ofproto_v1_3
 from ryu.lib import dpid as dpid_lib
 from ryu.lib import stplib
 from ryu.lib.packet import packet
-from ryu.lib.packet import ethernet
+from ryu.lib.packet import ethernet, ipv4
 from ryu.app import simple_switch_13
+from ryu.ofproto import ofproto_v1_3_parser
+import socket
+
 
 class SimpleSwitch13(simple_switch_13.SimpleSwitch13):
-    OFP_VERSIONS = [ofproto_v1_3.OFP_VERSION]
     _CONTEXTS = {'stplib': stplib.Stp}
 
     def __init__(self, *args, **kwargs):
@@ -23,10 +22,11 @@ class SimpleSwitch13(simple_switch_13.SimpleSwitch13):
         config = {dpid_lib.str_to_dpid('0000000000000001'):
         {'bridge': {'priority': 0x8000}},
         dpid_lib.str_to_dpid('0000000000000002'):
-        {'bridge': {'priority': 0x9000}},
+        {'bridge': {'priority': 0x8000}},
         dpid_lib.str_to_dpid('0000000000000003'):
-        {'bridge': {'priority': 0xa000}}}
+        {'bridge': {'priority': 0x8000}}}
         self.stp.set_config(config)
+
     def delete_flow(self, datapath):
         ofproto = datapath.ofproto
         parser = datapath.ofproto_parser
@@ -47,30 +47,51 @@ class SimpleSwitch13(simple_switch_13.SimpleSwitch13):
         in_port = msg.match['in_port']
         pkt = packet.Packet(msg.data)
         eth = pkt.get_protocols(ethernet.ethernet)[0]
+        ip = pkt.get_protocols(ipv4.ipv4)
         dst = eth.dst
         src = eth.src
         dpid = datapath.id
-        self.mac_to_port.setdefault(dpid, {})
-        print(self.mac_to_port)
-        self.logger.info("packet in %s %s %s %s", dpid, src, dst, in_port)
-        # learn a mac address to avoid FLOOD next time.
-        self.mac_to_port[dpid][src] = in_port
-        if dst in self.mac_to_port[dpid]:
-            out_port = self.mac_to_port[dpid][dst]
-        else:
-            out_port = ofproto.OFPP_FLOOD
 
-        print(out_port)
-        actions = [parser.OFPActionOutput(out_port)]
-        # install a flow to avoid packet_in next time
-        if out_port != ofproto.OFPP_FLOOD:
+        isToBrdMltOf = dst == "ff:ff:ff:ff:ff:ff" or dst.startswith("33:33:00:00:")
+
+        self.mac_to_port.setdefault(dpid, {})
+        self.mac_to_port[dpid].setdefault("host", {})
+        self.logger. info("packet in %s %s %s %s", dpid, src, dst, in_port)
+
+        if in_port == 1:
+            self.mac_to_port[dpid]["host"] = src
+
+        if in_port == 1:
+            actions = [parser.OFPActionOutput(in_port, 0)]
+            match = parser.OFPMatch(eth_dst=src)
+            self.add_flow(datapath, 1, match, actions)
+            actions = []
+            match = parser.OFPMatch(in_port=4, ipv4_src='10.0.0.' + str(dpid), eth_type=0x800)
+            self.add_flow(datapath, 1, match, actions)
+
+        if self.mac_to_port[dpid]["host"] and dst != self.mac_to_port[dpid]["host"] and not isToBrdMltOf:
+            out_port = ofproto.OFPP_FLOOD if in_port == 1 else ofproto.OFPP_IN_PORT
+            actions = [parser.OFPActionOutput(out_port, 0)]
             match = parser.OFPMatch(in_port=in_port, eth_dst=dst)
             self.add_flow(datapath, 1, match, actions)
+        else:
+            actions = [parser.OFPActionOutput(ofproto.OFPP_IN_PORT, 0)]
+            data = None
+            if msg.buffer_id == ofproto.OFP_NO_BUFFER:
+                data = msg.data
+            out = parser.OFPPacketOut(datapath=datapath, buffer_id=msg.buffer_id,
+                                      in_port=in_port, actions=actions, data=data)
+            datapath.send_msg(out)
+            out_port = ofproto.OFPP_FLOOD
+
+        actions = [parser.OFPActionOutput(out_port, 0)]
         data = None
         if msg.buffer_id == ofproto.OFP_NO_BUFFER:
             data = msg.data
         out = parser.OFPPacketOut(datapath=datapath, buffer_id=msg.buffer_id,
                                   in_port=in_port, actions=actions, data=data)
+
+        self.logger. info("packet in %s %s %s %s", dpid, src, dst, out_port)
         datapath.send_msg(out)
 
         @set_ev_cls(stplib.EventTopologyChange, MAIN_DISPATCHER)

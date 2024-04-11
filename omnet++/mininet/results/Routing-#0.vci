@@ -1,0 +1,424 @@
+file 18782 1692030745                                           
+version 2
+run Routing-0-20230814-18:32:14-8199
+attr configname Routing
+attr datetime 20230814-18:32:14
+attr datetimef 20230814-183214
+attr experiment Routing
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network AnalogModelShowcaseRoutingNetwork
+attr processid 8199
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config image-path ../inet4.5/images
+config sim-time-limit 5s
+config network AnalogModelShowcaseRoutingNetwork
+config *.numHosts 7
+config *.source.numApps 1
+config *.source.app[0].typename PingApp
+config *.source.app[0].destAddr "\"destination\""
+config *.node*.mobility.initFromDisplayString false
+config *.node*.mobility.typename LinearMobility
+config *.node*.mobility.initialMovementHeading uniform(0deg,360deg)
+config *.node*.mobility.speed 25mps
+config **.constraintAreaMaxX 400m
+config **.constraintAreaMaxY 400m
+config **.constraintAreaMinX 0m
+config **.constraintAreaMinY 0m
+config *.configurator.addStaticRoutes false
+config **.netmaskRoutes "\"\""
+config *.*.routingApp.typename Aodv
+config **.arp.typename GlobalArp
+config *.*.routingApp.activeRouteTimeout 1s
+config *.*.routingApp.deletePeriod 0.5s
+config *.*.wlan[*].radio.signalAnalogRepresentation "\"unitDisk\""
+config **.radio.transmitter.analogModel.communicationRange 200m
+config **.radio.transmitter.analogModel.interferenceRange 400m
+config **.radio.transmitter.analogModel.detectionRange 800m
+config **.displayCommunicationRanges true
+config *.visualizer.*.routingTableVisualizer[0].displayLabels false
+config *.visualizer.*.routingTableVisualizer[0].displayRoutesIndividually false
+config *.visualizer.*.routingTableVisualizer[0].lineShift 0
+config *.visualizer.*.networkRouteVisualizer[0].displayRoutes true
+config *.visualizer.*.networkRouteVisualizer[0].packetFilter "\"*ping*\""
+config *.visualizer.*.interfaceTableVisualizer[0].displayInterfaceTables true
+config *.visualizer.*.interfaceTableVisualizer[0].format "\"%a/%l\""
+config *.visualizer.*.numDataLinkVisualizers 4
+config *.visualizer.*.dataLinkVisualizer[*].activityLevel "\"peer\""
+config *.visualizer.*.dataLinkVisualizer[*].displayLinks true
+config *.visualizer.*.dataLinkVisualizer[0].packetFilter "\"aodv::Rreq\""
+config *.visualizer.*.dataLinkVisualizer[1].packetFilter "\"ping*\""
+config *.visualizer.*.dataLinkVisualizer[1].*Color "\"blue\""
+config *.visualizer.*.dataLinkVisualizer[2].packetFilter "\"aodv::Rrep\""
+config *.visualizer.*.dataLinkVisualizer[2].*Color "\"darkslategray\""
+config *.visualizer.*.dataLinkVisualizer[3].packetFilter "\"aodv::Rerr\""
+config *.visualizer.*.dataLinkVisualizer[3].*Color "\"red\""
+config *.visualizer.*.infoVisualizer[0].displayInfos true
+config *.visualizer.*.infoVisualizer[0].modules "\"*.source.app[0]\""
+config *.visualizer.*.routingTableVisualizer[0].displayRoutingTables true
+config *.visualizer.*.routingTableVisualizer[0].destinationFilter "\"destination\""
+
+vector 0 AnalogModelShowcaseRoutingNetwork.source.wlan[0].mac.dcf frameSequenceActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(frameSequenceStarted)-count(frameSequenceFinished))
+attr title "frame sequence active"
+0	18059 16 0 0 0 0 2 0 0 0 0
+vector 1 AnalogModelShowcaseRoutingNetwork.source.wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(count(packetEnqueued) - count(packetDequeued))"
+attr title "queue length"
+1	18075 16 0 0 0 0 2 0 0 0 0
+vector 2 AnalogModelShowcaseRoutingNetwork.source.wlan[0].mac.dcf.channelAccess.contention backoffActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(backoffStarted)-count(backoffStopped))
+attr title "backoff active"
+2	18091 16 0 0 0 0 2 0 0 0 0
+vector 3 AnalogModelShowcaseRoutingNetwork.source.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+3	18107 8 0 0 0 0 1 0 0 0 0
+vector 4 AnalogModelShowcaseRoutingNetwork.source.udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+4	18115 8 0 0 0 0 1 0 0 0 0
+vector 5 AnalogModelShowcaseRoutingNetwork.source.udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+5	18123 8 0 0 0 0 1 0 0 0 0
+vector 6 AnalogModelShowcaseRoutingNetwork.node[0].wlan[0].mac.dcf frameSequenceActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(frameSequenceStarted)-count(frameSequenceFinished))
+attr title "frame sequence active"
+6	18131 16 0 0 0 0 2 0 0 0 0
+vector 7 AnalogModelShowcaseRoutingNetwork.node[0].wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(count(packetEnqueued) - count(packetDequeued))"
+attr title "queue length"
+7	18147 16 0 0 0 0 2 0 0 0 0
+vector 8 AnalogModelShowcaseRoutingNetwork.node[0].wlan[0].mac.dcf.channelAccess.contention backoffActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(backoffStarted)-count(backoffStopped))
+attr title "backoff active"
+8	18163 16 0 0 0 0 2 0 0 0 0
+vector 9 AnalogModelShowcaseRoutingNetwork.node[0].udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+9	18179 8 0 0 0 0 1 0 0 0 0
+vector 10 AnalogModelShowcaseRoutingNetwork.node[0].udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+10	18187 9 0 0 0 0 1 0 0 0 0
+vector 11 AnalogModelShowcaseRoutingNetwork.node[0].udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+11	18196 9 0 0 0 0 1 0 0 0 0
+vector 12 AnalogModelShowcaseRoutingNetwork.node[1].wlan[0].mac.dcf frameSequenceActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(frameSequenceStarted)-count(frameSequenceFinished))
+attr title "frame sequence active"
+12	18205 18 0 0 0 0 2 0 0 0 0
+vector 13 AnalogModelShowcaseRoutingNetwork.node[1].wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(count(packetEnqueued) - count(packetDequeued))"
+attr title "queue length"
+13	18223 18 0 0 0 0 2 0 0 0 0
+vector 14 AnalogModelShowcaseRoutingNetwork.node[1].wlan[0].mac.dcf.channelAccess.contention backoffActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(backoffStarted)-count(backoffStopped))
+attr title "backoff active"
+14	18241 18 0 0 0 0 2 0 0 0 0
+vector 15 AnalogModelShowcaseRoutingNetwork.node[1].udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+15	18259 9 0 0 0 0 1 0 0 0 0
+vector 16 AnalogModelShowcaseRoutingNetwork.node[1].udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+16	18268 9 0 0 0 0 1 0 0 0 0
+vector 17 AnalogModelShowcaseRoutingNetwork.node[1].udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+17	18277 9 0 0 0 0 1 0 0 0 0
+vector 18 AnalogModelShowcaseRoutingNetwork.node[2].wlan[0].mac.dcf frameSequenceActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(frameSequenceStarted)-count(frameSequenceFinished))
+attr title "frame sequence active"
+18	18286 18 0 0 0 0 2 0 0 0 0
+vector 19 AnalogModelShowcaseRoutingNetwork.node[2].wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(count(packetEnqueued) - count(packetDequeued))"
+attr title "queue length"
+19	18304 18 0 0 0 0 2 0 0 0 0
+vector 20 AnalogModelShowcaseRoutingNetwork.node[2].wlan[0].mac.dcf.channelAccess.contention backoffActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(backoffStarted)-count(backoffStopped))
+attr title "backoff active"
+20	18322 18 0 0 0 0 2 0 0 0 0
+vector 21 AnalogModelShowcaseRoutingNetwork.node[2].udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+21	18340 9 0 0 0 0 1 0 0 0 0
+vector 22 AnalogModelShowcaseRoutingNetwork.node[2].udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+22	18349 9 0 0 0 0 1 0 0 0 0
+vector 23 AnalogModelShowcaseRoutingNetwork.node[2].udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+23	18358 9 0 0 0 0 1 0 0 0 0
+vector 24 AnalogModelShowcaseRoutingNetwork.node[3].wlan[0].mac.dcf frameSequenceActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(frameSequenceStarted)-count(frameSequenceFinished))
+attr title "frame sequence active"
+24	18367 18 0 0 0 0 2 0 0 0 0
+vector 25 AnalogModelShowcaseRoutingNetwork.node[3].wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(count(packetEnqueued) - count(packetDequeued))"
+attr title "queue length"
+25	18385 18 0 0 0 0 2 0 0 0 0
+vector 26 AnalogModelShowcaseRoutingNetwork.node[3].wlan[0].mac.dcf.channelAccess.contention backoffActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(backoffStarted)-count(backoffStopped))
+attr title "backoff active"
+26	18403 18 0 0 0 0 2 0 0 0 0
+vector 27 AnalogModelShowcaseRoutingNetwork.node[3].udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+27	18421 9 0 0 0 0 1 0 0 0 0
+vector 28 AnalogModelShowcaseRoutingNetwork.node[3].udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+28	18430 9 0 0 0 0 1 0 0 0 0
+vector 29 AnalogModelShowcaseRoutingNetwork.node[3].udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+29	18439 9 0 0 0 0 1 0 0 0 0
+vector 30 AnalogModelShowcaseRoutingNetwork.node[4].wlan[0].mac.dcf frameSequenceActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(frameSequenceStarted)-count(frameSequenceFinished))
+attr title "frame sequence active"
+30	18448 18 0 0 0 0 2 0 0 0 0
+vector 31 AnalogModelShowcaseRoutingNetwork.node[4].wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(count(packetEnqueued) - count(packetDequeued))"
+attr title "queue length"
+31	18466 18 0 0 0 0 2 0 0 0 0
+vector 32 AnalogModelShowcaseRoutingNetwork.node[4].wlan[0].mac.dcf.channelAccess.contention backoffActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(backoffStarted)-count(backoffStopped))
+attr title "backoff active"
+32	18484 18 0 0 0 0 2 0 0 0 0
+vector 33 AnalogModelShowcaseRoutingNetwork.node[4].udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+33	18502 9 0 0 0 0 1 0 0 0 0
+vector 34 AnalogModelShowcaseRoutingNetwork.node[4].udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+34	18511 9 0 0 0 0 1 0 0 0 0
+vector 35 AnalogModelShowcaseRoutingNetwork.node[4].udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+35	18520 9 0 0 0 0 1 0 0 0 0
+vector 36 AnalogModelShowcaseRoutingNetwork.node[5].wlan[0].mac.dcf frameSequenceActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(frameSequenceStarted)-count(frameSequenceFinished))
+attr title "frame sequence active"
+36	18529 18 0 0 0 0 2 0 0 0 0
+vector 37 AnalogModelShowcaseRoutingNetwork.node[5].wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(count(packetEnqueued) - count(packetDequeued))"
+attr title "queue length"
+37	18547 18 0 0 0 0 2 0 0 0 0
+vector 38 AnalogModelShowcaseRoutingNetwork.node[5].wlan[0].mac.dcf.channelAccess.contention backoffActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(backoffStarted)-count(backoffStopped))
+attr title "backoff active"
+38	18565 18 0 0 0 0 2 0 0 0 0
+vector 39 AnalogModelShowcaseRoutingNetwork.node[5].udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+39	18583 9 0 0 0 0 1 0 0 0 0
+vector 40 AnalogModelShowcaseRoutingNetwork.node[5].udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+40	18592 9 0 0 0 0 1 0 0 0 0
+vector 41 AnalogModelShowcaseRoutingNetwork.node[5].udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+41	18601 9 0 0 0 0 1 0 0 0 0
+vector 42 AnalogModelShowcaseRoutingNetwork.node[6].wlan[0].mac.dcf frameSequenceActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(frameSequenceStarted)-count(frameSequenceFinished))
+attr title "frame sequence active"
+42	18610 18 0 0 0 0 2 0 0 0 0
+vector 43 AnalogModelShowcaseRoutingNetwork.node[6].wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(count(packetEnqueued) - count(packetDequeued))"
+attr title "queue length"
+43	18628 18 0 0 0 0 2 0 0 0 0
+vector 44 AnalogModelShowcaseRoutingNetwork.node[6].wlan[0].mac.dcf.channelAccess.contention backoffActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(backoffStarted)-count(backoffStopped))
+attr title "backoff active"
+44	18646 18 0 0 0 0 2 0 0 0 0
+vector 45 AnalogModelShowcaseRoutingNetwork.node[6].udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+45	18664 9 0 0 0 0 1 0 0 0 0
+vector 46 AnalogModelShowcaseRoutingNetwork.node[6].udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+46	18673 9 0 0 0 0 1 0 0 0 0
+vector 47 AnalogModelShowcaseRoutingNetwork.node[6].udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+47	18682 9 0 0 0 0 1 0 0 0 0
+vector 48 AnalogModelShowcaseRoutingNetwork.destination.wlan[0].mac.dcf frameSequenceActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(frameSequenceStarted)-count(frameSequenceFinished))
+attr title "frame sequence active"
+48	18691 18 0 0 0 0 2 0 0 0 0
+vector 49 AnalogModelShowcaseRoutingNetwork.destination.wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(count(packetEnqueued) - count(packetDequeued))"
+attr title "queue length"
+49	18709 18 0 0 0 0 2 0 0 0 0
+vector 50 AnalogModelShowcaseRoutingNetwork.destination.wlan[0].mac.dcf.channelAccess.contention backoffActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(backoffStarted)-count(backoffStopped))
+attr title "backoff active"
+50	18727 18 0 0 0 0 2 0 0 0 0
+vector 51 AnalogModelShowcaseRoutingNetwork.destination.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+51	18745 9 0 0 0 0 1 0 0 0 0
+vector 52 AnalogModelShowcaseRoutingNetwork.destination.udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+52	18754 9 0 0 0 0 1 0 0 0 0
+vector 53 AnalogModelShowcaseRoutingNetwork.destination.udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+53	18763 9 0 0 0 0 1 0 0 0 0
+vector 54 AnalogModelShowcaseRoutingNetwork.source.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source radioModeChanged
+attr title "Radio mode"
+54	18772 10 0 0 0 0 1 0 0 0 0

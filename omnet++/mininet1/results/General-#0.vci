@@ -1,0 +1,1437 @@
+file 671826 1712408491                                          
+version 3
+run General-0-20240406-15:00:14-5227
+attr configname General
+attr datetime 20240406-15:00:14
+attr datetimef 20240406-150014
+attr experiment General
+attr inifile mininet.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Mininet
+attr processid 5227
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config image-path ../../../omnetpp-6.0.1/samples/inet4.5/images
+config network Mininet
+config scheduler-class inet::RealTimeScheduler
+config *.visualizer.interfaceTableVisualizer[0].displayInterfaceTables true
+config *.visualizer.mediumVisualizer[0].displayCommunicationRanges true
+config *.visualizer.numDataLinkVisualizers 2
+config *.visualizer.*.displaySignals true
+config *.visualizer.dataLinkVisualizer[0].displayLinks true
+config *.visualizer.dataLinkVisualizer[0].lineColor "\"red1\""
+config *.visualizer.dataLinkVisualizer[0].packetFilter "\"*\""
+config *.*.wlan[*].radio.transmitter.power 1mW
+config *.host*.wlan[*].typename ExtUpperIeee80211Interface
+config *.host*.wlan[*].copyConfiguration "\"copyFromExt\""
+config *.host0.wlan[0].device "\"taps1-eth2\""
+config *.host1.wlan[0].device "\"taps2-eth2\""
+config *.host2.wlan[0].device "\"taps3-eth2\""
+config *.host3.wlan[0].device "\"taps4-eth2\""
+config *.host4.wlan[0].device "\"taps5-eth2\""
+config *.host5.wlan[0].device "\"taps6-eth2\""
+config *.host5.mobility.typename LinearMobility
+config *.host5.mobility.speed 5mps
+config *.host5.mobility.initialMovementHeading -180deg
+
+vector 0 Mininet.host0.wlan[0].mac.dcf frameSequenceActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(frameSequenceStarted)-count(frameSequenceFinished))
+attr title "frame sequence active"
+vector 1 Mininet.host0.wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(count(packetEnqueued) - count(packetDequeued))"
+attr title "queue length"
+vector 2 Mininet.host0.wlan[0].mac.dcf.channelAccess.contention backoffActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(backoffStarted)-count(backoffStopped))
+attr title "backoff active"
+vector 3 Mininet.host0.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+vector 4 Mininet.host0.udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+vector 5 Mininet.host0.udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+vector 6 Mininet.host1.wlan[0].mac.dcf frameSequenceActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(frameSequenceStarted)-count(frameSequenceFinished))
+attr title "frame sequence active"
+vector 7 Mininet.host1.wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(count(packetEnqueued) - count(packetDequeued))"
+attr title "queue length"
+vector 8 Mininet.host1.wlan[0].mac.dcf.channelAccess.contention backoffActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(backoffStarted)-count(backoffStopped))
+attr title "backoff active"
+vector 9 Mininet.host1.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+vector 10 Mininet.host1.udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+vector 11 Mininet.host1.udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+vector 12 Mininet.host2.wlan[0].mac.dcf frameSequenceActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(frameSequenceStarted)-count(frameSequenceFinished))
+attr title "frame sequence active"
+vector 13 Mininet.host2.wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(count(packetEnqueued) - count(packetDequeued))"
+attr title "queue length"
+vector 14 Mininet.host2.wlan[0].mac.dcf.channelAccess.contention backoffActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(backoffStarted)-count(backoffStopped))
+attr title "backoff active"
+vector 15 Mininet.host2.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+vector 16 Mininet.host2.udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+vector 17 Mininet.host2.udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+vector 18 Mininet.host3.wlan[0].mac.dcf frameSequenceActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(frameSequenceStarted)-count(frameSequenceFinished))
+attr title "frame sequence active"
+vector 19 Mininet.host3.wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(count(packetEnqueued) - count(packetDequeued))"
+attr title "queue length"
+vector 20 Mininet.host3.wlan[0].mac.dcf.channelAccess.contention backoffActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(backoffStarted)-count(backoffStopped))
+attr title "backoff active"
+vector 21 Mininet.host3.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+vector 22 Mininet.host3.udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+vector 23 Mininet.host3.udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+vector 24 Mininet.host4.wlan[0].mac.dcf frameSequenceActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(frameSequenceStarted)-count(frameSequenceFinished))
+attr title "frame sequence active"
+vector 25 Mininet.host4.wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(count(packetEnqueued) - count(packetDequeued))"
+attr title "queue length"
+vector 26 Mininet.host4.wlan[0].mac.dcf.channelAccess.contention backoffActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(backoffStarted)-count(backoffStopped))
+attr title "backoff active"
+vector 27 Mininet.host4.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+vector 28 Mininet.host4.udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+vector 29 Mininet.host4.udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+vector 30 Mininet.host5.wlan[0].mac.dcf frameSequenceActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(frameSequenceStarted)-count(frameSequenceFinished))
+attr title "frame sequence active"
+vector 31 Mininet.host5.wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(count(packetEnqueued) - count(packetDequeued))"
+attr title "queue length"
+vector 32 Mininet.host5.wlan[0].mac.dcf.channelAccess.contention backoffActive:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source warmup(count(backoffStarted)-count(backoffStopped))
+attr title "backoff active"
+vector 33 Mininet.host5.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+vector 34 Mininet.host5.udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+vector 35 Mininet.host5.udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+vector 36 Mininet.host0.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source radioModeChanged
+attr title "Radio mode"
+vector 37 Mininet.host0.wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source radioChannelChanged
+attr title "Radio channel"
+vector 38 Mininet.host1.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source radioModeChanged
+attr title "Radio mode"
+vector 39 Mininet.host1.wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source radioChannelChanged
+attr title "Radio channel"
+vector 40 Mininet.host2.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source radioModeChanged
+attr title "Radio mode"
+vector 41 Mininet.host2.wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source radioChannelChanged
+attr title "Radio channel"
+vector 42 Mininet.host3.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source radioModeChanged
+attr title "Radio mode"
+vector 43 Mininet.host3.wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source radioChannelChanged
+attr title "Radio channel"
+vector 44 Mininet.host4.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source radioModeChanged
+attr title "Radio mode"
+vector 45 Mininet.host4.wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source radioChannelChanged
+attr title "Radio channel"
+vector 46 Mininet.host5.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source radioModeChanged
+attr title "Radio mode"
+vector 47 Mininet.host5.wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source radioChannelChanged
+attr title "Radio channel"
+vector 48 Mininet.host0.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source receptionStateChanged
+attr title "Radio reception state"
+vector 49 Mininet.host0.wlan[0].mac.dcf.channelAccess.contention stateChanged:vector ETV
+attr enum IDLE,DEFER,IFS_AND_BACKOFF
+attr interpolationmode none
+attr recordingmode vector
+attr title "contention state changed"
+attr type enum
+vector 50 Mininet.host1.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source receptionStateChanged
+attr title "Radio reception state"
+vector 51 Mininet.host1.wlan[0].mac.dcf.channelAccess.contention stateChanged:vector ETV
+attr enum IDLE,DEFER,IFS_AND_BACKOFF
+attr interpolationmode none
+attr recordingmode vector
+attr title "contention state changed"
+attr type enum
+vector 52 Mininet.host2.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source receptionStateChanged
+attr title "Radio reception state"
+vector 53 Mininet.host2.wlan[0].mac.dcf.channelAccess.contention stateChanged:vector ETV
+attr enum IDLE,DEFER,IFS_AND_BACKOFF
+attr interpolationmode none
+attr recordingmode vector
+attr title "contention state changed"
+attr type enum
+vector 54 Mininet.host3.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source receptionStateChanged
+attr title "Radio reception state"
+vector 55 Mininet.host3.wlan[0].mac.dcf.channelAccess.contention stateChanged:vector ETV
+attr enum IDLE,DEFER,IFS_AND_BACKOFF
+attr interpolationmode none
+attr recordingmode vector
+attr title "contention state changed"
+attr type enum
+vector 56 Mininet.host4.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source receptionStateChanged
+attr title "Radio reception state"
+vector 57 Mininet.host4.wlan[0].mac.dcf.channelAccess.contention stateChanged:vector ETV
+attr enum IDLE,DEFER,IFS_AND_BACKOFF
+attr interpolationmode none
+attr recordingmode vector
+attr title "contention state changed"
+attr type enum
+vector 58 Mininet.host5.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source receptionStateChanged
+attr title "Radio reception state"
+vector 59 Mininet.host5.wlan[0].mac.dcf.channelAccess.contention stateChanged:vector ETV
+attr enum IDLE,DEFER,IFS_AND_BACKOFF
+attr interpolationmode none
+attr recordingmode vector
+attr title "contention state changed"
+attr type enum
+vector 60 Mininet.host0.wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr title "contention window"
+vector 61 Mininet.host1.wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr title "contention window"
+vector 62 Mininet.host2.wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr title "contention window"
+vector 63 Mininet.host3.wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr title "contention window"
+vector 64 Mininet.host4.wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr title "contention window"
+vector 65 Mininet.host5.wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr title "contention window"
+vector 66 Mininet.host0.wlan[0].tap packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceived
+attr title "packets received, packetBytes"
+vector 67 Mininet.host0.wlan[0].tap packetSentFromLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToLower
+attr title "packets sent to higher layer, packetBytes"
+vector 68 Mininet.host1.wlan[0].tap packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceived
+attr title "packets received, packetBytes"
+vector 69 Mininet.host1.wlan[0].tap packetSentFromLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToLower
+attr title "packets sent to higher layer, packetBytes"
+vector 70 Mininet.host2.wlan[0].tap packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceived
+attr title "packets received, packetBytes"
+vector 71 Mininet.host2.wlan[0].tap packetSentFromLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToLower
+attr title "packets sent to higher layer, packetBytes"
+vector 72 Mininet.host3.wlan[0].tap packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceived
+attr title "packets received, packetBytes"
+vector 73 Mininet.host3.wlan[0].tap packetSentFromLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToLower
+attr title "packets sent to higher layer, packetBytes"
+vector 74 Mininet.host4.wlan[0].tap packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceived
+attr title "packets received, packetBytes"
+vector 75 Mininet.host4.wlan[0].tap packetSentFromLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToLower
+attr title "packets sent to higher layer, packetBytes"
+vector 76 Mininet.host5.wlan[0].tap packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceived
+attr title "packets received, packetBytes"
+vector 77 Mininet.host5.wlan[0].tap packetSentFromLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToLower
+attr title "packets sent to higher layer, packetBytes"
+vector 78 Mininet.host0.wlan[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets received from upper layer, packetBytes"
+vector 79 Mininet.host0.wlan[0].mac.dcf.channelAccess.pendingQueue incomingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+vector 80 Mininet.host0.wlan[0].mac.dcf.channelAccess.pendingQueue queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length"
+attr unit pk
+vector 81 Mininet.host0.wlan[0].mac.dcf.channelAccess.pendingQueue queueBitLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length"
+attr unit b
+vector 82 Mininet.host0.wlan[0].mac.dcf.channelAccess.contention backoffPeriodGenerated:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr title "backoff periods"
+vector 83 Mininet.host1.wlan[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets received from upper layer, packetBytes"
+vector 84 Mininet.host1.wlan[0].mac.dcf.channelAccess.pendingQueue incomingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+vector 85 Mininet.host1.wlan[0].mac.dcf.channelAccess.pendingQueue queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length"
+attr unit pk
+vector 86 Mininet.host1.wlan[0].mac.dcf.channelAccess.pendingQueue queueBitLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length"
+attr unit b
+vector 87 Mininet.host1.wlan[0].mac.dcf.channelAccess.contention backoffPeriodGenerated:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr title "backoff periods"
+vector 88 Mininet.host2.wlan[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets received from upper layer, packetBytes"
+vector 89 Mininet.host2.wlan[0].mac.dcf.channelAccess.pendingQueue incomingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+vector 90 Mininet.host2.wlan[0].mac.dcf.channelAccess.pendingQueue queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length"
+attr unit pk
+vector 91 Mininet.host2.wlan[0].mac.dcf.channelAccess.pendingQueue queueBitLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length"
+attr unit b
+vector 92 Mininet.host2.wlan[0].mac.dcf.channelAccess.contention backoffPeriodGenerated:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr title "backoff periods"
+vector 93 Mininet.host3.wlan[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets received from upper layer, packetBytes"
+vector 94 Mininet.host3.wlan[0].mac.dcf.channelAccess.pendingQueue incomingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+vector 95 Mininet.host3.wlan[0].mac.dcf.channelAccess.pendingQueue queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length"
+attr unit pk
+vector 96 Mininet.host3.wlan[0].mac.dcf.channelAccess.pendingQueue queueBitLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length"
+attr unit b
+vector 97 Mininet.host3.wlan[0].mac.dcf.channelAccess.contention backoffPeriodGenerated:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr title "backoff periods"
+vector 98 Mininet.host4.wlan[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets received from upper layer, packetBytes"
+vector 99 Mininet.host4.wlan[0].mac.dcf.channelAccess.pendingQueue incomingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+vector 100 Mininet.host4.wlan[0].mac.dcf.channelAccess.pendingQueue queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length"
+attr unit pk
+vector 101 Mininet.host4.wlan[0].mac.dcf.channelAccess.pendingQueue queueBitLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length"
+attr unit b
+vector 102 Mininet.host4.wlan[0].mac.dcf.channelAccess.contention backoffPeriodGenerated:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr title "backoff periods"
+vector 103 Mininet.host5.wlan[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets received from upper layer, packetBytes"
+vector 104 Mininet.host5.wlan[0].mac.dcf.channelAccess.pendingQueue incomingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+vector 105 Mininet.host5.wlan[0].mac.dcf.channelAccess.pendingQueue queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length"
+attr unit pk
+vector 106 Mininet.host5.wlan[0].mac.dcf.channelAccess.pendingQueue queueBitLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length"
+attr unit b
+vector 107 Mininet.host5.wlan[0].mac.dcf.channelAccess.contention backoffPeriodGenerated:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr title "backoff periods"
+vector 108 Mininet.host0.wlan[0].mac.dcf.channelAccess.pendingQueue queueingTime:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+vector 109 Mininet.host0.wlan[0].mac.dcf.channelAccess.pendingQueue outgoingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+vector 110 Mininet.host0.wlan[0].mac.dcf datarateSelected:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr title "datarates selected"
+vector 111 Mininet.host0.wlan[0].mac packetSentToLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets sent to lower layer, packetBytes"
+vector 112 Mininet.host0.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source transmissionStateChanged
+attr title "Radio transmission state"
+vector 113 Mininet.host1.wlan[0].mac.dcf.channelAccess.pendingQueue queueingTime:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+vector 114 Mininet.host1.wlan[0].mac.dcf.channelAccess.pendingQueue outgoingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+vector 115 Mininet.host1.wlan[0].mac.dcf datarateSelected:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr title "datarates selected"
+vector 116 Mininet.host1.wlan[0].mac packetSentToLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets sent to lower layer, packetBytes"
+vector 117 Mininet.host1.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source transmissionStateChanged
+attr title "Radio transmission state"
+vector 118 Mininet.host2.wlan[0].mac.dcf.channelAccess.pendingQueue queueingTime:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+vector 119 Mininet.host2.wlan[0].mac.dcf.channelAccess.pendingQueue outgoingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+vector 120 Mininet.host2.wlan[0].mac.dcf datarateSelected:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr title "datarates selected"
+vector 121 Mininet.host2.wlan[0].mac packetSentToLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets sent to lower layer, packetBytes"
+vector 122 Mininet.host2.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source transmissionStateChanged
+attr title "Radio transmission state"
+vector 123 Mininet.host3.wlan[0].mac.dcf.channelAccess.pendingQueue queueingTime:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+vector 124 Mininet.host3.wlan[0].mac.dcf.channelAccess.pendingQueue outgoingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+vector 125 Mininet.host3.wlan[0].mac.dcf datarateSelected:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr title "datarates selected"
+vector 126 Mininet.host3.wlan[0].mac packetSentToLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets sent to lower layer, packetBytes"
+vector 127 Mininet.host3.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source transmissionStateChanged
+attr title "Radio transmission state"
+vector 128 Mininet.host4.wlan[0].mac.dcf.channelAccess.pendingQueue queueingTime:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+vector 129 Mininet.host4.wlan[0].mac.dcf.channelAccess.pendingQueue outgoingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+vector 130 Mininet.host4.wlan[0].mac.dcf datarateSelected:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr title "datarates selected"
+vector 131 Mininet.host4.wlan[0].mac packetSentToLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets sent to lower layer, packetBytes"
+vector 132 Mininet.host4.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source transmissionStateChanged
+attr title "Radio transmission state"
+vector 133 Mininet.host5.wlan[0].mac.dcf.channelAccess.pendingQueue queueingTime:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+vector 134 Mininet.host5.wlan[0].mac.dcf.channelAccess.pendingQueue outgoingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+vector 135 Mininet.host5.wlan[0].mac.dcf datarateSelected:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr title "datarates selected"
+vector 136 Mininet.host5.wlan[0].mac packetSentToLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets sent to lower layer, packetBytes"
+vector 137 Mininet.host5.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source transmissionStateChanged
+attr title "Radio transmission state"
+vector 138 Mininet.host0.wlan[0].mac.dcf packetSentToPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets sent, packetBytes"
+vector 139 Mininet.host0.wlan[0].mac.dcf packetSentToPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211Multicast(packetSentToPeer)
+attr title "packets sent: multicast, packetBytes"
+vector 140 Mininet.host0.wlan[0].mac.dcf packetSentToPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211NotRetry(packetSentToPeer)
+attr title "packets sent: without retry, packetBytes"
+vector 141 Mininet.host0.wlan[0].mac.dcf.channelAccess.inProgressFrames queueingTime:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source queueingTime(packetDequeued)
+attr title "queueing times"
+vector 142 Mininet.host1.wlan[0].mac.dcf packetSentToPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets sent, packetBytes"
+vector 143 Mininet.host1.wlan[0].mac.dcf packetSentToPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211Multicast(packetSentToPeer)
+attr title "packets sent: multicast, packetBytes"
+vector 144 Mininet.host1.wlan[0].mac.dcf packetSentToPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211NotRetry(packetSentToPeer)
+attr title "packets sent: without retry, packetBytes"
+vector 145 Mininet.host1.wlan[0].mac.dcf.channelAccess.inProgressFrames queueingTime:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source queueingTime(packetDequeued)
+attr title "queueing times"
+vector 146 Mininet.host2.wlan[0].mac.dcf packetSentToPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets sent, packetBytes"
+vector 147 Mininet.host2.wlan[0].mac.dcf packetSentToPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211Multicast(packetSentToPeer)
+attr title "packets sent: multicast, packetBytes"
+vector 148 Mininet.host2.wlan[0].mac.dcf packetSentToPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211NotRetry(packetSentToPeer)
+attr title "packets sent: without retry, packetBytes"
+vector 149 Mininet.host2.wlan[0].mac.dcf.channelAccess.inProgressFrames queueingTime:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source queueingTime(packetDequeued)
+attr title "queueing times"
+vector 150 Mininet.host3.wlan[0].mac.dcf packetSentToPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets sent, packetBytes"
+vector 151 Mininet.host3.wlan[0].mac.dcf packetSentToPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211Multicast(packetSentToPeer)
+attr title "packets sent: multicast, packetBytes"
+vector 152 Mininet.host3.wlan[0].mac.dcf packetSentToPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211NotRetry(packetSentToPeer)
+attr title "packets sent: without retry, packetBytes"
+vector 153 Mininet.host3.wlan[0].mac.dcf.channelAccess.inProgressFrames queueingTime:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source queueingTime(packetDequeued)
+attr title "queueing times"
+vector 154 Mininet.host4.wlan[0].mac.dcf packetSentToPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets sent, packetBytes"
+vector 155 Mininet.host4.wlan[0].mac.dcf packetSentToPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211Multicast(packetSentToPeer)
+attr title "packets sent: multicast, packetBytes"
+vector 156 Mininet.host4.wlan[0].mac.dcf packetSentToPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211NotRetry(packetSentToPeer)
+attr title "packets sent: without retry, packetBytes"
+vector 157 Mininet.host4.wlan[0].mac.dcf.channelAccess.inProgressFrames queueingTime:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source queueingTime(packetDequeued)
+attr title "queueing times"
+vector 158 Mininet.host5.wlan[0].mac.dcf packetSentToPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets sent, packetBytes"
+vector 159 Mininet.host5.wlan[0].mac.dcf packetSentToPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211Multicast(packetSentToPeer)
+attr title "packets sent: multicast, packetBytes"
+vector 160 Mininet.host5.wlan[0].mac.dcf packetSentToPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211NotRetry(packetSentToPeer)
+attr title "packets sent: without retry, packetBytes"
+vector 161 Mininet.host5.wlan[0].mac.dcf.channelAccess.inProgressFrames queueingTime:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source queueingTime(packetDequeued)
+attr title "queueing times"
+vector 162 Mininet.host0.wlan[0].mac.dcf packetSentToPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211Broadcast(packetSentToPeer)
+attr title "packets sent: broadcast , packetBytes"
+vector 163 Mininet.host3.wlan[0].mac packetReceivedFromLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets received from lower layer, packetBytes"
+vector 164 Mininet.host3.wlan[0].mac.dcf packetReceivedFromPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets received, packetBytes"
+vector 165 Mininet.host3.wlan[0].mac.dcf packetReceivedFromPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211Multicast(packetReceivedFromPeer)
+attr title "packets received: multicast, packetBytes"
+vector 166 Mininet.host3.wlan[0].mac.dcf packetReceivedFromPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211Broadcast(packetReceivedFromPeer)
+attr title "packets received: broadcast, packetBytes"
+vector 167 Mininet.host3.wlan[0].mac.dcf packetReceivedFromPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211NotRetry(packetReceivedFromPeer)
+attr title "packets received: without retry, packetBytes"
+vector 168 Mininet.host3.wlan[0].mac packetSentToUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets sent to upper layer, packetBytes"
+vector 169 Mininet.host3.wlan[0].tap packetReceivedFromLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceivedFromLower
+attr title "packets received from higher layer, packetBytes"
+vector 170 Mininet.host3.wlan[0].tap packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSent
+attr title "packets sent, packetBytes"
+vector 171 Mininet.host3.wlan[0].mac.dcf packetSentToPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211Broadcast(packetSentToPeer)
+attr title "packets sent: broadcast , packetBytes"
+vector 172 Mininet.host0.wlan[0].mac packetReceivedFromLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets received from lower layer, packetBytes"
+vector 173 Mininet.host0.wlan[0].mac.dcf packetReceivedFromPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets received, packetBytes"
+vector 174 Mininet.host0.wlan[0].mac.dcf packetReceivedFromPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211Multicast(packetReceivedFromPeer)
+attr title "packets received: multicast, packetBytes"
+vector 175 Mininet.host0.wlan[0].mac.dcf packetReceivedFromPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211Broadcast(packetReceivedFromPeer)
+attr title "packets received: broadcast, packetBytes"
+vector 176 Mininet.host0.wlan[0].mac.dcf packetReceivedFromPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211NotRetry(packetReceivedFromPeer)
+attr title "packets received: without retry, packetBytes"
+vector 177 Mininet.host0.wlan[0].mac packetSentToUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets sent to upper layer, packetBytes"
+vector 178 Mininet.host0.wlan[0].tap packetReceivedFromLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceivedFromLower
+attr title "packets received from higher layer, packetBytes"
+vector 179 Mininet.host0.wlan[0].tap packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSent
+attr title "packets sent, packetBytes"
+vector 180 Mininet.host4.wlan[0].mac packetReceivedFromLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets received from lower layer, packetBytes"
+vector 181 Mininet.host4.wlan[0].mac.dcf packetReceivedFromPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets received, packetBytes"
+vector 182 Mininet.host4.wlan[0].mac.dcf packetReceivedFromPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211Multicast(packetReceivedFromPeer)
+attr title "packets received: multicast, packetBytes"
+vector 183 Mininet.host4.wlan[0].mac.dcf packetReceivedFromPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211Broadcast(packetReceivedFromPeer)
+attr title "packets received: broadcast, packetBytes"
+vector 184 Mininet.host4.wlan[0].mac.dcf packetReceivedFromPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211NotRetry(packetReceivedFromPeer)
+attr title "packets received: without retry, packetBytes"
+vector 185 Mininet.host4.wlan[0].mac packetSentToUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets sent to upper layer, packetBytes"
+vector 186 Mininet.host4.wlan[0].tap packetReceivedFromLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceivedFromLower
+attr title "packets received from higher layer, packetBytes"
+vector 187 Mininet.host4.wlan[0].tap packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSent
+attr title "packets sent, packetBytes"
+vector 188 Mininet.host5.wlan[0].mac packetReceivedFromLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets received from lower layer, packetBytes"
+vector 189 Mininet.host5.wlan[0].mac.dcf packetReceivedFromPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets received, packetBytes"
+vector 190 Mininet.host5.wlan[0].mac.dcf packetReceivedFromPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211Multicast(packetReceivedFromPeer)
+attr title "packets received: multicast, packetBytes"
+vector 191 Mininet.host5.wlan[0].mac.dcf packetReceivedFromPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211Broadcast(packetReceivedFromPeer)
+attr title "packets received: broadcast, packetBytes"
+vector 192 Mininet.host5.wlan[0].mac.dcf packetReceivedFromPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211NotRetry(packetReceivedFromPeer)
+attr title "packets received: without retry, packetBytes"
+vector 193 Mininet.host5.wlan[0].mac packetSentToUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets sent to upper layer, packetBytes"
+vector 194 Mininet.host5.wlan[0].tap packetReceivedFromLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceivedFromLower
+attr title "packets received from higher layer, packetBytes"
+vector 195 Mininet.host5.wlan[0].tap packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSent
+attr title "packets sent, packetBytes"
+vector 196 Mininet.host2.wlan[0].mac packetReceivedFromLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets received from lower layer, packetBytes"
+vector 197 Mininet.host2.wlan[0].mac.dcf packetReceivedFromPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets received, packetBytes"
+vector 198 Mininet.host2.wlan[0].mac.dcf packetReceivedFromPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211Multicast(packetReceivedFromPeer)
+attr title "packets received: multicast, packetBytes"
+vector 199 Mininet.host2.wlan[0].mac.dcf packetReceivedFromPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211Broadcast(packetReceivedFromPeer)
+attr title "packets received: broadcast, packetBytes"
+vector 200 Mininet.host2.wlan[0].mac.dcf packetReceivedFromPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211NotRetry(packetReceivedFromPeer)
+attr title "packets received: without retry, packetBytes"
+vector 201 Mininet.host2.wlan[0].mac packetSentToUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets sent to upper layer, packetBytes"
+vector 202 Mininet.host2.wlan[0].tap packetReceivedFromLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceivedFromLower
+attr title "packets received from higher layer, packetBytes"
+vector 203 Mininet.host2.wlan[0].tap packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSent
+attr title "packets sent, packetBytes"
+vector 204 Mininet.host4.wlan[0].mac.dcf packetSentToPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211Broadcast(packetSentToPeer)
+attr title "packets sent: broadcast , packetBytes"
+vector 205 Mininet.host3.wlan[0].mac packetDrop:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetDropped
+attr title "packet drops, packetBytes"
+vector 206 Mininet.host3.wlan[0].mac packetDropIncorrectlyReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drops: incorrectly received, packetBytes"
+vector 207 Mininet.host2.wlan[0].mac packetDrop:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetDropped
+attr title "packet drops, packetBytes"
+vector 208 Mininet.host2.wlan[0].mac packetDropIncorrectlyReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drops: incorrectly received, packetBytes"
+vector 209 Mininet.host2.wlan[0].mac.dcf packetSentToPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211Broadcast(packetSentToPeer)
+attr title "packets sent: broadcast , packetBytes"
+vector 210 Mininet.host5.wlan[0].mac.dcf packetSentToPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211Broadcast(packetSentToPeer)
+attr title "packets sent: broadcast , packetBytes"
+vector 211 Mininet.host4.wlan[0].mac packetDrop:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetDropped
+attr title "packet drops, packetBytes"
+vector 212 Mininet.host4.wlan[0].mac packetDropIncorrectlyReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drops: incorrectly received, packetBytes"
+vector 213 Mininet.host1.wlan[0].mac packetReceivedFromLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets received from lower layer, packetBytes"
+vector 214 Mininet.host1.wlan[0].mac packetDrop:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetDropped
+attr title "packet drops, packetBytes"
+vector 215 Mininet.host1.wlan[0].mac packetDropIncorrectlyReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drops: incorrectly received, packetBytes"
+vector 216 Mininet.host1.wlan[0].mac.dcf packetReceivedFromPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets received, packetBytes"
+vector 217 Mininet.host1.wlan[0].mac.dcf packetReceivedFromPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211Multicast(packetReceivedFromPeer)
+attr title "packets received: multicast, packetBytes"
+vector 218 Mininet.host1.wlan[0].mac.dcf packetReceivedFromPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211Broadcast(packetReceivedFromPeer)
+attr title "packets received: broadcast, packetBytes"
+vector 219 Mininet.host1.wlan[0].mac.dcf packetReceivedFromPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211NotRetry(packetReceivedFromPeer)
+attr title "packets received: without retry, packetBytes"
+vector 220 Mininet.host1.wlan[0].mac packetSentToUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr title "packets sent to upper layer, packetBytes"
+vector 221 Mininet.host1.wlan[0].tap packetReceivedFromLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceivedFromLower
+attr title "packets received from higher layer, packetBytes"
+vector 222 Mininet.host1.wlan[0].tap packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSent
+attr title "packets sent, packetBytes"
+vector 223 Mininet.host1.wlan[0].mac.dcf packetSentToPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source ieee80211Broadcast(packetSentToPeer)
+attr title "packets sent: broadcast , packetBytes"
+vector 224 Mininet.host0.wlan[0].mac packetDrop:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetDropped
+attr title "packet drops, packetBytes"
+vector 225 Mininet.host0.wlan[0].mac packetDropIncorrectlyReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drops: incorrectly received, packetBytes"
+vector 226 Mininet.host5.wlan[0].mac packetDrop:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetDropped
+attr title "packet drops, packetBytes"
+vector 227 Mininet.host5.wlan[0].mac packetDropIncorrectlyReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drops: incorrectly received, packetBytes"
+vector 228 Mininet.host3.wlan[0].mac.dcf.channelAccess.pendingQueue incomingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPushStarted)
+attr title "incoming datarate"
+attr unit bps
+vector 229 Mininet.host3.wlan[0].mac.dcf.channelAccess.pendingQueue outgoingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPulled)
+attr title "outgoing datarate"
+attr unit bps
+0	55501 2268 0 9355 0 49.857456984 108 0 1 53 53
+1	57769 2268 0 9355 0 49.857456984 108 0 1 53 53
+2	60037 2259 0 9346 0 49.857406984 108 0 1 53 53
+3	62296 8 0 0 0 0 1 0 0 0 0
+4	62304 8 0 0 0 0 1 0 0 0 0
+5	62312 8 0 0 0 0 1 0 0 0 0
+6	62320 1392 0 9528 0 49.951677796 66 0 1 32 32
+7	63712 1392 0 9528 0 49.951677796 66 0 1 32 32
+8	65104 1387 0 9510 0 49.951627796 66 0 1 32 32
+9	66491 8 0 0 0 0 1 0 0 0 0
+10	66499 9 0 0 0 0 1 0 0 0 0
+11	66508 9 0 0 0 0 1 0 0 0 0
+12	66517 4104 0 9476 0 49.867116953 182 0 1 90 90
+13	70621 4104 0 9476 0 49.867116953 182 0 1 90 90
+14	74725 4104 0 9449 0 49.867066953 182 0 1 90 90
+15	78829 9 0 0 0 0 1 0 0 0 0
+16	78838 9 0 0 0 0 1 0 0 0 0
+17	78847 9 0 0 0 0 1 0 0 0 0
+18	78856 4892 0 9529 0 49.951677796 218 0 1 108 108
+19	83748 4892 0 9529 0 49.951677796 218 0 1 108 108
+20	88640 4887 0 9511 0 49.951627796 218 0 1 108 108
+21	93527 9 0 0 0 0 1 0 0 0 0
+22	93536 9 0 0 0 0 1 0 0 0 0
+23	93545 9 0 0 0 0 1 0 0 0 0
+24	93554 3868 0 9478 0 49.867116953 172 0 1 85 85
+25	97422 3868 0 9478 0 49.867116953 172 0 1 85 85
+26	101290 3868 0 9451 0 49.867066953 172 0 1 85 85
+27	105158 9 0 0 0 0 1 0 0 0 0
+28	105167 9 0 0 0 0 1 0 0 0 0
+29	105176 9 0 0 0 0 1 0 0 0 0
+30	105185 1708 0 8425 0 43.728035726 78 0 1 38 38
+31	106893 1708 0 8425 0 43.728035726 78 0 1 38 38
+32	108601 1708 0 8407 0 43.727985726 78 0 1 38 38
+33	110309 9 0 0 0 0 1 0 0 0 0
+34	110318 9 0 0 0 0 1 0 0 0 0
+35	110327 9 0 0 0 0 1 0 0 0 0
+36	110336 2385 0 9356 0 49.857456984 109 0 3 267 693
+37	112721 9 0 0 0 0 1 0 0 0 0
+38	112730 1467 0 9530 0 49.951677796 67 0 3 162 420
+39	114197 9 0 0 0 0 1 0 0 0 0
+40	114206 4113 0 9479 0 49.867116953 183 0 3 452 1174
+41	118319 9 0 0 0 0 1 0 0 0 0
+42	118328 4901 0 9531 0 49.951677796 219 0 3 542 1408
+43	123229 9 0 0 0 0 1 0 0 0 0
+44	123238 3877 0 9481 0 49.867116953 173 0 3 427 1109
+45	127115 9 0 0 0 0 1 0 0 0 0
+46	127124 1717 0 8427 0 43.728035726 79 0 3 192 498
+47	128841 9 0 0 0 0 1 0 0 0 0
+48	128850 8490 0 9534 0 49.951678216291 346 0 3 526 1202
+49	137340 23376 0 9535 0 49.951678216291 968 0 2 212 424
+50	160716 6320 0 9530 0 49.951677796 261 0 3 424 984
+51	167036 17154 0 9530 0 49.951677796 714 0 2 128 256
+52	184190 12406 0 9540 0 49.951678356388 505 0 3 739 1621
+53	196596 30190 0 9540 0 49.951678356388 1246 0 2 360 720
+54	226786 14048 0 9531 0 49.951677796 574 0 3 823 1825
+55	240834 36534 0 9531 0 49.951677796 1520 0 2 432 864
+56	277368 11524 0 9536 0 49.951678244318 469 0 3 682 1514
+57	288892 29656 0 9537 0 49.951678244318 1224 0 2 340 680
+58	318548 7373 0 9532 0 49.951678176748 299 0 3 471 1051
+59	325921 18700 0 9533 0 49.951678176748 764 0 2 152 304
+60	344621 10 0 0 0 0 1 31 31 31 961
+61	344631 10 0 0 0 0 1 31 31 31 961
+62	344641 10 0 0 0 0 1 31 31 31 961
+63	344651 10 0 0 0 0 1 31 31 31 961
+64	344661 10 0 0 0 0 1 31 31 31 961
+65	344671 10 0 0 0 0 1 31 31 31 961
+66	344681 1229 1 9343 0.167451025 49.857406984 53 46 114 2606 137172
+67	345910 1229 1 9343 0.167451025 49.857406984 53 46 114 2606 137172
+68	347139 752 1 9505 0.167451025 49.951627796 32 46 114 1756 108224
+69	347891 752 1 9505 0.167451025 49.951627796 32 46 114 1756 108224
+70	348643 2135 1 9442 0.167451025 49.867066953 90 46 114 4440 232808
+71	350778 2135 1 9442 0.167451025 49.867066953 90 46 114 4440 232808
+72	352913 2544 1 9505 0.167451025 49.951627796 108 46 114 5252 269264
+73	355457 2544 1 9505 0.167451025 49.951627796 108 46 114 5252 269264
+74	358001 2012 1 9442 0.167451025 49.867066953 85 46 114 4202 221268
+75	360013 2012 1 9442 0.167451025 49.867066953 85 46 114 4202 221268
+76	362025 885 1 8401 0.167451025 43.727985726 38 50 114 2120 129496
+77	362910 885 1 8401 0.167451025 43.727985726 38 50 114 2120 129496
+78	363795 1229 8 9345 0.167451025 49.857406984 53 36 104 2076 90352
+79	365024 1282 8 9345 0.167451025 49.857406984 53 512 1056 28480 15882240
+80	366306 2349 8 9347 0.167451025 49.857406984 106 0 1 53 53
+81	368655 2457 8 9347 0.167451025 49.857406984 106 0 1056 28480 15882240
+82	371112 1209 8 9345 0.167451025 49.857406984 53 0 31 753 15749
+83	372321 752 9 9508 0.167451025 49.951627796 32 36 104 1436 76304
+84	373073 784 9 9508 0.167451025 49.951627796 32 512 1056 18656 11635712
+85	373857 1435 9 9512 0.167451025 49.951627796 64 0 1 32 32
+86	375292 1502 9 9512 0.167451025 49.951627796 64 0 1056 18656 11635712
+87	376794 738 9 9508 0.167451025 49.951627796 32 0 30 502 10940
+88	377532 2136 10 9446 0.167451025 49.867066953 90 36 104 3540 153008
+89	379668 2226 10 9446 0.167451025 49.867066953 90 512 1056 48480 26995712
+90	381894 4086 10 9452 0.167451025 49.867066953 180 0 1 90 90
+91	385980 4269 10 9452 0.167451025 49.867066953 180 0 1056 48480 26995712
+92	390249 2107 10 9446 0.167451025 49.867066953 90 0 31 1488 32578
+93	392356 2545 11 9509 0.167451025 49.951627796 108 36 104 4172 175024
+94	394901 2653 11 9509 0.167451025 49.951627796 108 512 1056 57568 31572992
+95	397554 4869 11 9515 0.167451025 49.951627796 216 0 1 108 108
+96	402423 5088 11 9515 0.167451025 49.951627796 216 0 1056 57568 31572992
+97	407511 2508 11 9509 0.167451025 49.951627796 108 0 31 1615 32359
+98	410019 2013 12 9448 0.167451025 49.867066953 85 36 104 3352 145728
+99	412032 2098 12 9448 0.167451025 49.867066953 85 512 1056 45856 25605120
+100	414130 4020 12 9458 0.167451025 49.867066953 170 0 1 85 85
+101	418150 4193 12 9458 0.167451025 49.867066953 170 0 1056 45856 25605120
+102	422343 2064 12 9448 0.167451025 49.867066953 85 0 31 1262 26376
+103	424407 924 13 8405 0.167451025 43.727985726 38 40 104 1740 90896
+104	425331 962 13 8405 0.167451025 43.727985726 38 544 1056 22432 13960192
+105	426293 1766 13 8411 0.167451025 43.727985726 76 0 1 38 38
+106	428059 1845 13 8411 0.167451025 43.727985726 76 0 1056 22432 13960192
+107	429904 902 13 8405 0.167451025 43.727985726 38 0 31 516 11198
+108	430806 1228 20 9347 0.167451025 49.857406984 53 0 0 0 0
+109	432034 1336 20 9347 0.167451025 49.857406984 53 512 1056 28480 15882240
+110	433370 1599 20 9347 0.167451025 49.857406984 53 24000000 24000000 1272000000 3.0528e+16
+111	434969 1283 20 9347 0.167451025 49.857406984 53 64 132 3560 248160
+112	436252 4928 21 9356 0.167451025 49.857456984 212 0 2 212 318
+113	441180 750 23 9512 0.167451025 49.951627796 32 0 0 0 0
+114	441930 817 23 9512 0.167451025 49.951627796 32 512 1056 18656 11635712
+115	442747 974 23 9512 0.167451025 49.951627796 32 24000000 24000000 768000000 1.8432e+16
+116	443721 785 23 9512 0.167451025 49.951627796 32 64 132 2332 181808
+117	444506 3008 24 9530 0.167451025 49.951677796 128 0 2 128 192
+118	447514 2133 26 9452 0.167451025 49.867066953 90 0 0 0 0
+119	449647 2316 26 9452 0.167451025 49.867066953 90 512 1056 48480 26995712
+120	451963 2763 26 9452 0.167451025 49.867066953 90 24000000 24000000 2160000000 5.184e+16
+121	454726 2226 26 9452 0.167451025 49.867066953 90 64 132 6060 421808
+122	456952 8532 27 9479 0.167451025 49.867116953 360 0 2 360 540
+123	465484 2543 29 9515 0.167451025 49.951627796 108 0 0 0 0
+124	468027 2762 29 9515 0.167451025 49.951627796 108 512 1056 57568 31572992
+125	470789 3299 29 9515 0.167451025 49.951627796 108 24000000 24000000 2592000000 6.2208e+16
+126	474088 2654 29 9515 0.167451025 49.951627796 108 64 132 7196 493328
+127	476742 10180 30 9531 0.167451025 49.951677796 432 0 2 432 648
+128	486922 2010 32 9458 0.167451025 49.867066953 85 0 0 0 0
+129	488932 2183 32 9458 0.167451025 49.867066953 85 512 1056 45856 25605120
+130	491115 2605 32 9458 0.167451025 49.867066953 85 24000000 24000000 2040000000 4.896e+16
+131	493720 2098 32 9458 0.167451025 49.867066953 85 64 132 5732 400080
+132	495818 8040 33 9481 0.167451025 49.867116953 340 0 2 340 510
+133	503858 883 35 8411 0.167451025 43.727985726 38 0 0 0 0
+134	504741 962 35 8411 0.167451025 43.727985726 38 544 1056 22432 13960192
+135	505703 1149 35 8411 0.167451025 43.727985726 38 24000000 24000000 912000000 2.1888e+16
+136	506852 924 35 8411 0.167451025 43.727985726 38 68 132 2804 218128
+137	507776 3532 36 8427 0.167451025 43.728035726 152 0 2 152 228
+138	511308 1291 68 9355 0.167525025 49.857456984 53 64 132 3560 248160
+139	512599 1291 68 9355 0.167525025 49.857456984 53 64 132 3560 248160
+140	513890 1291 68 9355 0.167525025 49.857456984 53 64 132 3560 248160
+141	515181 1456 68 9355 0.167525025 49.857456984 53 5e-05 7.4e-05 0.002706 1.39284e-07
+142	516637 789 69 9528 0.167525025 49.951677796 32 64 132 2332 181808
+143	517426 789 69 9528 0.167525025 49.951677796 32 64 132 2332 181808
+144	518215 789 69 9528 0.167525025 49.951677796 32 64 132 2332 181808
+145	519004 896 69 9528 0.167525025 49.951677796 32 5e-05 7.4e-05 0.001688 9.0592e-08
+146	519900 2226 70 9476 0.167525025 49.867116953 90 64 132 6060 421808
+147	522126 2226 70 9476 0.167525025 49.867116953 90 64 132 6060 421808
+148	524352 2226 70 9476 0.167525025 49.867116953 90 64 132 6060 421808
+149	526578 2519 70 9476 0.167525025 49.867116953 90 5e-05 7.4e-05 0.004612 2.38088e-07
+150	529097 2658 71 9529 0.167525025 49.951677796 108 64 132 7196 493328
+151	531755 2658 71 9529 0.167525025 49.951677796 108 64 132 7196 493328
+152	534413 2658 71 9529 0.167525025 49.951677796 108 64 132 7196 493328
+153	537071 3003 71 9529 0.167525025 49.951677796 108 5e-05 7.4e-05 0.005508 2.82672e-07
+154	540074 2098 72 9478 0.167525025 49.867116953 85 64 132 5732 400080
+155	542172 2098 72 9478 0.167525025 49.867116953 85 64 132 5732 400080
+156	544270 2098 72 9478 0.167525025 49.867116953 85 64 132 5732 400080
+157	546368 2364 72 9478 0.167525025 49.867116953 85 5e-05 7.4e-05 0.004338 2.23092e-07
+158	548732 924 73 8425 0.167525025 43.728035726 38 68 132 2804 218128
+159	549656 924 73 8425 0.167525025 43.728035726 38 68 132 2804 218128
+160	550580 924 73 8425 0.167525025 43.728035726 38 68 132 2804 218128
+161	551504 1049 73 8425 0.167525025 43.728035726 38 5e-05 7.4e-05 0.001988 1.05592e-07
+162	552553 1244 285 9355 0.19280178 49.857456984 51 64 76 3296 213312
+163	553797 3990 345 9438 0.208499856291 49.865128151388 144 64 76 9360 609344
+164	557787 2916 345 9438 0.208499856291 49.865128151388 105 64 72 6764 435952
+165	560703 2916 345 9438 0.208499856291 49.865128151388 105 64 72 6764 435952
+166	563619 2916 345 9438 0.208499856291 49.865128151388 105 64 72 6764 435952
+167	566535 2916 345 9438 0.208499856291 49.865128151388 105 64 72 6764 435952
+168	569451 2916 345 9438 0.208499856291 49.865128151388 105 36 44 3824 139488
+169	572367 2916 347 9440 0.208499856291 49.865128151388 105 46 54 4874 226468
+170	575283 2916 347 9440 0.208499856291 49.865128151388 105 42 50 4454 189156
+171	578199 2588 364 9529 0.226427807 49.951677796 105 64 76 6800 441056
+172	580787 2917 367 9535 0.226428227291 49.951678216291 105 64 76 6800 441056
+173	583704 1552 367 9379 0.226428227291 49.860949749291 56 64 76 3612 233232
+174	585256 1552 367 9379 0.226428227291 49.860949749291 56 64 76 3612 233232
+175	586808 1552 367 9379 0.226428227291 49.860949749291 56 64 76 3612 233232
+176	588360 1552 367 9379 0.226428227291 49.860949749291 56 64 76 3612 233232
+177	589912 1552 367 9379 0.226428227291 49.860949749291 56 36 48 2044 74864
+178	591464 1552 369 9381 0.226428227291 49.860949749291 56 46 58 2604 121344
+179	593016 1552 369 9381 0.226428227291 49.860949749291 56 42 54 2380 101408
+180	594568 3274 371 9537 0.226428255318 49.951678244318 118 64 76 7660 498096
+181	597842 2306 371 9430 0.226428255318 49.865128055697 83 64 76 5352 345440
+182	600148 2306 371 9430 0.226428255318 49.865128055697 83 64 76 5352 345440
+183	602454 2306 371 9430 0.226428255318 49.865128055697 83 64 76 5352 345440
+184	604760 2306 371 9430 0.226428255318 49.865128055697 83 64 76 5352 345440
+185	607066 2306 371 9430 0.226428255318 49.865128055697 83 36 48 3028 110800
+186	609372 2306 373 9432 0.226428255318 49.865128055697 83 46 58 3858 179660
+187	611678 2306 373 9432 0.226428255318 49.865128055697 83 42 54 3526 150124
+188	613984 2210 375 9533 0.226428273732 49.951678176748 80 64 76 5228 342320
+189	616194 960 375 8322 0.226428273732 43.720687706262 35 64 72 2268 147152
+190	617154 960 375 8322 0.226428273732 43.720687706262 35 64 72 2268 147152
+191	618114 960 375 8322 0.226428273732 43.720687706262 35 64 72 2268 147152
+192	619074 960 375 8322 0.226428273732 43.720687706262 35 64 72 2268 147152
+193	620034 960 375 8322 0.226428273732 43.720687706262 35 36 44 1288 47584
+194	620994 960 377 8324 0.226428273732 43.720687706262 35 46 54 1638 76844
+195	621954 960 377 8324 0.226428273732 43.720687706262 35 42 50 1498 64300
+196	622914 3237 379 9539 0.226428367388 49.95167831636 117 64 76 7632 498720
+197	626151 2468 379 9410 0.226428367388 49.863423123697 89 64 76 5772 374864
+198	628619 2468 379 9410 0.226428367388 49.863423123697 89 64 76 5772 374864
+199	631087 2468 379 9410 0.226428367388 49.863423123697 89 64 76 5772 374864
+200	633555 2468 379 9410 0.226428367388 49.863423123697 89 64 76 5772 374864
+201	636023 2468 379 9410 0.226428367388 49.863423123697 89 36 48 3280 121408
+202	638491 2468 381 9412 0.226428367388 49.863423123697 89 46 58 4170 195908
+203	640959 2468 381 9412 0.226428367388 49.863423123697 89 42 54 3814 163972
+204	643427 2028 407 9478 0.237597004 49.867116953 82 64 76 5336 347808
+205	645455 1074 411 9319 0.237597424291 48.837939619318 39 64 76 2596 173392
+206	646529 1074 411 9319 0.237597424291 48.837939619318 39 64 76 2596 173392
+207	647603 769 414 9539 0.237597468697 49.95167831636 28 64 76 1860 123856
+208	648372 769 414 9539 0.237597468697 49.95167831636 28 64 76 1860 123856
+209	649141 2156 445 9476 0.273917269 49.867116953 87 64 76 5664 369536
+210	651297 854 446 8425 0.273917269 43.728035726 35 68 76 2408 165856
+211	652151 968 450 9537 0.273917733697 49.951678244318 35 64 76 2308 152656
+212	653119 968 450 9537 0.273917733697 49.951678244318 35 64 76 2308 152656
+213	654087 2282 456 9489 0.27391778936 49.86711747336 85 64 76 5548 362768
+214	656369 1499 456 9489 0.27391778936 49.86711747336 56 64 76 3672 241312
+215	657868 1499 456 9489 0.27391778936 49.86711747336 56 64 76 3672 241312
+216	659367 783 581 9434 0.72147204736 49.86512811136 29 64 72 1876 121456
+217	660150 783 581 9434 0.72147204736 49.86512811136 29 64 72 1876 121456
+218	660933 783 581 9434 0.72147204736 49.86512811136 29 64 72 1876 121456
+219	661716 783 581 9434 0.72147204736 49.86512811136 29 64 72 1876 121456
+220	662499 783 581 9434 0.72147204736 49.86512811136 29 36 44 1064 39136
+221	663282 783 583 9436 0.72147204736 49.86512811136 29 46 54 1354 63316
+222	664065 783 583 9436 0.72147204736 49.86512811136 29 42 50 1238 52948
+223	664848 719 691 9528 0.830514028 49.951677796 29 64 76 1936 129536
+224	665567 1365 700 9535 0.830514448291 49.951678216291 49 64 76 3188 207824
+225	666932 1365 700 9535 0.830514448291 49.951678216291 49 64 76 3188 207824
+226	668297 1250 706 9533 0.830514500043 49.951678176748 45 64 76 2960 195168
+227	669547 1250 706 9533 0.830514500043 49.951678176748 45 64 76 2960 195168
+228	670797 514 8892 9509 47.8105859 49.9105859 22 -642.57517819697 10240 35197.424821803 341200102.85963
+229	671311 514 8894 9515 47.8105859 49.9105859 22 -642.57517819697 10240 35197.424821803 341200102.85963
+
